@@ -2,7 +2,6 @@
 
 공식 등록된 컴포넌트 목록입니다. 스킬이 HTML 생성 시 이 목록과 대조합니다.
 퍼블코드 전용 컴포넌트는 `publog-code.md`를 참조하세요.
-가이드 HTML 전용 컴포넌트는 `design-system-html-ui.md`를 참조하세요.
 
 ---
 
