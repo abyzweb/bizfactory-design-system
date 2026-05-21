@@ -614,6 +614,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .bg-guide .brand-card.primary .name { color: #fff; }
 .bg-guide .brand-card.secondary .name { color: var(--trendy); }
 .bg-guide .brand-card .name em { color: var(--friendly); font-style: normal; }
+.bg-guide .brand-card .name.noto { font-size:22px; font-family:'Noto Sans KR',sans-serif; font-weight:700; letter-spacing:0; }
 .bg-guide .brand-card .sub-name { font-size: 12px; margin-top: 4px; font-weight: 300; }
 .bg-guide .brand-card.primary .sub-name { color: rgba(255,255,255,0.45); }
 .bg-guide .brand-card.secondary .sub-name { color: var(--text-muted); }
@@ -731,6 +732,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
 /* ── SNS & 채널 ── */
 .bg-guide .sns-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.bg-guide .sns-grid.col3 { grid-template-columns: repeat(3, 1fr); max-width: 480px; }
 .bg-guide .sns-card { padding: 16px; border-radius: var(--radius); border: 1px solid var(--border); text-align: center; background: #fff; }
 .bg-guide .sns-name { font-size: 11px; font-weight: 700; color: var(--trendy); margin-top: 8px; }
 .bg-guide .sns-url { font-size: 9px; color: var(--text-muted); margin-top: 3px; word-break: break-all; }
@@ -934,6 +936,226 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .dday-safe   { background:#f0fdf4; color:#15803d; }
 .pc-guide .dday-warn   { background:#fffbeb; color:#b45309; }
 .pc-guide .dday-urgent { background:#fff1f2; color:#e11d48; }
+
+/* ── 가이드 공통 유틸 ── */
+.flex-12  { display:flex; gap:12px; }
+.flex-12w { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.mt-12 { margin-top:12px; }
+.col-narrow { width:120px; }
+
+/* ── pc-guide 레이아웃 변형 ── */
+.pc-guide.col    { display:flex; flex-direction:column; }
+.pc-guide.row    { display:flex; }
+.pc-guide.center { display:flex; justify-content:center; }
+.pc-guide.wrap   { display:flex; flex-wrap:wrap; align-items:flex-start; }
+.pc-guide.row-c  { display:flex; align-items:center; flex-wrap:wrap; }
+.pc-guide.raw    { padding:0; background:transparent; border:none; }
+.pc-guide.auto-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); }
+.pc-guide.gap-8  { gap:8px; }
+.pc-guide.gap-10 { gap:10px; }
+.pc-guide.gap-12 { gap:12px; }
+.pc-guide.gap-20 { gap:20px; }
+
+/* ── pc 내부 흰색 카드 ── */
+.pc-inner      { background:#fff; border-radius:16px; border:1px solid var(--border); padding:20px; }
+.pc-inner.w480 { max-width:480px; margin:0 auto; }
+.pc-inner.w520 { max-width:520px; margin:0 auto; }
+.pc-inner.p16  { padding:16px; }
+
+/* ── pc-guide 상태 레이블·타이틀 ── */
+.pc-state-label    { font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:.08em; }
+.pc-state-label.sm { margin-bottom:6px; }
+.pc-preview-title  { font-size:16px; font-weight:700; }
+.pc-preview-title.mb { margin-bottom:12px; }
+.pc-preview-note   { font-size:12px; color:var(--text-muted); margin-top:2px; }
+.pc-step-note      { font-size:11px; color:var(--text-muted); margin-bottom:10px; }
+
+/* ── 프로그레스바 채움 ── */
+.fill-33  { width:33%; }
+.fill-66  { width:66%; }
+.fill-100 { width:100%; }
+
+/* ── 스펙 테이블 내 버튼 데모 ── */
+.btn-demo { font-size:11px !important; padding:5px 12px !important; height:auto !important; }
+
+/* ── bg-guide 태그 데모 ── */
+.bg-tag-row      { display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end; }
+.bg-tag-row.ox   { overflow-x:auto; }
+.bg-tag-item     { text-align:center; flex-shrink:0; }
+.bg-tag-preview  { padding-bottom:10px; }
+.bg-tag-name     { font-size:11px; font-weight:700; color:var(--trendy); }
+.bg-tag-name.mt  { margin-top:8px; }
+.bg-tag-code     { font-size:10px; color:var(--text-muted); }
+
+/* ── bg-guide 브랜드 포지셔닝 ── */
+.bg-bp-grid     { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.bg-bp-card     { padding:20px; border-radius:10px; background:var(--belief); border:1px solid var(--border); }
+.bg-bp-card.ct  { border-top:3px solid var(--trendy); }
+.bg-bp-card.cf  { border-top:3px solid var(--friendly); }
+.bg-bp-card.ca  { border-top:3px solid var(--attention); }
+.bg-bp-title    { font-weight:700; font-size:13px; color:var(--trendy); margin-bottom:7px; }
+.bg-bp-desc     { font-size:12px; color:var(--text-muted); line-height:1.7; }
+
+/* ── bg-guide 컬러 스와치 ── */
+.bg-cs-trendy    { background:#222450; }
+.bg-cs-friendly  { background:#FFCE2D; border-bottom:1px solid var(--border); }
+.bg-cs-clear     { background:#FFFFFF; border-bottom:1px solid var(--border); }
+.bg-cs-belief    { background:#F0F1F6; }
+.bg-cs-stability { background:#111111; }
+.bg-cs-attention { background:#515382; }
+.bg-cs-role-w    { color:rgba(255,255,255,0.6); }
+.bg-cs-role-n    { color:rgba(34,36,80,0.6); }
+.bg-cs-role-gray { color:#999; }
+.bg-cs-hex-white { color:#fff; }
+.bg-cs-hex-navy  { color:var(--trendy); }
+.bg-cs-hex-gray  { color:#ccc; }
+.bg-cs-hex-muted { color:#666; }
+
+/* ── bg-guide 그레이스케일 ── */
+.bg-gs-1a { background:#1a1a1a; }
+.bg-gs-33 { background:#333; }
+.bg-gs-66 { background:#666; }
+.bg-gs-99 { background:#999; }
+.bg-gs-cc { background:#ccc; }
+.bg-gs-e4 { background:#e4e5ec; }
+.bg-gs-f0 { background:#f0f1f6; }
+.bg-gs-hw { color:#fff; }
+.bg-gs-hm { color:#555; }
+.bg-gs-rd { color:rgba(255,255,255,0.4); }
+.bg-gs-rm { color:#888; }
+
+/* ── bg-guide 폰트 스펙 데모 ── */
+.bg-fs-publog-hero  { font-family:'Montserrat',sans-serif; font-size:40px; font-weight:900; color:var(--trendy); letter-spacing:-1.5px; line-height:1; }
+.bg-fs-montserrat-h { font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:var(--trendy); letter-spacing:-1px; line-height:1; }
+.bg-fs-montserrat-lg { font-family:'Montserrat',sans-serif; font-size:26px; font-weight:800; color:var(--trendy); }
+.bg-fs-montserrat-md { font-family:'Montserrat',sans-serif; font-size:22px; font-weight:800; color:var(--trendy); }
+.bg-fs-montserrat-sm { font-family:'Montserrat',sans-serif; font-size:13px; color:#333; letter-spacing:0; }
+.bg-fs-noto-hero    { font-family:'Noto Sans KR',sans-serif; font-size:32px; font-weight:700; color:var(--trendy); line-height:1.2; }
+.bg-fs-noto-lg      { font-family:'Noto Sans KR'; font-size:17px; font-weight:700; color:var(--stability); }
+.bg-fs-body         { font-size:13px; color:var(--text-body); }
+.bg-fs-price        { font-family:'Montserrat',sans-serif; font-size:22px; font-weight:800; color:var(--trendy); }
+.bg-fs-footnote     { font-size:11px; font-weight:300; color:var(--text-light); }
+.bg-gsb-title       { font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#fff; letter-spacing:2px; }
+.bg-gsb-note        { font-size:12px; color:rgba(255,255,255,0.45); margin-top:8px; }
+
+/* ── bg-guide 상품 배지 아이콘 ── */
+.bg-icon-row   { display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end; overflow-x:auto; }
+.bg-icon-item  { text-align:center; flex-shrink:0; }
+.bg-icon-img   { width:45px; height:45px; object-fit:contain; display:block; margin:0 auto; }
+.bg-icon-label { font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px; }
+
+/* ── bg-guide 출처 노트 ── */
+.bg-source-note { font-size:11px; color:var(--text-muted); margin-top:4px; display:block; }
+
+/* ── bg-guide 로그인 모달 ── */
+.bg-modal-wrap  { background:#e8eaf0; border-radius:var(--radius); border:1px solid var(--border); padding:48px 24px; display:flex; justify-content:center; align-items:flex-start; }
+.bg-modal-card  { background:#fff; border-radius:16px; width:360px; box-shadow:0 32px 64px -16px rgba(0,0,0,0.22); overflow:hidden; font-family:'Noto Sans KR',sans-serif; }
+.bg-modal-head  { padding:32px 32px 16px; text-align:center; }
+.bg-modal-title { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:900; letter-spacing:0.06em; color:#222450; margin-bottom:8px; }
+.bg-modal-sub   { font-size:12px; color:#999; }
+.bg-modal-sub-link { font-weight:600; color:#222450; text-decoration:underline; cursor:pointer; }
+.bg-modal-form  { padding:0 28px 8px; display:flex; flex-direction:column; gap:10px; }
+.bg-modal-input { width:100%; height:48px; border-radius:4px; border:1px solid #E4E5EC; padding:0 16px; font-size:13.5px; outline:none; font-family:inherit; box-sizing:border-box; }
+.bg-modal-btn-login { width:100%; height:52px; border-radius:4px; background:#222450; color:#fff; font-family:'Montserrat','Noto Sans KR',sans-serif; font-size:14px; font-weight:700; border:none; cursor:pointer; }
+.bg-modal-kakao-wrap { padding:8px 28px 16px; }
+.bg-modal-kakao-btn { width:100%; height:52px; border-radius:4px; background:#FEE500; color:#3C1E1E; font-family:'Noto Sans KR',sans-serif; font-size:13.5px; font-weight:700; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; }
+.bg-modal-social-wrap { padding:0 28px 20px; display:flex; align-items:center; gap:12px; }
+.bg-modal-divider { flex:1; height:1px; background:#E4E5EC; }
+.bg-modal-social-btn { width:40px; height:40px; border-radius:50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.bg-modal-naver  { background:#1ec800; color:#fff; font-weight:800; font-size:15px; }
+.bg-modal-apple  { background:#000; color:#fff; }
+.bg-modal-google { background:#fff; border:1px solid #d9d9d9; }
+.bg-modal-links  { padding-bottom:20px; display:flex; align-items:center; justify-content:center; gap:12px; font-size:11.5px; color:#999; }
+.bg-modal-links-sep { color:#E4E5EC; }
+.bg-modal-links span { cursor:pointer; }
+.bg-modal-notice { margin:0 28px 24px; padding:10px 12px; border-radius:4px; background:#F0F1F6; font-size:11px; text-align:center; color:#999; }
+
+/* ── bg-guide 소셜 스펙 ── */
+.bg-social-row { display:flex; gap:16px; align-items:center; padding:8px 0 20px; }
+.bg-modal-spec-naver  { width:36px; height:36px; border-radius:50%; background:#1ec800; border:none; color:#fff; font-weight:800; font-size:13px; cursor:default; }
+.bg-modal-spec-apple  { width:36px; height:36px; border-radius:50%; background:#000; border:none; color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:11px; cursor:default; }
+.bg-modal-spec-google { width:36px; height:36px; border-radius:50%; background:#fff; border:1px solid #d9d9d9; display:inline-flex; align-items:center; justify-content:center; cursor:default; }
+
+/* ── 버튼행 레이아웃 ── */
+.btn-row-480 { display:flex; gap:0; max-width:480px; }
+.btn-row-480 .btn-pdf  { flex:1; }
+.btn-row-480 .btn-make { flex:2; }
+
+/* ── publcard 바디 가격/배지 행 ── */
+.publcard-body-row { display:flex; align-items:flex-end; justify-content:space-between; }
+.dday-badge.mb4   { margin-bottom:4px; }
+
+/* ── reg-card 내 텍스트 ── */
+.reg-card-title  { text-align:center; font-size:20px; font-weight:700; margin-bottom:6px; }
+.reg-card-desc   { text-align:center; font-size:12px; color:var(--text-muted); margin-bottom:20px; }
+.reg-card-desc code.mono { font-family:'JetBrains Mono',monospace; font-weight:600; }
+.pc-state-label.mt20 { margin-top:20px; margin-bottom:8px; }
+
+/* ── reg-input 여백 ── */
+.reg-input.mb8 { margin-bottom:8px; }
+
+/* ── 체크박스 레이블 굵기 ── */
+.cb-label-text.fw6 { font-weight:600; }
+.cb-label-text.fw7 { font-weight:700; }
+
+/* ── 체크박스 레이블 행 (label 태그) ── */
+.cb-label-row { display:flex; align-items:center; gap:8px; font-size:12px; margin-bottom:10px; cursor:pointer; }
+
+/* ── grp-card 제목 (padding 포함) ── */
+.grp-card-title { padding:16px 20px 4px; font-size:16px; font-weight:700; }
+.grp-card-title.dim { opacity:.6; }
+
+/* ── grp-strip D-day 라벨 ── */
+.grp-dday { font-size:11px; color:rgba(0,0,0,0.45); }
+
+/* ── mycode-card 흐림 상태 ── */
+.mycode-card.dim  { opacity:.7; }
+.mycode-thumb.dim { opacity:.5; }
+.mycode-info      { flex:1; }
+.mycode-price.muted { color:var(--text-muted); }
+
+/* ── etc 섹션 인라인 안내 텍스트 ── */
+.etc-hint { display:inline-flex; align-items:center; padding:0 12px; font-size:11px; color:var(--text-muted); }
+
+/* ── dday 범례 텍스트/구분선 ── */
+.dday-legend-text { font-size:11px; color:var(--text-muted); }
+.dday-legend-sep  { padding:0 8px; color:var(--border); }
+
+/* ── inlinehelp 버튼 attention 변형 ── */
+.inlinehelp-btn.att  { border-color:rgba(81,83,130,0.3); color:#515382; }
+.inlinehelp-icon.att { background:rgba(81,83,130,0.12); color:#515382; }
+
+/* ── spec-table 텍스트 ── */
+.spec-muted { color:var(--text-muted); }
+
+/* ── callout 설명 하단 여백 ── */
+.callout-card-desc.mb14 { margin-bottom:14px; }
+
+/* ── am1 guide table ── */
+.am1-col120 { width:120px; }
+.am1-nowrap { white-space:nowrap; }
+
+/* ── font-card trendy 배경 ── */
+.font-card-preview.trendy { background:var(--trendy); }
+
+/* ── font spec th 너비 ── */
+.th-160 { width:160px; }
+.th-220 { width:220px; }
+
+/* ── bg01 GOODS PLANET 서브 ── */
+.bg-goods-sub { font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; color:var(--text-muted); margin-top:8px; letter-spacing:0.05em; }
+
+/* ── search 영역 감싸기 ── */
+.search-demo-wrap { background:var(--belief); padding:32px 28px 80px; border-radius:var(--radius); border:1px solid var(--border); }
+.search-chip-row  { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+
+/* ── product-card-thumb 배경 ── */
+.pct-bg-blue  { background:#eef0fa; }
+.pct-bg-pink  { background:#fff5f5; }
+.pct-bg-lilac { background:#f0f0ff; }
+
+/* ── am1 mt-12 블록 ── */
+.am1-block-mt { margin-top:12px; }
 
 </style>
 </head>
@@ -1258,7 +1480,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         </div>
         <div class="divider"></div>
         <div class="card-label">Block (width: 100%)</div>
-        <div style="display:flex; gap:12px;">
+        <div class="flex-12">
           <button class="btn-primary btn-block">주문하기</button>
           <button class="btn-outline btn-block">담아두기</button>
         </div>
@@ -1319,10 +1541,10 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       </div>
       <div class="section-card">
         <div class="card-label">실제 상세페이지 배치 예시</div>
-        <div style="display:flex; gap:0; max-width:480px;">
+        <div class="btn-row-480">
           <button class="btn-basket">장바구니</button>
-          <button class="btn-pdf" style="flex:1;">PDF 미리보기</button>
-          <button class="btn-make" style="flex:2;">제작하기</button>
+          <button class="btn-pdf">PDF 미리보기</button>
+          <button class="btn-make">제작하기</button>
         </div>
       </div>
       <div class="section-card">
@@ -1365,28 +1587,28 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">다단계 폼 상단 진행 상태 바. Navy(퍼블코드 만들기)와 Purple(그룹코드 만들기) 2가지 테마</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; flex-direction:column; gap:20px;">
+        <div class="pc-guide col gap-20">
           <div>
-            <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">STEP 1 / 3 — Navy 테마</p>
+            <p class="pc-step-note">STEP 1 / 3 — Navy 테마</p>
             <div class="step-indicator">
               <span class="step-num">STEP <span class="step-accent">1</span> / 3</span>
-              <div class="step-track"><div class="step-fill" style="width:33%"></div></div>
+              <div class="step-track"><div class="step-fill fill-33"></div></div>
               <span class="step-label">상품 선택</span>
             </div>
           </div>
           <div>
-            <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">STEP 2 / 3 — Navy 테마</p>
+            <p class="pc-step-note">STEP 2 / 3 — Navy 테마</p>
             <div class="step-indicator">
               <span class="step-num">STEP <span class="step-accent">2</span> / 3</span>
-              <div class="step-track"><div class="step-fill" style="width:66%"></div></div>
+              <div class="step-track"><div class="step-fill fill-66"></div></div>
               <span class="step-label">옵션 설정</span>
             </div>
           </div>
           <div>
-            <p style="font-size:11px; color:var(--text-muted); margin-bottom:10px;">STEP 3 / 3 — Purple 테마 (그룹코드)</p>
+            <p class="pc-step-note">STEP 3 / 3 — Purple 테마 (그룹코드)</p>
             <div class="step-indicator">
               <span class="step-num">STEP <span class="step-accent purple">3</span> / 3</span>
-              <div class="step-track"><div class="step-fill purple" style="width:100%"></div></div>
+              <div class="step-track"><div class="step-fill purple fill-100"></div></div>
               <span class="step-label purple">완료</span>
             </div>
           </div>
@@ -1470,7 +1692,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">border-radius 28px · 썸네일 + 가격 + 코드 + 액션 버튼 구조</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; justify-content:center;">
+        <div class="pc-guide center">
           <div class="publcard-wrap">
             <div class="publcard-thumb">
               <div class="publcard-thumb-circle"></div>
@@ -1482,12 +1704,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="publcard-body">
-              <div style="display:flex; align-items:flex-end; justify-content:space-between;">
+              <div class="publcard-body-row">
                 <div>
                   <p class="publcard-price-label">PRICE</p>
                   <p class="publcard-price">37,800<small>원</small></p>
                 </div>
-                <span class="dday-badge dday-safe" style="margin-bottom:4px;">D-184</span>
+                <span class="dday-badge dday-safe mb4">D-184</span>
               </div>
             </div>
             <div class="publcard-divider"></div>
@@ -1537,19 +1759,19 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="pc-guide">
           <div class="reg-card">
             <div class="reg-icon">🔑</div>
-            <p style="text-align:center; font-size:20px; font-weight:700; margin-bottom:6px;">코드를 입력해 주세요</p>
-            <p style="text-align:center; font-size:12px; color:var(--text-muted); margin-bottom:20px;">예: <span style="font-family:'JetBrains Mono',monospace; font-weight:600;">0RVTZDRDP6</span> 또는 <span style="font-family:'JetBrains Mono',monospace; font-weight:600;">GRP2024A</span></p>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:.08em;">① 미입력 상태</p>
-            <input class="reg-input" placeholder="코드 입력" readonly style="margin-bottom:8px;">
+            <p class="reg-card-title">코드를 입력해 주세요</p>
+            <p class="reg-card-desc">예: <code class="mono">0RVTZDRDP6</code> 또는 <code class="mono">GRP2024A</code></p>
+            <p class="pc-state-label">① 미입력 상태</p>
+            <input class="reg-input mb8" placeholder="코드 입력" readonly>
             <button class="reg-btn disabled">코드 확인하기</button>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin:20px 0 8px; text-transform:uppercase; letter-spacing:.08em;">② 퍼블코드 인식</p>
-            <input class="reg-input" value="0RVTZDRDP6" readonly style="margin-bottom:0;">
+            <p class="pc-state-label mt20">② 퍼블코드 인식</p>
+            <input class="reg-input" value="0RVTZDRDP6" readonly>
             <div class="reg-detect-wrap">
               <span class="reg-badge pub"><span class="reg-badge-dot"></span>퍼블코드로 인식됨 — 상품 정보를 확인하세요</span>
             </div>
             <button class="reg-btn pub">코드 확인하기</button>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin:20px 0 8px; text-transform:uppercase; letter-spacing:.08em;">③ 그룹코드 인식</p>
-            <input class="reg-input" value="GRP2024A" readonly style="margin-bottom:0; border-color:var(--attention);">
+            <p class="pc-state-label mt20">③ 그룹코드 인식</p>
+            <input class="reg-input" value="GRP2024A" readonly style="border-color:var(--attention);">
             <div class="reg-detect-wrap">
               <span class="reg-badge grp"><span class="reg-badge-dot"></span>그룹코드로 인식됨 — 묶음 안에서 원하는 상품을 골라요</span>
             </div>
@@ -1584,7 +1806,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">SVG 방식 체크박스. 외부 이미지 의존성 없음</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:20px;">
+        <div class="pc-guide row gap-20">
           <label class="cb-wrap">
             <input class="cb-input" type="checkbox">
             <span class="cb-box"></span>
@@ -1612,11 +1834,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="pc-guide">
-          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:16px; max-width:480px; margin:0 auto;">
+          <div class="pc-inner p16 w480">
             <div class="bulk-header">
               <div>
-                <p style="font-size:16px; font-weight:700;">묶을 퍼블코드 선택</p>
-                <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">2개 이상 선택해야 그룹을 만들 수 있어요.</p>
+                <p class="pc-preview-title">묶을 퍼블코드 선택</p>
+                <p class="pc-preview-note">2개 이상 선택해야 그룹을 만들 수 있어요.</p>
               </div>
               <span class="bulk-count-badge">2개 선택</span>
             </div>
@@ -1625,7 +1847,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               <button class="bulk-filter-tab off">공개</button>
               <button class="bulk-filter-tab off">비공개</button>
             </div>
-            <label style="display:flex; align-items:center; gap:8px; font-size:12px; margin-bottom:10px; cursor:pointer;">
+            <label class="cb-label-row">
               <input type="checkbox"> 전체 선택 (활성 코드만)
             </label>
             <div class="bulk-item on">
@@ -1676,13 +1898,13 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">미선택 / 부분 선택 / 전체 선택 3가지 상태. 동의 폼 등에서 사용</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start;">
+        <div class="pc-guide wrap gap-20">
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:.08em;">① 미선택 (모두 OFF)</p>
+            <p class="pc-state-label">① 미선택 (모두 OFF)</p>
             <div class="cb-list">
               <div class="cb-row">
                 <div class="cb-box cb-off"></div>
-                <span class="cb-label-text" style="font-weight:600;">전체 동의합니다.</span>
+                <span class="cb-label-text fw6">전체 동의합니다.</span>
               </div>
               <div class="cb-sep"></div>
               <div class="cb-row cb-i1">
@@ -1704,11 +1926,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:.08em;">② 부분 선택 (일부 ON)</p>
+            <p class="pc-state-label">② 부분 선택 (일부 ON)</p>
             <div class="cb-list">
               <div class="cb-row">
                 <div class="cb-box cb-off"></div>
-                <span class="cb-label-text" style="font-weight:600;">전체 동의합니다.</span>
+                <span class="cb-label-text fw6">전체 동의합니다.</span>
               </div>
               <div class="cb-sep"></div>
               <div class="cb-row cb-i1">
@@ -1721,7 +1943,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
               <div class="cb-row cb-i1">
                 <div class="cb-box cb-on"></div>
-                <span class="cb-label-text" style="font-weight:600;">이용약관 동의 <span class="cb-req">(필수)</span></span>
+                <span class="cb-label-text fw6">이용약관 동의 <span class="cb-req">(필수)</span></span>
               </div>
               <div class="cb-row cb-i2">
                 <div class="cb-box cb-off"></div>
@@ -1730,11 +1952,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:10px; text-transform:uppercase; letter-spacing:.08em;">③ 전체 선택 (모두 ON)</p>
+            <p class="pc-state-label">③ 전체 선택 (모두 ON)</p>
             <div class="cb-list">
               <div class="cb-row">
                 <div class="cb-box cb-on"></div>
-                <span class="cb-label-text" style="font-weight:700;">전체 동의합니다.</span>
+                <span class="cb-label-text fw7">전체 동의합니다.</span>
               </div>
               <div class="cb-sep"></div>
               <div class="cb-row cb-i1">
@@ -1747,7 +1969,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
               <div class="cb-row cb-i1">
                 <div class="cb-box cb-on"></div>
-                <span class="cb-label-text" style="font-weight:600;">이용약관 동의 <span class="cb-req">(필수)</span></span>
+                <span class="cb-label-text fw6">이용약관 동의 <span class="cb-req">(필수)</span></span>
               </div>
               <div class="cb-row cb-i2">
                 <div class="cb-box cb-on"></div>
@@ -1784,18 +2006,18 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <h2 class="section-title">그룹코드 종료 상태 카드 (grp-card)</h2>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; flex-direction:column; gap:12px;">
+        <div class="pc-guide col gap-12">
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.08em;">① 정상</p>
+            <p class="pc-state-label sm">① 정상</p>
             <div class="grp-card">
               <div class="grp-strip">
                 <div class="grp-strip-left">
                   <span class="grp-strip-dot"></span>
                   <span class="grp-strip-label">그룹 공유</span>
                 </div>
-                <span style="font-size:11px; color:rgba(0,0,0,0.45);">D-14</span>
+                <span class="grp-dday">D-14</span>
               </div>
-              <div style="padding:16px 20px 4px; font-size:16px; font-weight:700;">봄 한정 굿즈 묶음</div>
+              <div class="grp-card-title">봄 한정 굿즈 묶음</div>
               <div class="grp-items-row">
                 <div class="grp-tile"><div class="grp-thumb active-t">🌸</div><p class="grp-tile-name">스티커팩</p></div>
                 <div class="grp-tile"><div class="grp-thumb active-t">🔑</div><p class="grp-tile-name">키링</p></div>
@@ -1804,7 +2026,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.08em;">② 일부 종료</p>
+            <p class="pc-state-label sm">② 일부 종료</p>
             <div class="grp-card">
               <div class="grp-strip">
                 <div class="grp-strip-left">
@@ -1812,9 +2034,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
                   <span class="grp-strip-label">그룹 공유</span>
                   <span class="grp-strip-partial">· 일부 종료</span>
                 </div>
-                <span style="font-size:11px; color:rgba(0,0,0,0.45);">D-7</span>
+                <span class="grp-dday">D-7</span>
               </div>
-              <div style="padding:16px 20px 4px; font-size:16px; font-weight:700;">단풍 엽서 기획전</div>
+              <div class="grp-card-title">단풍 엽서 기획전</div>
               <div class="grp-items-row">
                 <div class="grp-tile"><div class="grp-thumb active-t">🍁</div><p class="grp-tile-name">엽서 A</p></div>
                 <div class="grp-tile"><div class="grp-thumb soldout-t"><span>🌿</span><div class="grp-so-overlay"><span class="grp-so-text">SOLD<br>OUT</span></div></div><p class="grp-tile-name">엽서 B</p></div>
@@ -1823,7 +2045,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
           <div>
-            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.08em;">③ 전체 종료</p>
+            <p class="pc-state-label sm">③ 전체 종료</p>
             <div class="grp-card">
               <div class="grp-strip">
                 <div class="grp-strip-left">
@@ -1831,9 +2053,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
                   <span class="grp-strip-label" style="color:#dc2626;">그룹 공유</span>
                   <span class="grp-strip-all">· 전체 종료</span>
                 </div>
-                <span style="font-size:11px; color:rgba(0,0,0,0.45);">D-0</span>
+                <span class="grp-dday">D-0</span>
               </div>
-              <div style="padding:16px 20px 4px; font-size:16px; font-weight:700; opacity:.6;">여름 스페셜 세트</div>
+              <div class="grp-card-title dim">여름 스페셜 세트</div>
               <div class="grp-items-row">
                 <div class="grp-tile"><div class="grp-thumb soldout-t"><span>🐚</span><div class="grp-so-overlay"><span class="grp-so-text">SOLD<br>OUT</span></div></div><p class="grp-tile-name">조개 뱃지</p></div>
                 <div class="grp-tile"><div class="grp-thumb soldout-t"><span>🌊</span><div class="grp-so-overlay"><span class="grp-so-text">SOLD<br>OUT</span></div></div><p class="grp-tile-name">엽서</p></div>
@@ -1867,9 +2089,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <h2 class="section-title">그룹관리 탭 &amp; 통계 (grp-tab / grp-stat)</h2>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="padding:0; background:transparent; border:none;">
-          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:20px;">
-            <p style="font-size:16px; font-weight:700; margin-bottom:12px;">그룹 관리</p>
+        <div class="pc-guide raw">
+          <div class="pc-inner">
+            <p class="pc-preview-title mb">그룹 관리</p>
           <div class="grp-tab-bar">
             <button class="grp-tab-pill act">GRP-A · 봄 세트</button>
             <button class="grp-tab-pill inact">GRP-B · 여름</button>
@@ -1929,7 +2151,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="pc-guide">
-          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:20px; max-width:520px; margin:0 auto;">
+          <div class="pc-inner w520">
           <div class="mycode-main-tabs">
             <button class="mycode-main-tab on">내 코드</button>
             <button class="mycode-main-tab off">받은 코드</button>
@@ -1937,7 +2159,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <p class="mycode-section-label">활성 · 8개</p>
           <div class="mycode-card">
             <div class="mycode-thumb">🔑</div>
-            <div style="flex:1;">
+            <div class="mycode-info">
               <p class="mycode-title">봄 아크릴 키링</p>
               <p class="mycode-meta">D-23 · 조회 18 · 구매 7</p>
             </div>
@@ -1946,7 +2168,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           </div>
           <div class="mycode-card">
             <div class="mycode-thumb">🌟</div>
-            <div style="flex:1;">
+            <div class="mycode-info">
               <p class="mycode-title">여름 홀로그램 스티커</p>
               <p class="mycode-meta">D-5 · 조회 34 · 구매 12</p>
             </div>
@@ -1954,23 +2176,23 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <span class="mycode-price">6,500원</span>
           </div>
           <p class="mycode-section-label">종료 · 4개</p>
-          <div class="mycode-card" style="opacity:.7;">
-            <div class="mycode-thumb" style="opacity:.5;">🧣</div>
-            <div style="flex:1;">
+          <div class="mycode-card dim">
+            <div class="mycode-thumb dim">🧣</div>
+            <div class="mycode-info">
               <p class="mycode-title">패브릭 포스터 소형</p>
               <p class="mycode-meta">2026.03.31 종료 · 구매 14</p>
             </div>
             <span class="mycode-status ended-s">종료</span>
-            <span class="mycode-price" style="color:var(--text-muted);">18,000원</span>
+            <span class="mycode-price muted">18,000원</span>
           </div>
-          <div class="mycode-card" style="opacity:.7;">
-            <div class="mycode-thumb" style="opacity:.5;">🎴</div>
-            <div style="flex:1;">
+          <div class="mycode-card dim">
+            <div class="mycode-thumb dim">🎴</div>
+            <div class="mycode-info">
               <p class="mycode-title">한정판 포카 12종</p>
               <p class="mycode-meta">2026.04.25 품절 · 구매 88</p>
             </div>
             <span class="mycode-status soldout-s">품절</span>
-            <span class="mycode-price" style="color:var(--text-muted);">22,000원</span>
+            <span class="mycode-price muted">22,000원</span>
           </div>
           </div>
         </div>
@@ -2004,7 +2226,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">마이퍼블로그 사이드바 네비게이션. 너비 220px · PC 전용. 퍼블코드 대시보드 좌측에 위치</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; justify-content:center;">
+        <div class="pc-guide center">
           <div class="lnb-demo-wrap">
             <div class="lnb-header">
               <p class="lnb-header-name">MY PUBLOG</p>
@@ -2066,10 +2288,10 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">퍼블코드 내 탭 전환 UI. 알약형(border-radius 9999px) · height 44px</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <div class="pc-guide row-c gap-8">
           <button class="subtab-btn subtab-active">퍼블코드 <span class="subtab-count">5</span></button>
           <button class="subtab-btn subtab-inactive">그룹코드 <span class="subtab-count">3</span></button>
-          <span style="display:inline-flex; align-items:center; padding:0 12px; font-size:11px; color:var(--text-muted);">그룹코드 선택 시 →</span>
+          <span class="etc-hint">그룹코드 선택 시 →</span>
           <button class="subtab-btn subtab-inactive">퍼블코드</button>
           <button class="subtab-btn subtab-purple">그룹코드 <span class="subtab-count">3</span></button>
         </div>
@@ -2089,7 +2311,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">퍼블코드·그룹코드를 표시하는 인라인 칩. 오른쪽에 복사 버튼 포함</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div class="pc-guide wrap gap-12">
           <div class="codechip codechip-pub">PUBL-7K3M-A2<button class="codechip-copy">복사</button></div>
           <div class="codechip codechip-grp">GRP-2024-XZ7<button class="codechip-copy">복사</button></div>
         </div>
@@ -2108,15 +2330,15 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">코드 만료일까지 남은 일수를 표시하는 상태 배지. 긴급도에 따라 3단계 색상 분기</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <div class="pc-guide row-c gap-10">
           <span class="dday-badge dday-urgent">D-2</span>
-          <span style="font-size:11px; color:var(--text-muted);">3일 이하</span>
-          <span style="padding:0 8px; color:var(--border);">|</span>
+          <span class="dday-legend-text">3일 이하</span>
+          <span class="dday-legend-sep">|</span>
           <span class="dday-badge dday-warn">D-5</span>
-          <span style="font-size:11px; color:var(--text-muted);">4~7일</span>
-          <span style="padding:0 8px; color:var(--border);">|</span>
+          <span class="dday-legend-text">4~7일</span>
+          <span class="dday-legend-sep">|</span>
           <span class="dday-badge dday-safe">D-14</span>
-          <span style="font-size:11px; color:var(--text-muted);">8일 이상</span>
+          <span class="dday-legend-text">8일 이상</span>
         </div>
         <div class="divider"></div>
         <div class="card-label">Spec</div>
@@ -2134,12 +2356,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">? 버튼 클릭 시 해당 기능 설명을 팝업으로 보여주는 도움말 컴포넌트</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div class="pc-guide wrap gap-10">
           <button class="inlinehelp-btn">
             <span class="inlinehelp-icon">?</span> 퍼블코드란?
           </button>
-          <button class="inlinehelp-btn" style="border-color:rgba(81,83,130,0.3); color:#515382;">
-            <span class="inlinehelp-icon" style="background:rgba(81,83,130,0.12); color:#515382;">?</span> 그룹코드란?
+          <button class="inlinehelp-btn att">
+            <span class="inlinehelp-icon att">?</span> 그룹코드란?
           </button>
         </div>
         <div class="divider"></div>
@@ -2150,7 +2372,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr><td>기본 (닫힘)</td><td>#FFFFFF</td><td>rgba(0,0,0,0.15)</td><td>36px / 9999px</td></tr>
             <tr><td>열림 (퍼블코드)</td><td>#FFF9D6 (accent-soft)</td><td>#222450</td><td>36px / 9999px</td></tr>
             <tr><td>열림 (그룹코드)</td><td>#ECEEFF</td><td>#515382</td><td>36px / 9999px</td></tr>
-            <tr><td colspan="4" style="color:var(--text-muted);">? 버튼: 16px 원형 · 텍스트: 12px 500 · 모바일 바텀시트 / PC 팝오버</td></tr>
+            <tr><td colspan="4" class="spec-muted">? 버튼: 16px 원형 · 텍스트: 12px 500 · 모바일 바텀시트 / PC 팝오버</td></tr>
           </tbody>
         </table>
       </div>
@@ -2159,7 +2381,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">퍼블코드 버전 통계 카드. 기본 stat-card보다 큰 수치와 경고 상태 포함</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:12px;">
+        <div class="pc-guide auto-grid gap-12">
           <div class="stat-card-pc">
             <p class="stat-label">공유한 코드</p>
             <p class="stat-value">8</p>
@@ -2184,7 +2406,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr><td>기본 (Default)</td><td>#FFFFFF</td><td>muted / #111111</td><td>16px / 20px</td></tr>
             <tr><td>경고 (Warn)</td><td>#fff7ed</td><td>#ea580c / #ea580c</td><td>16px / 20px</td></tr>
             <tr><td>그룹 (Group)</td><td>#FFFFFF</td><td>#515382 / #515382</td><td>16px / 20px</td></tr>
-            <tr><td colspan="4" style="color:var(--text-muted);">숫자: Montserrat 700 32px · 라벨: 13px 500 · 서브: 12px</td></tr>
+            <tr><td colspan="4" class="spec-muted">숫자: Montserrat 700 32px · 라벨: 13px 500 · 서브: 12px</td></tr>
           </tbody>
         </table>
       </div>
@@ -2297,7 +2519,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
       <div class="callout-card">
         <div class="callout-card-title">처음이라면 이렇게 시작하세요</div>
-        <div class="callout-card-desc" style="margin-bottom:14px">클로드 코드로 프로젝트가 자동화되어 있어요. 관리자는 AI가 안내하는 흐름에 따라 작업하면 돼요.<br>VS Code를 프로젝트 경로에 연결하고 채팅창에 <code>새 작업</code>이라고 입력해보세요.</div>
+        <div class="callout-card-desc mb14">클로드 코드로 프로젝트가 자동화되어 있어요. 관리자는 AI가 안내하는 흐름에 따라 작업하면 돼요.<br>VS Code를 프로젝트 경로에 연결하고 채팅창에 <code>새 작업</code>이라고 입력해보세요.</div>
         <button class="step-btn" onclick="copyNasPath(this)">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           프로젝트 경로 복사
@@ -2308,15 +2530,15 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">디자인 변경은 명령어 없이 바로 말하면 돼요. 예: "배너 추가해줘", "버튼 색상 바꿔줘"</div>
       <div class="section-card">
         <table class="spec-table">
-          <colgroup><col style="width:120px"><col></colgroup>
+          <colgroup><col class="am1-col120"><col></colgroup>
           <thead>
             <tr><th>명령어</th><th>설명</th></tr>
           </thead>
           <tbody>
-            <tr><td style="white-space:nowrap"><code>새 작업</code></td><td>노션 확인 → received/ 파일 준비 → 검수 → 수정까지 단계별 안내해요.<br />GitHub 업로드·로그·노션 완료는 마무리 단계에서 자동 처리돼요.</td></tr>
-            <tr><td style="white-space:nowrap"><code>이어서</code></td><td>LOG.md 마지막 항목과 노션 미완료 항목을 확인해 이전 작업을 어느 단계부터 재개할지 안내해줘요.</td></tr>
-            <tr><td style="white-space:nowrap"><code>백업해줘</code></td><td>버전 확정 + zip + 가이드 페이지 스냅샷을 backup/ 폴더에 저장해요.</td></tr>
-            <tr><td style="white-space:nowrap"><code>로그 저장</code></td><td>대화를 중간에 끊을 때 작업 내용을 LOG.md에 바로 기록해요.</td></tr>
+            <tr><td class="am1-nowrap"><code>새 작업</code></td><td>노션 확인 → received/ 파일 준비 → 검수 → 수정까지 단계별 안내해요.<br />GitHub 업로드·로그·노션 완료는 마무리 단계에서 자동 처리돼요.</td></tr>
+            <tr><td class="am1-nowrap"><code>이어서</code></td><td>LOG.md 마지막 항목과 노션 미완료 항목을 확인해 이전 작업을 어느 단계부터 재개할지 안내해줘요.</td></tr>
+            <tr><td class="am1-nowrap"><code>백업해줘</code></td><td>버전 확정 + zip + 가이드 페이지 스냅샷을 backup/ 폴더에 저장해요.</td></tr>
+            <tr><td class="am1-nowrap"><code>로그 저장</code></td><td>대화를 중간에 끊을 때 작업 내용을 LOG.md에 바로 기록해요.</td></tr>
           </tbody>
         </table>
       </div>
@@ -2370,7 +2592,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 │   └── publog-code.md
 └── <span class="dir">docs/</span>
     └── index.html         <span class="comment">← GitHub Pages (지금 보고 있는 이 가이드 페이지)</span></pre>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div class="flex-12w">
           <a class="step-btn" href="https://github.com/abyzweb/publog-design-system" target="_blank">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             GitHub 저장소 바로가기
@@ -2447,7 +2669,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
         </div>
-        <div style="margin-top:12px">
+        <div class="am1-block-mt">
           <a class="step-btn" href="https://claude.ai/design" target="_blank">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             클로드 디자인 바로가기
@@ -2478,7 +2700,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
             <div class="brand-card secondary">
               <label>플랫폼 부제 (공식 슬로건)</label>
-              <div class="name" style="font-size:22px; font-family:'Noto Sans KR'; font-weight:700; letter-spacing:0;">Welcome to GOODS planet</div>
+              <div class="name noto">Welcome to GOODS planet</div>
               <div class="sub-name">나만의 굿즈 만들기 · 굿즈플래닛</div>
             </div>
           </div>
@@ -2493,7 +2715,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="slogan-en">welcome to GOODS planet</div>
             <div class="slogan-desc">
               퍼블로그의 슬로건은 "welcome to GOODS planet"으로, <strong>모든 추억을 굿즈로 담아 나눌 수 있다는 중앙 중심성</strong>으로써 모든 이들이 자신 만의 특별하고 가치있게 살아가고자 하는 퍼블로그의 지향을 나타냅니다.<br>
-              <span style="font-size:11px; color:var(--text-muted); margin-top:4px; display:block;">출처: publog.co.kr/sub_company/new/brand_identity.asp</span>
+              <span class="bg-source-note">출처: publog.co.kr/sub_company/new/brand_identity.asp</span>
             </div>
           </div>
         </div>
@@ -2502,18 +2724,18 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <h2 class="section-title">브랜드 포지셔닝</h2>
       <div class="section-card">
         <div class="bg-guide">
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
-            <div style="padding:20px; border-radius:10px; background:var(--belief); border:1px solid var(--border); border-top:3px solid var(--trendy);">
-              <div style="font-weight:700; font-size:13px; color:var(--trendy); margin-bottom:7px;">🎨 굿즈 크리에이터</div>
-              <div style="font-size:12px; color:var(--text-muted); line-height:1.7;">팬덤·덕질 굿즈, 스티커·포토카드 소량 제작</div>
+          <div class="bg-bp-grid">
+            <div class="bg-bp-card ct">
+              <div class="bg-bp-title">🎨 굿즈 크리에이터</div>
+              <div class="bg-bp-desc">팬덤·덕질 굿즈, 스티커·포토카드 소량 제작</div>
             </div>
-            <div style="padding:20px; border-radius:10px; background:var(--belief); border:1px solid var(--border); border-top:3px solid var(--friendly);">
-              <div style="font-weight:700; font-size:13px; color:var(--trendy); margin-bottom:7px;">👰 라이프 이벤트</div>
-              <div style="font-size:12px; color:var(--text-muted); line-height:1.7;">웨딩, 돌잔치, 졸업, 생일 기념 굿즈</div>
+            <div class="bg-bp-card cf">
+              <div class="bg-bp-title">👰 라이프 이벤트</div>
+              <div class="bg-bp-desc">웨딩, 돌잔치, 졸업, 생일 기념 굿즈</div>
             </div>
-            <div style="padding:20px; border-radius:10px; background:var(--belief); border:1px solid var(--border); border-top:3px solid var(--attention);">
-              <div style="font-weight:700; font-size:13px; color:var(--trendy); margin-bottom:7px;">🏢 기업·단체</div>
-              <div style="font-size:12px; color:var(--text-muted); line-height:1.7;">어린이집, 스포츠팀, 종교단체, 동호회</div>
+            <div class="bg-bp-card ca">
+              <div class="bg-bp-title">🏢 기업·단체</div>
+              <div class="bg-bp-desc">어린이집, 스포츠팀, 종교단체, 동호회</div>
             </div>
           </div>
         </div>
@@ -2598,9 +2820,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="bg-guide">
           <div class="official-colors">
             <div class="color-tile">
-              <div class="color-swatch" style="background:#222450;">
-                <div class="role-tag" style="color:rgba(255,255,255,0.6);">TRENDY</div>
-                <div class="hex-tag" style="color:#fff;">#222450</div>
+              <div class="color-swatch bg-cs-trendy">
+                <div class="role-tag bg-cs-role-w">TRENDY</div>
+                <div class="hex-tag bg-cs-hex-white">#222450</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">트렌디 — Brand Primary</div>
@@ -2608,9 +2830,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="color-tile">
-              <div class="color-swatch" style="background:#FFCE2D;">
-                <div class="role-tag" style="color:rgba(34,36,80,0.6);">FRIENDLY</div>
-                <div class="hex-tag" style="color:var(--trendy);">#FFCE2D</div>
+              <div class="color-swatch bg-cs-friendly">
+                <div class="role-tag bg-cs-role-n">FRIENDLY</div>
+                <div class="hex-tag bg-cs-hex-navy">#FFCE2D</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">프렌들리 — Brand Yellow</div>
@@ -2618,9 +2840,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="color-tile">
-              <div class="color-swatch" style="background:#FFFFFF; border-bottom:1px solid var(--border);">
-                <div class="role-tag" style="color:#bbb;">CLEAR</div>
-                <div class="hex-tag" style="color:#ccc;">#FFFFFF</div>
+              <div class="color-swatch bg-cs-clear">
+                <div class="role-tag bg-cs-role-gray">CLEAR</div>
+                <div class="hex-tag bg-cs-hex-gray">#FFFFFF</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">클리어 — White Base</div>
@@ -2628,9 +2850,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="color-tile">
-              <div class="color-swatch" style="background:#F0F1F6;">
-                <div class="role-tag" style="color:#999;">BELIEF</div>
-                <div class="hex-tag" style="color:#666;">#F0F1F6</div>
+              <div class="color-swatch bg-cs-belief">
+                <div class="role-tag bg-cs-role-gray">BELIEF</div>
+                <div class="hex-tag bg-cs-hex-muted">#F0F1F6</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">빌리프 — Background</div>
@@ -2638,9 +2860,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="color-tile">
-              <div class="color-swatch" style="background:#111111;">
-                <div class="role-tag" style="color:rgba(255,255,255,0.4);">STABILITY</div>
-                <div class="hex-tag" style="color:#fff;">#111111</div>
+              <div class="color-swatch bg-cs-stability">
+                <div class="role-tag bg-cs-role-w">STABILITY</div>
+                <div class="hex-tag bg-cs-hex-white">#111111</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">스태빌리티 — Text Main</div>
@@ -2648,9 +2870,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="color-tile">
-              <div class="color-swatch" style="background:#515382;">
-                <div class="role-tag" style="color:rgba(255,255,255,0.6);">ATTENTION</div>
-                <div class="hex-tag" style="color:#fff;">#515382</div>
+              <div class="color-swatch bg-cs-attention">
+                <div class="role-tag bg-cs-role-w">ATTENTION</div>
+                <div class="hex-tag bg-cs-hex-white">#515382</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">어텐션 — Text Point</div>
@@ -2681,13 +2903,13 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Grayscale</div>
         <div class="bg-guide">
           <div class="gray-bar">
-            <div class="gray-stop" style="background:#1a1a1a;"><div class="g-hex" style="color:#fff;">#1A1A1A</div><div class="g-role" style="color:rgba(255,255,255,0.4);">본문강조</div></div>
-            <div class="gray-stop" style="background:#333;"><div class="g-hex" style="color:#fff;">#333333</div><div class="g-role" style="color:rgba(255,255,255,0.4);">GNB링크</div></div>
-            <div class="gray-stop" style="background:#666;"><div class="g-hex" style="color:#fff;">#666666</div><div class="g-role" style="color:rgba(255,255,255,0.4);">보조텍스트</div></div>
-            <div class="gray-stop" style="background:#999;"><div class="g-hex" style="color:#fff;">#999999</div><div class="g-role" style="color:rgba(255,255,255,0.4);">힌트</div></div>
-            <div class="gray-stop" style="background:#ccc;"><div class="g-hex" style="color:#555;">#CCCCCC</div><div class="g-role" style="color:#888;">구분선</div></div>
-            <div class="gray-stop" style="background:#e4e5ec;"><div class="g-hex" style="color:#555;">#E4E5EC</div><div class="g-role" style="color:#888;">테두리</div></div>
-            <div class="gray-stop" style="background:#f0f1f6;"><div class="g-hex" style="color:#555;">#F0F1F6</div><div class="g-role" style="color:#888;">배경(Belief)</div></div>
+            <div class="gray-stop bg-gs-1a"><div class="g-hex bg-gs-hw">#1A1A1A</div><div class="g-role bg-gs-rd">본문강조</div></div>
+            <div class="gray-stop bg-gs-33"><div class="g-hex bg-gs-hw">#333333</div><div class="g-role bg-gs-rd">GNB링크</div></div>
+            <div class="gray-stop bg-gs-66"><div class="g-hex bg-gs-hw">#666666</div><div class="g-role bg-gs-rd">보조텍스트</div></div>
+            <div class="gray-stop bg-gs-99"><div class="g-hex bg-gs-hw">#999999</div><div class="g-role bg-gs-rd">힌트</div></div>
+            <div class="gray-stop bg-gs-cc"><div class="g-hex bg-gs-hm">#CCCCCC</div><div class="g-role bg-gs-rm">구분선</div></div>
+            <div class="gray-stop bg-gs-e4"><div class="g-hex bg-gs-hm">#E4E5EC</div><div class="g-role bg-gs-rm">테두리</div></div>
+            <div class="gray-stop bg-gs-f0"><div class="g-hex bg-gs-hm">#F0F1F6</div><div class="g-role bg-gs-rm">배경(Belief)</div></div>
           </div>
         </div>
       </div>
@@ -2725,8 +2947,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <div class="font-specimen-grid">
             <div class="font-card">
               <div class="font-card-preview">
-                <div style="font-family:'Montserrat',sans-serif; font-size:40px; font-weight:900; color:var(--trendy); letter-spacing:-1.5px; line-height:1;">PUBLOG</div>
-                <div style="font-family:'Montserrat',sans-serif; font-size:16px; font-weight:400; color:var(--text-muted); margin-top:8px; letter-spacing:0.05em;">GOODS PLANET</div>
+                <div class="bg-fs-publog-hero">PUBLOG</div>
+                <div class="bg-goods-sub">GOODS PLANET</div>
               </div>
               <div class="font-card-meta">
                 <div class="fn">Montserrat — 영문 전용</div>
@@ -2735,7 +2957,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
             <div class="font-card">
               <div class="font-card-preview">
-                <div style="font-family:'Noto Sans KR',sans-serif; font-size:32px; font-weight:700; color:var(--trendy); line-height:1.2;">나만의 굿즈를<br>만드세요</div>
+                <div class="bg-fs-noto-hero">나만의 굿즈를<br>만드세요</div>
               </div>
               <div class="font-card-meta">
                 <div class="fn">YoonGothicPro760 / Noto Sans KR</div>
@@ -2744,9 +2966,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
           </div>
           <div class="font-card">
-            <div class="font-card-preview" style="background:var(--trendy);">
-              <div style="font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#fff; letter-spacing:2px;">GSB FONT</div>
-              <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:8px;">이벤트 배너 · 특별 프로모션 타이틀 한정 사용</div>
+            <div class="font-card-preview trendy">
+              <div class="bg-gsb-title">GSB FONT</div>
+              <div class="bg-gsb-note">이벤트 배너 · 특별 프로모션 타이틀 한정 사용</div>
             </div>
             <div class="font-card-meta">
               <div class="fn">GSB — 이벤트 전용</div>
@@ -2760,41 +2982,41 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Type Scale</div>
         <table class="spec-table">
-          <thead><tr><th style="width:160px;">사용처</th><th>예시</th><th style="width:220px;">스펙</th></tr></thead>
+          <thead><tr><th class="th-160">사용처</th><th>예시</th><th class="th-220">스펙</th></tr></thead>
           <tbody>
             <tr>
               <td>H1 · 영문 대타이틀</td>
-              <td><span style="font-family:Montserrat,sans-serif; font-size:40px; font-weight:900; color:var(--trendy); letter-spacing:-1.5px; line-height:1;">PUBLOG</span></td>
+              <td><span class="bg-fs-publog-hero">PUBLOG</span></td>
               <td>Montserrat 900<br>48px+ · letter-spacing: -1.5px</td>
             </tr>
             <tr>
               <td>H2 · 섹션 타이틀</td>
-              <td><span style="font-family:Montserrat,sans-serif; font-size:26px; font-weight:800; color:var(--trendy);">BEST SELLER</span></td>
+              <td><span class="bg-fs-montserrat-lg">BEST SELLER</span></td>
               <td>Montserrat 800<br>28–32px</td>
             </tr>
             <tr>
               <td>H3 · 상품명</td>
-              <td><span style="font-family:'Noto Sans KR'; font-size:17px; font-weight:700; color:var(--stability);">포토카드 · 아크릴 키링</span></td>
+              <td><span class="bg-fs-noto-lg">포토카드 · 아크릴 키링</span></td>
               <td>Noto Sans KR 700<br>16–20px</td>
             </tr>
             <tr>
               <td>Body · 본문</td>
-              <td><span style="font-size:13px; color:var(--text-body);">1개부터 대량까지 맞춤 제작 · 무료 샘플 · 대량할인</span></td>
+              <td><span class="bg-fs-body">1개부터 대량까지 맞춤 제작 · 무료 샘플 · 대량할인</span></td>
               <td>Noto Sans KR 400<br>13–14px</td>
             </tr>
             <tr>
               <td>Price · 가격</td>
-              <td><span style="font-family:Montserrat,sans-serif; font-size:22px; font-weight:800; color:var(--trendy);">6,400원~</span></td>
+              <td><span class="bg-fs-price">6,400원~</span></td>
               <td>Montserrat 800<br>18–24px · 반드시 ~포함</td>
             </tr>
             <tr>
               <td>GNB 메뉴</td>
-              <td><span style="font-family:Montserrat,sans-serif; font-size:13px; color:#333; letter-spacing:0;">사진인화 · 스티커 · 아크릴</span></td>
+              <td><span class="bg-fs-montserrat-sm">사진인화 · 스티커 · 아크릴</span></td>
               <td>Montserrat 400<br>13px · letter-spacing: 0 !</td>
             </tr>
             <tr>
               <td>Caption · 주석</td>
-              <td><span style="font-size:11px; font-weight:300; color:var(--text-light);">평일 9:30-17:00 · 주말·공휴일 휴무</span></td>
+              <td><span class="bg-fs-footnote">평일 9:30-17:00 · 주말·공휴일 휴무</span></td>
               <td>Noto Sans KR 300<br>10–12px · color #999</td>
             </tr>
           </tbody>
@@ -2815,31 +3037,31 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Menu Tags</div>
         <div class="bg-guide">
-          <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end;">
-            <div style="text-align:center;">
-              <div style="padding-bottom:10px;"><span class="memo_tag tag_new">NEW</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy);">NEW</div>
-              <div style="font-size:10px; color:var(--text-muted);">#ff8f17</div>
+          <div class="bg-tag-row">
+            <div class="bg-tag-item">
+              <div class="bg-tag-preview"><span class="memo_tag tag_new">NEW</span></div>
+              <div class="bg-tag-name">NEW</div>
+              <div class="bg-tag-code">#ff8f17</div>
             </div>
-            <div style="text-align:center;">
-              <div style="padding-bottom:10px;"><span class="memo_tag tag_hot">HOT</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy);">HOT</div>
-              <div style="font-size:10px; color:var(--text-muted);">#e5362c</div>
+            <div class="bg-tag-item">
+              <div class="bg-tag-preview"><span class="memo_tag tag_hot">HOT</span></div>
+              <div class="bg-tag-name">HOT</div>
+              <div class="bg-tag-code">#e5362c</div>
             </div>
-            <div style="text-align:center;">
-              <div style="padding-bottom:10px;"><span class="memo_tag tag_season">SEASON</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy);">SEASON</div>
-              <div style="font-size:10px; color:var(--text-muted);">#222450</div>
+            <div class="bg-tag-item">
+              <div class="bg-tag-preview"><span class="memo_tag tag_season">SEASON</span></div>
+              <div class="bg-tag-name">SEASON</div>
+              <div class="bg-tag-code">#222450</div>
             </div>
-            <div style="text-align:center;">
-              <div style="padding-bottom:10px;"><span class="memo_tag line_tag01">상담</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy);">상담</div>
-              <div style="font-size:10px; color:var(--text-muted);">#7b42f6 아웃라인</div>
+            <div class="bg-tag-item">
+              <div class="bg-tag-preview"><span class="memo_tag line_tag01">상담</span></div>
+              <div class="bg-tag-name">상담</div>
+              <div class="bg-tag-code">#7b42f6 아웃라인</div>
             </div>
-            <div style="text-align:center;">
-              <div style="padding-bottom:10px;"><span class="memo_tag line_tag02">즉시</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy);">즉시</div>
-              <div style="font-size:10px; color:var(--text-muted);">#e5362c 아웃라인</div>
+            <div class="bg-tag-item">
+              <div class="bg-tag-preview"><span class="memo_tag line_tag02">즉시</span></div>
+              <div class="bg-tag-name">즉시</div>
+              <div class="bg-tag-code">#e5362c 아웃라인</div>
             </div>
           </div>
         </div>
@@ -2850,21 +3072,21 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">GNB Tags</div>
         <div class="bg-guide">
-          <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end;">
-            <div style="text-align:center;">
+          <div class="bg-tag-row">
+            <div class="bg-tag-item">
               <div><span class="gnb-tag gnb-tag-hot">HOT</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">HOT</div>
-              <div style="font-size:10px; color:var(--text-muted);">bg #ff7373 / filled</div>
+              <div class="bg-tag-name mt">HOT</div>
+              <div class="bg-tag-code">bg #ff7373 / filled</div>
             </div>
-            <div style="text-align:center;">
+            <div class="bg-tag-item">
               <div><span class="gnb-tag gnb-tag-new">NEW</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">NEW</div>
-              <div style="font-size:10px; color:var(--text-muted);">#ff4040 / outline</div>
+              <div class="bg-tag-name mt">NEW</div>
+              <div class="bg-tag-code">#ff4040 / outline</div>
             </div>
-            <div style="text-align:center;">
+            <div class="bg-tag-item">
               <div><span class="gnb-tag gnb-tag-upgrade">UP</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">UPGRADE</div>
-              <div style="font-size:10px; color:var(--text-muted);">bg #ff7373 / w:22px</div>
+              <div class="bg-tag-name mt">UPGRADE</div>
+              <div class="bg-tag-code">bg #ff7373 / w:22px</div>
             </div>
           </div>
         </div>
@@ -2875,21 +3097,21 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Product Tags</div>
         <div class="bg-guide">
-          <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end;">
-            <div style="text-align:center;">
+          <div class="bg-tag-row">
+            <div class="bg-tag-item">
               <div><span class="b b-coupon">쿠폰가</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">쿠폰가</div>
-              <div style="font-size:10px; color:var(--text-muted);">bg #222450 / 12px</div>
+              <div class="bg-tag-name mt">쿠폰가</div>
+              <div class="bg-tag-code">bg #222450 / 12px</div>
             </div>
-            <div style="text-align:center;">
+            <div class="bg-tag-item">
               <div><span class="b b-pvc">PVC</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">PVC</div>
-              <div style="font-size:10px; color:var(--text-muted);">#222450 outline / 30×16px</div>
+              <div class="bg-tag-name mt">PVC</div>
+              <div class="bg-tag-code">#222450 outline / 30×16px</div>
             </div>
-            <div style="text-align:center;">
+            <div class="bg-tag-item">
               <div><span class="b b-pvc">NFC</span></div>
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">NFC</div>
-              <div style="font-size:10px; color:var(--text-muted);">동일 스타일 공용</div>
+              <div class="bg-tag-name mt">NFC</div>
+              <div class="bg-tag-code">동일 스타일 공용</div>
             </div>
           </div>
         </div>
@@ -2900,38 +3122,38 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Product Badges · 08 TYPES</div>
         <div class="bg-guide">
-          <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-end; overflow-x:auto;">
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://www.publog.co.kr/gnb/new/l_kc_mark.png?t=2" alt="KC 인증" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">KC 인증</div>
+          <div class="bg-icon-row">
+            <div class="bg-icon-item">
+              <img src="https://www.publog.co.kr/gnb/new/l_kc_mark.png?t=2" alt="KC 인증" class="bg-icon-img">
+              <div class="bg-icon-label">KC 인증</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_low.png?t=1" alt="업계 최저가" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">업계 최저가</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_low.png?t=1" alt="업계 최저가" class="bg-icon-img">
+              <div class="bg-icon-label">업계 최저가</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_quick.png?t=1" alt="번개배송" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">번개배송</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_quick.png?t=1" alt="번개배송" class="bg-icon-img">
+              <div class="bg-icon-label">번개배송</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_newdesign.png?t=1" alt="NEW DESIGN" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">NEW DESIGN</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_newdesign.png?t=1" alt="NEW DESIGN" class="bg-icon-img">
+              <div class="bg-icon-label">NEW DESIGN</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/cutr_icon.png?t=1" alt="귀도리컷팅" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">귀도리컷팅</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/cutr_icon.png?t=1" alt="귀도리컷팅" class="bg-icon-img">
+              <div class="bg-icon-label">귀도리컷팅</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_designadvice_tag.png?t=1" alt="대량구매 상담상품" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">대량구매 상담상품</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_designadvice_tag.png?t=1" alt="대량구매 상담상품" class="bg-icon-img">
+              <div class="bg-icon-label">대량구매 상담상품</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_designapply_tag.png?t=1" alt="디자인 대행신청" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">디자인 대행신청</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_designapply_tag.png?t=1" alt="디자인 대행신청" class="bg-icon-img">
+              <div class="bg-icon-label">디자인 대행신청</div>
             </div>
-            <div style="text-align:center; flex-shrink:0;">
-              <img src="https://stay10.publog.co.kr/gnb/new/l_shipstoday_tag.png?t=1" alt="2시 마감 당일출고" style="width:45px; height:45px; object-fit:contain; display:block; margin:0 auto;">
-              <div style="font-size:11px; font-weight:700; color:var(--trendy); margin-top:8px;">2시 마감 당일출고</div>
+            <div class="bg-icon-item">
+              <img src="https://stay10.publog.co.kr/gnb/new/l_shipstoday_tag.png?t=1" alt="2시 마감 당일출고" class="bg-icon-img">
+              <div class="bg-icon-label">2시 마감 당일출고</div>
             </div>
           </div>
         </div>
@@ -2962,11 +3184,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <table class="spec-table">
             <thead><tr><th>버튼</th><th>클래스</th><th>기본 색상</th><th>Hover</th></tr></thead>
             <tbody>
-              <tr><td><button class="btn-primary" style="font-size:11px; padding:6px 14px;">주문하기</button></td><td><code>.btn-primary</code></td><td>bg <strong>#222450</strong> / color #fff</td><td>bg #3a3f7a</td></tr>
-              <tr><td><button class="btn-sky" style="font-size:11px; padding:6px 14px;">바로구매</button></td><td><code>.btn-sky</code></td><td>bg <strong>var(--sky)</strong> / color #fff</td><td>bg #0092c0</td></tr>
-              <tr><td><button class="btn-yellow" style="font-size:11px; padding:6px 14px;">할인쿠폰</button></td><td><code>.btn-yellow</code></td><td>bg <strong>#FFCE2D</strong> / color #222450</td><td>bg #f0c000</td></tr>
-              <tr><td><button class="btn-outline" style="font-size:11px; padding:5px 13px;">담아두기</button></td><td><code>.btn-outline</code></td><td>border <strong>#222450</strong> / color #222450</td><td>bg #222450, color #fff</td></tr>
-              <tr><td><button class="btn-ghost" style="font-size:11px; padding:5px 13px;">샘플신청</button></td><td><code>.btn-ghost</code></td><td>border <strong>#ddd</strong> / color #888</td><td>border #aaa, color #444</td></tr>
+              <tr><td><button class="btn-primary btn-demo">주문하기</button></td><td><code>.btn-primary</code></td><td>bg <strong>#222450</strong> / color #fff</td><td>bg #3a3f7a</td></tr>
+              <tr><td><button class="btn-sky btn-demo">바로구매</button></td><td><code>.btn-sky</code></td><td>bg <strong>var(--sky)</strong> / color #fff</td><td>bg #0092c0</td></tr>
+              <tr><td><button class="btn-yellow btn-demo">할인쿠폰</button></td><td><code>.btn-yellow</code></td><td>bg <strong>#FFCE2D</strong> / color #222450</td><td>bg #f0c000</td></tr>
+              <tr><td><button class="btn-outline btn-demo">담아두기</button></td><td><code>.btn-outline</code></td><td>border <strong>#222450</strong> / color #222450</td><td>bg #222450, color #fff</td></tr>
+              <tr><td><button class="btn-ghost btn-demo">샘플신청</button></td><td><code>.btn-ghost</code></td><td>border <strong>#ddd</strong> / color #888</td><td>border #aaa, color #444</td></tr>
             </tbody>
           </table>
         </div>
@@ -2987,10 +3209,10 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <table class="spec-table">
             <thead><tr><th>버튼</th><th>클래스</th><th>기본 색상</th><th>Hover</th></tr></thead>
             <tbody>
-              <tr><td><button class="btn-delete" style="height:auto; font-size:11px; padding:5px 12px;">선택삭제</button></td><td><code>.btn-delete</code></td><td>bg <strong>#e9e9e9</strong> / color #888</td><td>bg #d5d5d5</td></tr>
-              <tr><td><button class="btn-multi" style="height:auto; font-size:11px; padding:5px 12px;">다중배송 신청하기</button></td><td><code>.btn-multi</code></td><td>bg #fff / border <strong>#ccc</strong> / color #333</td><td>bg #f5f5f5, border #aaa</td></tr>
-              <tr><td><button class="btn-share-cart" style="height:auto; font-size:11px; padding:5px 12px;">공유하기</button></td><td><code>.btn-share-cart</code></td><td>bg #fff / border <strong>#222450</strong> / color #222450</td><td>bg #f0f1f6</td></tr>
-              <tr><td><button class="btn-order-cart" style="height:auto; font-size:11px; padding:5px 18px;">주문하기</button></td><td><code>.btn-order-cart</code></td><td>bg <strong>#222450</strong> / color #fff</td><td>bg #3a3f7a</td></tr>
+              <tr><td><button class="btn-delete btn-demo">선택삭제</button></td><td><code>.btn-delete</code></td><td>bg <strong>#e9e9e9</strong> / color #888</td><td>bg #d5d5d5</td></tr>
+              <tr><td><button class="btn-multi btn-demo">다중배송 신청하기</button></td><td><code>.btn-multi</code></td><td>bg #fff / border <strong>#ccc</strong> / color #333</td><td>bg #f5f5f5, border #aaa</td></tr>
+              <tr><td><button class="btn-share-cart btn-demo">공유하기</button></td><td><code>.btn-share-cart</code></td><td>bg #fff / border <strong>#222450</strong> / color #222450</td><td>bg #f0f1f6</td></tr>
+              <tr><td><button class="btn-order-cart btn-demo">주문하기</button></td><td><code>.btn-order-cart</code></td><td>bg <strong>#222450</strong> / color #fff</td><td>bg #3a3f7a</td></tr>
             </tbody>
           </table>
         </div>
@@ -3010,9 +3232,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <table class="spec-table">
             <thead><tr><th>버튼</th><th>클래스</th><th>기본 색상</th><th>Hover</th></tr></thead>
             <tbody>
-              <tr><td><button class="btn-basket" style="width:44px; height:36px; font-size:14px;">🛒</button></td><td><code>.btn-basket</code></td><td>bg <strong>#cccccc</strong> / color #fff · 70×60px</td><td>bg #b3b3b3</td></tr>
-              <tr><td><button class="btn-make" style="height:36px; padding:0 16px; font-size:12px;">디자인 선택하기</button></td><td><code>.btn-make</code></td><td>bg <strong>#262853</strong> / color #fff · h:60px</td><td>bg #4e58c2</td></tr>
-              <tr><td><button class="btn-pdf" style="height:36px; padding:0 16px; font-size:12px;">PDF 업로드</button></td><td><code>.btn-pdf</code></td><td>bg <strong>#999999</strong> / color #fff · h:60px</td><td>bg #b3b3b3</td></tr>
+              <tr><td><button class="btn-basket btn-demo">🛒</button></td><td><code>.btn-basket</code></td><td>bg <strong>#cccccc</strong> / color #fff · 70×60px</td><td>bg #b3b3b3</td></tr>
+              <tr><td><button class="btn-make btn-demo">디자인 선택하기</button></td><td><code>.btn-make</code></td><td>bg <strong>#262853</strong> / color #fff · h:60px</td><td>bg #4e58c2</td></tr>
+              <tr><td><button class="btn-pdf btn-demo">PDF 업로드</button></td><td><code>.btn-pdf</code></td><td>bg <strong>#999999</strong> / color #fff · h:60px</td><td>bg #b3b3b3</td></tr>
             </tbody>
           </table>
         </div>
@@ -3024,15 +3246,14 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Search</div>
         <div class="bg-guide">
           <!-- 상태 전환 버튼 -->
-          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px;">
+          <div class="search-chip-row">
             <button class="s-state-btn s-on" onclick="showSearchState('tab-menu', this)">① 상품명 탭메뉴</button>
             <button class="s-state-btn" onclick="showSearchState('auto-product', this)">② 상품명 자동완성</button>
             <button class="s-state-btn" onclick="showSearchState('theme', this)">③ 테마샵</button>
             <button class="s-state-btn" onclick="showSearchState('auto-theme', this)">④ 테마샵 자동완성</button>
             <button class="s-state-btn" onclick="showSearchState('pubcode', this)">⑤ 퍼블코드</button>
           </div>
-          <div style="background:var(--belief); padding:32px 28px 80px; border-radius:var(--radius); border:1px solid var(--border);">
-            <div class="search-demo-wrap">
+          <div class="search-demo-wrap">
               <!-- 검색바 -->
               <div class="search_wrap" style="margin-left:0;">
                 <div class="searching_wrap" style="width:100%;">
@@ -3082,7 +3303,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
           </div>
-          <table class="spec-table" style="margin-top:16px;">
+          <table class="spec-table mt-12">
             <thead><tr><th>상태</th><th>탭 표시</th><th>placeholder</th><th>드롭다운</th></tr></thead>
             <tbody>
               <tr><td>① 상품명 탭메뉴 열림</td><td>상품명 ▲</td><td>탁월한 명암과 색감! 꼼꼼한 고급인화</td><td>상품명 ✓ / 테마샵 / 퍼블코드</td></tr>
@@ -3101,7 +3322,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="bg-guide">
           <div class="product-card-row">
             <div class="product-card">
-              <div class="product-card-thumb" style="background:#eef0fa;">📸</div>
+              <div class="product-card-thumb pct-bg-blue">📸</div>
               <div class="product-card-body">
                 <div class="product-card-name">포토북 <span class="b b-h">H</span></div>
                 <div class="product-card-desc">중앙, 두 이상의 꿰매기 방식</div>
@@ -3109,7 +3330,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="product-card">
-              <div class="product-card-thumb" style="background:#fff5f5;">🏷️</div>
+              <div class="product-card-thumb pct-bg-pink">🏷️</div>
               <div class="product-card-body">
                 <div class="product-card-name">띠부씰 스티커 <span class="b b-new">NEW</span></div>
                 <div class="product-card-desc">랜덤배치, 그 모양 그대로</div>
@@ -3117,7 +3338,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
             </div>
             <div class="product-card">
-              <div class="product-card-thumb" style="background:#f0f0ff;">💎</div>
+              <div class="product-card-thumb pct-bg-lilac">💎</div>
               <div class="product-card-body">
                 <div class="product-card-name">아크릴 키링 <span class="b b-hot">HOT</span></div>
                 <div class="product-card-desc">원하는 키링을 직접 디자인</div>
@@ -3231,7 +3452,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Social Login Brands</div>
         <div class="bg-guide">
-          <div class="sns-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 480px;">
+          <div class="sns-grid col3">
             <div class="sns-card">
               <div class="sns-icon" style="background:#1ec800;">
                 <img src="https://www.publog.co.kr/img/naver_logo.png?t=2" alt="Naver" style="width:26px; height:26px; object-fit:contain;">
@@ -3299,42 +3520,42 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Login Modal</div>
         <div class="bg-guide">
-          <div style="background:#e8eaf0; border-radius:var(--radius); border:1px solid var(--border); padding:48px 24px; display:flex; justify-content:center; align-items:flex-start;">
-            <div style="background:#fff; border-radius:16px; width:360px; box-shadow:0 32px 64px -16px rgba(0,0,0,0.22); overflow:hidden; font-family:'Noto Sans KR',sans-serif;">
-              <div style="padding:32px 32px 16px; text-align:center;">
-                <p style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:900; letter-spacing:0.06em; color:#222450; margin-bottom:8px;">WELCOME TO GOODS PLANET</p>
-                <p style="font-size:12px; color:#999999;">지금 가입하면 특별 무료 혜택을 드려요&nbsp;<span style="font-weight:600; color:#222450; text-decoration:underline; cursor:pointer;">자세히</span></p>
+          <div class="bg-modal-wrap">
+            <div class="bg-modal-card">
+              <div class="bg-modal-head">
+                <p class="bg-modal-title">WELCOME TO GOODS PLANET</p>
+                <p class="bg-modal-sub">지금 가입하면 특별 무료 혜택을 드려요&nbsp;<span class="bg-modal-sub-link">자세히</span></p>
               </div>
-              <div style="padding:0 28px 8px; display:flex; flex-direction:column; gap:10px;">
-                <input placeholder="아이디" style="width:100%; height:48px; border-radius:4px; border:1px solid #E4E5EC; padding:0 16px; font-size:13.5px; outline:none; font-family:inherit; box-sizing:border-box;">
-                <input type="password" placeholder="비밀번호" style="width:100%; height:48px; border-radius:4px; border:1px solid #E4E5EC; padding:0 16px; font-size:13.5px; outline:none; font-family:inherit; box-sizing:border-box;">
-                <button style="width:100%; height:52px; border-radius:4px; background:#222450; color:#fff; font-family:'Montserrat','Noto Sans KR',sans-serif; font-size:14px; font-weight:700; border:none; cursor:pointer;">로그인</button>
+              <div class="bg-modal-form">
+                <input class="bg-modal-input" placeholder="아이디">
+                <input class="bg-modal-input" type="password" placeholder="비밀번호">
+                <button class="bg-modal-btn-login">로그인</button>
               </div>
-              <div style="padding:8px 28px 16px;">
-                <button style="width:100%; height:52px; border-radius:4px; background:#FEE500; color:#3C1E1E; font-family:'Noto Sans KR',sans-serif; font-size:13.5px; font-weight:700; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+              <div class="bg-modal-kakao-wrap">
+                <button class="bg-modal-kakao-btn">
                   <svg width="20" height="20" viewBox="0 0 48 48" fill="#3C1E1E"><path d="M24 4C12.95 4 4 11.16 4 20c0 5.59 3.28 10.53 8.33 13.65L10.42 42 20.2 36.5C21.44 36.82 22.71 37 24 37c11.05 0 20-7.16 20-16S35.05 4 24 4z"/></svg>
                   카카오 로그인
                 </button>
               </div>
-              <div style="padding:0 28px 20px; display:flex; align-items:center; gap:12px;">
-                <div style="flex:1; height:1px; background:#E4E5EC;"></div>
-                <button style="width:40px; height:40px; border-radius:50%; background:#1ec800; border:none; color:#fff; font-weight:800; font-size:15px; cursor:pointer; display:flex; align-items:center; justify-content:center;">N</button>
-                <button style="width:40px; height:40px; border-radius:50%; background:#000000; border:none; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+              <div class="bg-modal-social-wrap">
+                <div class="bg-modal-divider"></div>
+                <button class="bg-modal-social-btn bg-modal-naver">N</button>
+                <button class="bg-modal-social-btn bg-modal-apple">
                   <svg width="14" height="17" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
                 </button>
-                <button style="width:40px; height:40px; border-radius:50%; background:#ffffff; border:1px solid #d9d9d9; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+                <button class="bg-modal-social-btn bg-modal-google">
                   <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
                 </button>
-                <div style="flex:1; height:1px; background:#E4E5EC;"></div>
+                <div class="bg-modal-divider"></div>
               </div>
-              <div style="padding-bottom:20px; display:flex; align-items:center; justify-content:center; gap:12px; font-size:11.5px; color:#999999;">
-                <span style="cursor:pointer;">회원 가입하기</span>
-                <span style="color:#E4E5EC;">|</span>
-                <span style="cursor:pointer;">비회원 주문/조회</span>
-                <span style="color:#E4E5EC;">|</span>
-                <span style="cursor:pointer;">아이디/비밀번호 찾기</span>
+              <div class="bg-modal-links">
+                <span>회원 가입하기</span>
+                <span class="bg-modal-links-sep">|</span>
+                <span>비회원 주문/조회</span>
+                <span class="bg-modal-links-sep">|</span>
+                <span>아이디/비밀번호 찾기</span>
               </div>
-              <div style="margin:0 28px 24px; padding:10px 12px; border-radius:4px; background:#F0F1F6; font-size:11px; text-align:center; color:#999999;">
+              <div class="bg-modal-notice">
                 데모 계정: <strong>cccccc103</strong> / 비밀번호 아무거나
               </div>
             </div>
@@ -3347,28 +3568,28 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Social Login Buttons</div>
         <div class="bg-guide">
-          <div style="display:flex; gap:16px; align-items:center; padding:8px 0 20px;">
-            <button style="width:40px; height:40px; border-radius:50%; background:#1ec800; border:none; color:#fff; font-weight:800; font-size:15px; cursor:pointer; display:flex; align-items:center; justify-content:center;">N</button>
-            <button style="width:40px; height:40px; border-radius:50%; background:#000000; border:none; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+          <div class="bg-social-row">
+            <button class="bg-modal-social-btn bg-modal-naver">N</button>
+            <button class="bg-modal-social-btn bg-modal-apple">
               <svg width="14" height="17" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
             </button>
-            <button style="width:40px; height:40px; border-radius:50%; background:#ffffff; border:1px solid #d9d9d9; cursor:pointer; display:flex; align-items:center; justify-content:center;">
-              <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
+            <button class="bg-modal-social-btn bg-modal-google">
+              <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 20.6s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
             </button>
           </div>
           <table class="spec-table">
               <thead><tr><th>플랫폼</th><th>배경색</th><th>텍스트 / 아이콘</th><th>테두리</th><th>크기</th></tr></thead>
               <tbody>
                 <tr>
-                  <td><button style="width:36px; height:36px; border-radius:50%; background:#1ec800; border:none; color:#fff; font-weight:800; font-size:13px; cursor:default;">N</button></td>
+                  <td><button class="bg-modal-spec-naver">N</button></td>
                   <td><strong>#1ec800</strong></td><td>흰색 "N" · font-weight 800</td><td>없음</td><td>40 × 40px 원형</td>
                 </tr>
                 <tr>
-                  <td><button style="width:36px; height:36px; border-radius:50%; background:#000; border:none; color:#fff; font-size:11px; cursor:default; display:inline-flex; align-items:center; justify-content:center;"><svg width="11" height="14" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg></button></td>
+                  <td><button class="bg-modal-spec-apple"><svg width="11" height="14" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg></button></td>
                   <td><strong>#000000</strong></td><td>흰색 Apple SVG</td><td>없음</td><td>40 × 40px 원형</td>
                 </tr>
                 <tr>
-                  <td><button style="width:36px; height:36px; border-radius:50%; background:#fff; border:1px solid #d9d9d9; cursor:default; display:inline-flex; align-items:center; justify-content:center;"><svg width="13" height="13" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg></button></td>
+                  <td><button class="bg-modal-spec-google"><svg width="13" height="13" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg></button></td>
                   <td><strong>#ffffff</strong></td><td>Google G 컬러 SVG</td><td>1px solid <strong>#d9d9d9</strong></td><td>40 × 40px 원형</td>
                 </tr>
               </tbody>
