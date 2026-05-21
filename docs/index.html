@@ -819,8 +819,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .cb-link { color:var(--attention); text-decoration:underline; cursor:pointer; }
 .pc-guide .cb-label-text { font-size:13px; color:var(--text-body); }
 
-.pc-guide .reg-card { background:#fff; border-radius:24px; border:1px solid rgba(0,0,0,0.06); padding:32px 28px; max-width:400px; }
-.pc-guide .reg-icon { width:64px; height:64px; border-radius:50%; background:var(--belief); display:flex; align-items:center; justify-content:center; font-size:28px; margin-bottom:20px; }
+.pc-guide .reg-card { background:#fff; border-radius:24px; border:1px solid rgba(0,0,0,0.06); padding:32px 28px; max-width:400px; margin:0 auto; }
+.pc-guide .reg-icon { width:64px; height:64px; border-radius:50%; background:var(--belief); display:flex; align-items:center; justify-content:center; font-size:28px; margin:0 auto 16px; }
 .pc-guide .reg-input { width:100%; height:64px; border-radius:16px; border:2px solid rgba(0,0,0,0.10); font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:700; letter-spacing:0.18em; text-align:center; outline:none; margin-bottom:12px; }
 .pc-guide .reg-input:focus { border-color:var(--trendy); }
 .pc-guide .reg-badge { display:inline-flex; align-items:center; gap:6px; height:28px; padding:0 12px; border-radius:9999px; font-size:12px; font-weight:700; margin-bottom:12px; }
@@ -830,15 +830,22 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .reg-badge.pub .reg-badge-dot { background:var(--trendy); }
 .pc-guide .reg-badge.grp .reg-badge-dot { background:var(--attention); }
 .pc-guide .reg-btn { width:100%; height:56px; border-radius:16px; border:none; font-size:15px; font-weight:700; color:#fff; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
-.pc-guide .reg-btn.pub      { background:var(--trendy); }
-.pc-guide .reg-btn.grp      { background:var(--attention); }
-.pc-guide .reg-btn.disabled { background:#ccc; cursor:not-allowed; }
+.pc-guide .reg-btn.pub      { background:#222450; }
+.pc-guide .reg-btn.grp      { background:#515382; }
+.pc-guide .reg-btn.disabled { background:#222450; opacity:.4; cursor:not-allowed; }
+.pc-guide .reg-detect-wrap  { height:28px; display:flex; align-items:center; justify-content:center; margin-top:12px; }
 
 .pc-guide .bulk-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
 .pc-guide .bulk-count-badge { height:28px; padding:0 12px; border-radius:9999px; background:var(--group-purple-soft); color:var(--attention); font-size:12px; font-weight:700; display:inline-flex; align-items:center; }
-.pc-guide .bulk-filter-tab { height:28px; padding:0 12px; border-radius:9999px; font-size:11px; font-weight:600; border:1.5px solid transparent; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
-.pc-guide .bulk-filter-tab.on  { background:var(--trendy); color:#fff; border-color:var(--trendy); }
+.pc-guide .bulk-filter-tabs { display:flex; gap:8px; margin-bottom:12px; }
+.pc-guide .bulk-filter-tab { height:28px; padding:0 12px; border-radius:9999px; font-size:12px; font-weight:600; border:none; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+.pc-guide .bulk-filter-tab.on  { background:#222450; color:#fff; border:1.5px solid #222450; }
 .pc-guide .bulk-filter-tab.off { background:#f3f4f6; color:#4b5563; }
+.pc-guide .bulk-check { width:20px; height:20px; border-radius:6px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.pc-guide .bulk-check.off { border:1.5px solid rgba(0,0,0,0.25); background:#fff; }
+.pc-guide .bulk-check.on  { background:#222450; border:none; }
+.pc-guide .bulk-check.on::after { content:''; display:block; width:11px; height:7px; border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg) translateY(-1px); }
+.pc-guide .bulk-info { flex:1; min-width:0; }
 .pc-guide .bulk-item { display:flex; align-items:center; gap:12px; padding:12px; border-radius:16px; border:1.5px solid rgba(0,0,0,0.08); margin-bottom:8px; transition:all 0.15s; }
 .pc-guide .bulk-item.on { border-color:var(--trendy); background:var(--group-purple-soft); }
 .pc-guide .bulk-emoji { width:48px; height:48px; border-radius:12px; background:var(--belief); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; }
@@ -848,11 +855,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
 .pc-guide .grp-card { background:#fff; border-radius:24px; border:1px solid rgba(0,0,0,0.06); overflow:hidden; }
 .pc-guide .grp-strip { display:flex; align-items:center; justify-content:space-between; gap:6px; padding:12px 20px; background:var(--group-purple-soft); }
-.pc-guide .grp-strip-left { display:flex; align-items:center; gap:6px; }
+.pc-guide .grp-strip-left { display:flex; align-items:center; gap:8px; }
 .pc-guide .grp-strip-dot   { width:6px; height:6px; border-radius:50%; background:var(--attention); }
 .pc-guide .grp-strip-label { font-size:12px; font-weight:700; color:var(--attention); }
-.pc-guide .grp-strip-partial { font-size:11px; font-weight:600; color:#c2410c; }
-.pc-guide .grp-strip-all     { font-size:11px; font-weight:600; color:#dc2626; }
+.pc-guide .grp-strip-partial { font-size:11px; font-weight:600; color:#c2410c; margin-left:4px; }
+.pc-guide .grp-strip-all     { font-size:11px; font-weight:600; color:#dc2626; margin-left:4px; }
 .pc-guide .grp-items-row { display:flex; gap:8px; padding:16px 20px; overflow-x:auto; scrollbar-width:none; }
 .pc-guide .grp-tile { flex-shrink:0; display:flex; flex-direction:column; align-items:center; width:64px; gap:6px; }
 .pc-guide .grp-thumb { width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:24px; position:relative; }
@@ -896,12 +903,19 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .pubsublink-btn.type-default { background:#fff; color:var(--trendy); }
 
 .pc-guide .lnb-wrap { width:220px; background:#fff; flex-shrink:0; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); }
+.pc-guide .lnb-demo-wrap { border:1px solid var(--border); border-radius:12px; overflow:hidden; max-width:220px; background:#fff; }
 .pc-guide .lnb-header { background:var(--trendy); padding:16px 20px; color:#fff; }
-.pc-guide .lnb-section-label { font-size:9.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#777; padding:12px 20px 4px; }
+.pc-guide .lnb-header-name { font-size:14px; font-weight:700; }
+.pc-guide .lnb-header-sub  { font-size:11px; color:rgba(255,255,255,0.5); margin-top:2px; }
+.pc-guide .lnb-section { padding:10px 0 4px; border-bottom:1px solid var(--border); }
+.pc-guide .lnb-section:last-child { border-bottom:0; padding-bottom:10px; }
+.pc-guide .lnb-section-label { font-size:9.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); padding:0 20px 6px; }
 .pc-guide .lnb-item { display:block; font-size:12.5px; padding:7px 20px; color:var(--text-body); cursor:pointer; text-decoration:none; }
-.pc-guide .lnb-item:hover     { background:var(--belief); }
-.pc-guide .lnb-item.active    { color:var(--trendy); font-weight:600; background:rgba(34,36,80,0.04); }
-.pc-guide .lnb-item.highlight { color:var(--attention); font-weight:600; }
+.pc-guide .lnb-item:hover      { background:var(--belief); }
+.pc-guide .lnb-item.active     { color:var(--trendy); font-weight:600; background:rgba(34,36,80,0.04); }
+.pc-guide .lnb-item.highlight  { color:var(--attention); font-weight:600; }
+.pc-guide .lnb-item.lnb-on     { color:var(--trendy); font-weight:600; background:rgba(34,36,80,0.04); }
+.pc-guide .lnb-item.lnb-highlight { color:#515382; font-weight:600; }
 
 .pc-guide .step-indicator { display:flex; align-items:center; gap:10px; }
 .pc-guide .step-num { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; color:var(--text-muted); white-space:nowrap; }
@@ -998,6 +1012,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="nav-sub-sub" onclick="showPage('pubcode-groupend')">그룹코드 종료</div>
         <div class="nav-sub-sub" onclick="showPage('pubcode-groupmanage')">그룹관리 10+</div>
         <div class="nav-sub-sub" onclick="showPage('pubcode-mycode')">마이코드 10+</div>
+        <div class="nav-sub-sub" onclick="showPage('pubcode-etc')">기타</div>
       </div>
     </div>
   </div>
@@ -1671,22 +1686,25 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-txt">코드 입력창에 JetBrains Mono 폰트 사용. 입력 내용에 따라 3가지 상태로 변환</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
-        <div class="pc-guide" style="display:flex; gap:20px; flex-wrap:wrap;">
-          <div class="reg-card">
-            <div class="reg-icon">📋</div>
-            <input class="reg-input" placeholder="코드 입력" readonly>
-            <button class="reg-btn disabled">코드 확인하기</button>
-          </div>
+        <div class="pc-guide">
           <div class="reg-card">
             <div class="reg-icon">🔑</div>
-            <input class="reg-input" value="0RVTZDRDP6" readonly>
-            <span class="reg-badge pub" style="display:flex;"><span class="reg-badge-dot"></span>퍼블코드로 인식됨</span>
+            <p style="text-align:center; font-size:20px; font-weight:700; margin-bottom:6px;">코드를 입력해 주세요</p>
+            <p style="text-align:center; font-size:12px; color:var(--text-muted); margin-bottom:20px;">예: <span style="font-family:'JetBrains Mono',monospace; font-weight:600;">0RVTZDRDP6</span> 또는 <span style="font-family:'JetBrains Mono',monospace; font-weight:600;">GRP2024A</span></p>
+            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:.08em;">① 미입력 상태</p>
+            <input class="reg-input" placeholder="코드 입력" readonly style="margin-bottom:8px;">
+            <button class="reg-btn disabled">코드 확인하기</button>
+            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin:20px 0 8px; text-transform:uppercase; letter-spacing:.08em;">② 퍼블코드 인식</p>
+            <input class="reg-input" value="0RVTZDRDP6" readonly style="margin-bottom:0;">
+            <div class="reg-detect-wrap">
+              <span class="reg-badge pub"><span class="reg-badge-dot"></span>퍼블코드로 인식됨 — 상품 정보를 확인하세요</span>
+            </div>
             <button class="reg-btn pub">코드 확인하기</button>
-          </div>
-          <div class="reg-card">
-            <div class="reg-icon">🗂️</div>
-            <input class="reg-input" value="GRP2024A" readonly>
-            <span class="reg-badge grp" style="display:flex;"><span class="reg-badge-dot"></span>그룹코드로 인식됨</span>
+            <p style="font-size:11px; font-weight:700; color:var(--text-muted); margin:20px 0 8px; text-transform:uppercase; letter-spacing:.08em;">③ 그룹코드 인식</p>
+            <input class="reg-input" value="GRP2024A" readonly style="margin-bottom:0; border-color:var(--attention);">
+            <div class="reg-detect-wrap">
+              <span class="reg-badge grp"><span class="reg-badge-dot"></span>그룹코드로 인식됨 — 묶음 안에서 원하는 상품을 골라요</span>
+            </div>
             <button class="reg-btn grp">그룹 상품 확인하기 →</button>
           </div>
         </div>
@@ -1746,52 +1764,62 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="pc-guide">
-          <div class="bulk-header">
-            <div>
-              <p style="font-size:14px; font-weight:600;">묶을 퍼블코드 선택</p>
-              <p style="font-size:12px; color:var(--text-muted);">2개 이상 선택해야 그룹을 만들 수 있어요.</p>
+          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:16px; max-width:480px; margin:0 auto;">
+            <div class="bulk-header">
+              <div>
+                <p style="font-size:16px; font-weight:700;">묶을 퍼블코드 선택</p>
+                <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">2개 이상 선택해야 그룹을 만들 수 있어요.</p>
+              </div>
+              <span class="bulk-count-badge">2개 선택</span>
             </div>
-            <span class="bulk-count-badge">2개 선택</span>
-          </div>
-          <div style="display:flex; gap:6px; margin-bottom:12px;">
-            <button class="bulk-filter-tab on">전체</button>
-            <button class="bulk-filter-tab off">공개</button>
-            <button class="bulk-filter-tab off">비공개</button>
-          </div>
-          <div class="bulk-item on">
-            <label class="cb-wrap" style="flex-shrink:0;">
-              <input class="cb-input" type="checkbox" checked>
-              <span class="cb-box"></span>
+            <div class="bulk-filter-tabs">
+              <button class="bulk-filter-tab on">전체</button>
+              <button class="bulk-filter-tab off">공개</button>
+              <button class="bulk-filter-tab off">비공개</button>
+            </div>
+            <label style="display:flex; align-items:center; gap:8px; font-size:12px; margin-bottom:10px; cursor:pointer;">
+              <input type="checkbox"> 전체 선택 (활성 코드만)
             </label>
-            <div class="bulk-emoji">🔑</div>
-            <div style="flex:1;">
-              <p class="bulk-title">봄 아크릴 키링</p>
-              <p class="bulk-spec">아크릴·양면·30×30mm</p>
+            <div class="bulk-item on">
+              <div class="bulk-check on"></div>
+              <div class="bulk-emoji">🔑</div>
+              <div class="bulk-info">
+                <p class="bulk-title">봄 아크릴 키링</p>
+                <p class="bulk-spec">아크릴·양면·30×30mm</p>
+              </div>
+              <span class="bulk-price">12,000원</span>
             </div>
-            <span class="bulk-price">12,000원</span>
-          </div>
-          <div class="bulk-item">
-            <label class="cb-wrap" style="flex-shrink:0;">
-              <input class="cb-input" type="checkbox">
-              <span class="cb-box"></span>
-            </label>
-            <div class="bulk-emoji">🏅</div>
-            <div style="flex:1;">
-              <p class="bulk-title">원형 뱃지 세트</p>
-              <p class="bulk-spec">44mm 원형·3개입</p>
+            <div class="bulk-item on">
+              <div class="bulk-check on"></div>
+              <div class="bulk-emoji">🌟</div>
+              <div class="bulk-info">
+                <p class="bulk-title">여름 홀로그램 스티커</p>
+                <p class="bulk-spec">40×50mm·홀로그램·10매</p>
+              </div>
+              <span class="bulk-price">6,500원</span>
             </div>
-            <span class="bulk-price">7,200원</span>
+            <div class="bulk-item">
+              <div class="bulk-check off"></div>
+              <div class="bulk-emoji">🏅</div>
+              <div class="bulk-info">
+                <p class="bulk-title">원형 뱃지 세트</p>
+                <p class="bulk-spec">44mm 원형·3개입</p>
+              </div>
+              <span class="bulk-price">7,200원</span>
+            </div>
           </div>
         </div>
         <div class="divider"></div>
         <div class="card-label">Spec</div>
         <table class="spec-table">
-          <thead><tr><th>요소</th><th>스펙</th></tr></thead>
+          <thead><tr><th>요소</th><th>스타일</th></tr></thead>
           <tbody>
-            <tr><td><code>.bulk-item</code></td><td>border-radius 16px · border 1.5px rgba(0,0,0,0.08)</td></tr>
-            <tr><td><code>.bulk-item.on</code></td><td>border-color var(--trendy) · bg var(--group-purple-soft) #ECEEFF</td></tr>
-            <tr><td><code>.bulk-count-badge</code></td><td>bg var(--group-purple-soft) · color var(--attention)</td></tr>
-            <tr><td><code>.bulk-filter-tab.on</code></td><td>bg var(--trendy) · color #fff</td></tr>
+            <tr><td>아이템 기본</td><td>border-radius 16px · border 1.5px rgba(0,0,0,0.08) · padding 12px</td></tr>
+            <tr><td>아이템 선택됨</td><td>border-color #222450 · background var(--group-purple-soft)</td></tr>
+            <tr><td>체크박스 ON</td><td>background #222450 · 흰색 체크마크 · border-radius 6px · 20×20px</td></tr>
+            <tr><td>선택 카운터 배지</td><td>background var(--group-purple-soft) · color var(--attention) · height 28px · border-radius 9999px</td></tr>
+            <tr><td>필터 탭 ON</td><td>background #222450 · 흰색 텍스트 · border 1.5px solid #222450 · border-radius 9999px</td></tr>
+            <tr><td>필터 탭 OFF</td><td>background #f3f4f6 · color #4b5563</td></tr>
           </tbody>
         </table>
       </div>
@@ -1988,41 +2016,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       </div>
       <hr>
 
-      <h2 class="section-title">MyPublog LNB</h2>
-      <div class="section-txt">마이퍼블로그 사이드바 네비게이션. 너비 220px · PC 전용</div>
-      <div class="section-card">
-        <div class="card-label">Preview</div>
-        <div class="pc-guide">
-          <nav class="lnb-wrap">
-            <div class="lnb-header">
-              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700;">MY PUBLOG</p>
-            </div>
-            <p class="lnb-section-label">코드 관리</p>
-            <a class="lnb-item active">마이 코드</a>
-            <a class="lnb-item highlight">그룹관리</a>
-            <a class="lnb-item">코드 등록</a>
-            <p class="lnb-section-label">계정</p>
-            <a class="lnb-item">주문 내역</a>
-            <a class="lnb-item">설정</a>
-          </nav>
-        </div>
-        <div class="divider"></div>
-        <div class="card-label">Spec</div>
-        <table class="spec-table">
-          <thead><tr><th>요소</th><th>스펙</th></tr></thead>
-          <tbody>
-            <tr><td><code>.lnb-wrap</code></td><td>width 220px · bg #fff · PC 전용</td></tr>
-            <tr><td><code>.lnb-header</code></td><td>bg var(--trendy) · padding 16px 20px · color #fff</td></tr>
-            <tr><td><code>.lnb-item.active</code></td><td>color var(--trendy) · font-weight 600 · bg rgba(34,36,80,0.04)</td></tr>
-            <tr><td><code>.lnb-item.highlight</code></td><td>color var(--attention) #515382 · font-weight 600</td></tr>
-          </tbody>
-        </table>
-      </div>
-
       <h2 class="section-title">그룹관리 탭 &amp; 통계 (grp-tab / grp-stat)</h2>
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="pc-guide">
+          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:20px;">
+            <p style="font-size:16px; font-weight:700; margin-bottom:12px;">그룹 관리</p>
           <div class="grp-tab-bar">
             <button class="grp-tab-pill act">GRP-A · 봄 세트</button>
             <button class="grp-tab-pill inact">GRP-B · 여름</button>
@@ -2053,17 +2052,18 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               <p class="grp-stat-label">만료까지</p>
             </div>
           </div>
+          </div>
         </div>
         <div class="divider"></div>
         <div class="card-label">Spec</div>
         <table class="spec-table">
-          <thead><tr><th>요소</th><th>스펙</th></tr></thead>
+          <thead><tr><th>요소</th><th>스타일</th></tr></thead>
           <tbody>
-            <tr><td><code>.grp-tab-bar</code></td><td>overflow-x auto · scrollbar-width none (10개 이상 스크롤)</td></tr>
-            <tr><td><code>.grp-tab-pill.act</code></td><td>bg var(--trendy) · color #fff</td></tr>
-            <tr><td><code>.grp-tab-pill.inact</code></td><td>bg var(--belief) · color var(--text-body)</td></tr>
-            <tr><td><code>.grp-stat</code></td><td>bg var(--belief) · border-radius 12px · Montserrat 22px/800</td></tr>
-            <tr><td><code>.grp-stat.dday</code></td><td>bg #eef2ff · color var(--attention)</td></tr>
+            <tr><td>탭 바 컨테이너</td><td>overflow-x auto · scrollbar-width none · gap 4px · padding-bottom 4px</td></tr>
+            <tr><td>탭 활성</td><td>background #222450 · 흰색 텍스트 · height 36px · border-radius 9999px · flex-shrink 0</td></tr>
+            <tr><td>탭 비활성</td><td>background var(--belief) · 기본 텍스트 · white-space nowrap</td></tr>
+            <tr><td>통계 카드</td><td>background var(--belief) · border-radius 12px · padding 14px 16px · Montserrat 22px 800</td></tr>
+            <tr><td>D-day 통계 카드</td><td>background #eef2ff · val color #515382</td></tr>
           </tbody>
         </table>
       </div>
@@ -2081,6 +2081,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="pc-guide">
+          <div style="background:#fff; border-radius:16px; border:1px solid var(--border); padding:20px; max-width:520px; margin:0 auto;">
           <div class="mycode-main-tabs">
             <button class="mycode-main-tab on">내 코드</button>
             <button class="mycode-main-tab off">받은 코드</button>
@@ -2123,6 +2124,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <span class="mycode-status soldout-s">품절</span>
             <span class="mycode-price" style="color:var(--text-muted);">22,000원</span>
           </div>
+          </div>
         </div>
         <div class="divider"></div>
         <div class="card-label">Spec</div>
@@ -2137,6 +2139,52 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr><td><code>.mycode-status.soldout-s</code></td><td>bg #fef2f2 · color #dc2626</td></tr>
             <tr><td><code>.mycode-price</code></td><td>Montserrat 14px / 800 · margin-left auto</td></tr>
             <tr><td>종료 카드</td><td>opacity .7 · 썸네일 opacity .5</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 기타 -->
+    <div class="page" id="page-pubcode-etc">
+      <div class="section-header">
+        <h1 class="page-title">기타</h1>
+        <p>퍼블코드 전용 컴포넌트 중 레퍼런스와 완전히 대응하지 않는 보조 UI</p>
+      </div>
+      <hr>
+
+      <h2 class="section-title">MyPublog LNB</h2>
+      <div class="section-txt">마이퍼블로그 사이드바 네비게이션. 너비 220px · PC 전용. 퍼블코드 대시보드 좌측에 위치</div>
+      <div class="section-card">
+        <div class="card-label">Preview</div>
+        <div class="pc-guide">
+          <div class="lnb-demo-wrap">
+            <div class="lnb-header">
+              <p class="lnb-header-name">MY PUBLOG</p>
+              <p class="lnb-header-sub">publog 님</p>
+            </div>
+            <div class="lnb-section">
+              <p class="lnb-section-label">코드 관리</p>
+              <a class="lnb-item lnb-on">마이 코드</a>
+              <a class="lnb-item lnb-highlight">그룹관리</a>
+              <a class="lnb-item">코드 등록</a>
+            </div>
+            <div class="lnb-section">
+              <p class="lnb-section-label">계정</p>
+              <a class="lnb-item">주문 내역</a>
+              <a class="lnb-item">설정</a>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card-label">Spec</div>
+        <table class="spec-table">
+          <thead><tr><th>요소</th><th>스타일</th></tr></thead>
+          <tbody>
+            <tr><td><code>.lnb-demo-wrap</code></td><td>max-width 220px · bg #fff · border-radius 12px · overflow hidden</td></tr>
+            <tr><td><code>.lnb-header</code></td><td>bg var(--trendy) · padding 16px 20px · color #fff</td></tr>
+            <tr><td><code>.lnb-section</code></td><td>padding 10px 0 4px · border-bottom 1px var(--border)</td></tr>
+            <tr><td><code>.lnb-item.lnb-on</code></td><td>color var(--trendy) · font-weight 600 · bg rgba(34,36,80,0.04)</td></tr>
+            <tr><td><code>.lnb-item.lnb-highlight</code></td><td>color #515382 · font-weight 600</td></tr>
           </tbody>
         </table>
       </div>
