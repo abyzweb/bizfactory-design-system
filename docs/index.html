@@ -803,15 +803,14 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
 .pc-guide .cb-wrap { display:flex; align-items:center; gap:8px; cursor:pointer; }
 .pc-guide .cb-input { display:none; }
-.pc-guide .cb-box { width:18px; height:18px; border-radius:4px; border:1.5px solid var(--border); background:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.15s; }
-.pc-guide .cb-input:checked + .cb-box { background:var(--trendy); border-color:var(--trendy); }
-.pc-guide .cb-input:checked + .cb-box::after { content:''; display:block; width:10px; height:6px; border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg) translateY(-1px); }
+.pc-guide .cb-box { width:18px; height:18px; border-radius:4px; flex-shrink:0; display:grid; place-items:center; }
+.pc-guide .cb-input:checked + .cb-box { background-color:#222450; background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox_on.png'); background-size:100% 100%; background-repeat:no-repeat; border:none; }
+.pc-guide .cb-input:not(:checked) + .cb-box { background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox.png'); background-size:100% 100%; background-repeat:no-repeat; border:1.5px solid #d1d5db; background-color:#fff; }
 .pc-guide .cb-label { font-size:13px; color:var(--text-body); }
 .pc-guide .cb-list { display:flex; flex-direction:column; gap:8px; min-width:220px; }
 .pc-guide .cb-row { display:flex; align-items:center; gap:8px; }
-.pc-guide .cb-off { border:1.5px solid #d1d5db; background:#fff; }
-.pc-guide .cb-on { background:#222450; border-color:#222450; }
-.pc-guide .cb-on::after { content:''; display:block; width:10px; height:6px; border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg) translateY(-1px); }
+.pc-guide .cb-off { background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox.png'); background-size:100% 100%; background-repeat:no-repeat; border:1.5px solid #d1d5db; background-color:#fff; }
+.pc-guide .cb-on { background-color:#222450; background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox_on.png'); background-size:100% 100%; background-repeat:no-repeat; border:none; }
 .pc-guide .cb-i1 { padding-left:28px; }
 .pc-guide .cb-i2 { padding-left:52px; }
 .pc-guide .cb-sep { height:1px; background:var(--border); margin-left:28px; }
@@ -841,10 +840,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .bulk-filter-tab { height:28px; padding:0 12px; border-radius:9999px; font-size:12px; font-weight:600; border:none; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
 .pc-guide .bulk-filter-tab.on  { background:#222450; color:#fff; border:1.5px solid #222450; }
 .pc-guide .bulk-filter-tab.off { background:#f3f4f6; color:#4b5563; }
-.pc-guide .bulk-check { width:18px; height:18px; border-radius:4px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.pc-guide .bulk-check.off { border:1.5px solid var(--border); background:#fff; }
-.pc-guide .bulk-check.on  { background:#222450; border:none; }
-.pc-guide .bulk-check.on::after { content:''; display:block; width:10px; height:6px; border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg) translateY(-1px); }
+.pc-guide .bulk-check { width:20px; height:20px; border-radius:6px; display:grid; place-items:center; flex-shrink:0; }
+.pc-guide .bulk-check.off { background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox.png'); background-size:100% 100%; background-repeat:no-repeat; border:1.5px solid rgba(0,0,0,0.25); background-color:#fff; }
+.pc-guide .bulk-check.on  { background-color:#222450; background-image:url('https://www.bizfactory.co.kr/include/img/login/checkbox_on.png'); background-size:100% 100%; background-repeat:no-repeat; border:none; }
 .pc-guide .bulk-info { flex:1; min-width:0; }
 .pc-guide .bulk-item { display:flex; align-items:center; gap:12px; padding:12px; border-radius:16px; border:1.5px solid rgba(0,0,0,0.08); margin-bottom:8px; transition:all 0.15s; }
 .pc-guide .bulk-item.on { border-color:var(--trendy); background:var(--group-purple-soft); }
@@ -1666,7 +1664,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <tbody>
             <tr><td>아이템 기본</td><td>border-radius 16px · border 1.5px rgba(0,0,0,0.08) · padding 12px</td></tr>
             <tr><td>아이템 선택됨</td><td>border-color #222450 · background var(--group-purple-soft)</td></tr>
-            <tr><td>체크박스 ON</td><td>background #222450 · 흰색 체크마크 · border-radius 4px · 18×18px</td></tr>
+            <tr><td>체크박스 ON</td><td>background #222450 · checkbox_on.png · border 없음 · border-radius 6px · 20×20px</td></tr>
             <tr><td>선택 카운터 배지</td><td>background var(--group-purple-soft) · color var(--attention) · height 28px · border-radius 9999px</td></tr>
             <tr><td>필터 탭 ON</td><td>background #222450 · 흰색 텍스트 · border 1.5px solid #222450 · border-radius 9999px</td></tr>
             <tr><td>필터 탭 OFF</td><td>background #f3f4f6 · color #4b5563</td></tr>
