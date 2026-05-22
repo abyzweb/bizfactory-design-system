@@ -47,7 +47,7 @@ body {
 .sidebar {
   width: var(--sidebar-w);
   min-height: 100vh;
-  background: #1a1a25;
+  background: #222450;
   position: fixed;
   top: 0; left: 0; bottom: 0;
   display: flex;
@@ -169,6 +169,16 @@ body {
 .nav-group-header.open .chevron { transform: rotate(90deg); }
 
 .nav-items { overflow: hidden; }
+
+.nav-num {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: #ffce2d;
+  min-width: 24px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
 
 .nav-sub {
   display: flex;
@@ -1214,16 +1224,16 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
     </div>
     <div class="nav-items">
       <div class="nav-sub" onclick="showPage('test')">test</div>
-      <div class="nav-sub" onclick="showPage('bg01')">01 브랜드 정체성</div>
-      <div class="nav-sub" onclick="showPage('bg02')">02 로고 시스템</div>
-      <div class="nav-sub" onclick="showPage('bg03')">03 컬러 시스템</div>
-      <div class="nav-sub" onclick="showPage('bg04')">04 타이포그래피</div>
-      <div class="nav-sub" onclick="showPage('bg05')">05 태그 &amp; 뱃지</div>
-      <div class="nav-sub" onclick="showPage('bg06')">06 UI 컴포넌트</div>
-      <div class="nav-sub" onclick="showPage('bg07')">07 레이아웃 구조</div>
-      <div class="nav-sub" onclick="showPage('bg08')">08 채널 &amp; SNS</div>
-      <div class="nav-sub" onclick="showPage('bg09')">09 로그인 모달</div>
-      <div class="nav-sub" onclick="showPage('bg10')">10 아이콘 시스템</div>
+      <div class="nav-sub" onclick="showPage('bg01')"><span class="nav-num">01</span> 브랜드 정체성</div>
+      <div class="nav-sub" onclick="showPage('bg02')"><span class="nav-num">02</span> 로고 시스템</div>
+      <div class="nav-sub" onclick="showPage('bg03')"><span class="nav-num">03</span> 컬러 시스템</div>
+      <div class="nav-sub" onclick="showPage('bg04')"><span class="nav-num">04</span> 타이포그래피</div>
+      <div class="nav-sub" onclick="showPage('bg05')"><span class="nav-num">05</span> 태그 &amp; 뱃지</div>
+      <div class="nav-sub" onclick="showPage('bg06')"><span class="nav-num">06</span> UI 컴포넌트</div>
+      <div class="nav-sub" onclick="showPage('bg07')"><span class="nav-num">07</span> 레이아웃 구조</div>
+      <div class="nav-sub" onclick="showPage('bg08')"><span class="nav-num">08</span> 채널 &amp; SNS</div>
+      <div class="nav-sub" onclick="showPage('bg09')"><span class="nav-num">09</span> 로그인 모달</div>
+      <div class="nav-sub" onclick="showPage('bg10')"><span class="nav-num">10</span> 아이콘 시스템</div>
     </div>
 
     <div class="nav-divider"></div>
