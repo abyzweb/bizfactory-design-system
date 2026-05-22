@@ -25,13 +25,18 @@ html { scrollbar-gutter: stable; }
   --sidebar-w: 252px;
   --radius: 12px;
   --group-purple-soft: #ECEEFF;
+  --paper: #FAFAF7;
+  --dday-warn-bg: #fffbeb;
+  --dday-warn-tx: #b45309;
+  --dday-urgent-bg: #fff1f2;
+  --dday-urgent-tx: #e11d48;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Montserrat", "YoonGothicPro760", sans-serif;
   color: var(--text-body);
   line-height: 1.6;
-  background: #f7f8fc;
+  background: var(--paper);
   display: flex;
   min-height: 100vh;
 }
@@ -583,7 +588,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .btn-share-cart:hover { background: var(--belief); }
 .btn-order-cart:hover { background: #3a3f7a; }
 
-.btn-make   { height: 60px; padding: 0 32px; background: var(--trendy); color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: background 0.18s; }
+.btn-make   { height: 60px; padding: 0 32px; background: #262853; color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: background 0.18s; }
 .btn-pdf    { height: 60px; padding: 0 32px; background: #999; color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: background 0.18s; }
 .btn-basket { height: 60px; width: 70px; background: #ccc; color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; }
 .btn-make:hover { background: #4e58c2; }
@@ -792,6 +797,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .pc-guide .field-hint { font-size:11.5px; color:var(--text-muted); margin-top:6px; }
 .pc-guide .inlinehelp-btn { display:inline-flex; align-items:center; gap:6px; height:36px; padding:0 12px; border-radius:9999px; background:#fff; border:1px solid rgba(0,0,0,0.15); font-size:12px; font-weight:500; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
 .pc-guide .inlinehelp-icon { width:16px; height:16px; border-radius:50%; background:rgba(0,0,0,0.1); font-size:10px; font-weight:700; color:var(--text-muted); display:inline-flex; align-items:center; justify-content:center; }
+.pc-guide .inlinehelp-btn.open-pub { background:#FFF9D6; border-color:var(--trendy); }
+.pc-guide .inlinehelp-btn.open-grp { background:#ECEEFF; border-color:#515382; }
 
 .pc-guide .stat-card-pc { border-radius:16px; padding:20px; border:1px solid rgba(0,0,0,0.06); background:#fff; }
 .pc-guide .stat-card-pc.stat-warn { background:#fff7ed; border-color:rgba(234,88,12,0.25); }
@@ -1049,9 +1056,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
 /* ── bg-guide 로그인 모달 ── */
 .bg-modal-wrap  { background:#e8eaf0; border-radius:var(--radius); border:1px solid var(--border); padding:48px 24px; display:flex; justify-content:center; align-items:flex-start; }
-.bg-modal-card  { background:#fff; border-radius:16px; width:360px; box-shadow:0 32px 64px -16px rgba(0,0,0,0.22); overflow:hidden; font-family:'Noto Sans KR',sans-serif; }
+.bg-modal-card  { background:#fff; border-radius:16px; width:360px; box-shadow:0 32px 64px -16px rgba(0,0,0,0.28); overflow:hidden; font-family:'Noto Sans KR',sans-serif; }
 .bg-modal-head  { padding:32px 32px 16px; text-align:center; }
-.bg-modal-title { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:900; letter-spacing:0.06em; color:#222450; margin-bottom:8px; }
+.bg-modal-title { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:900; letter-spacing:0.06em; color:#222450; text-align:center; margin-bottom:28px; }
 .bg-modal-sub   { font-size:12px; color:#999; }
 .bg-modal-sub-link { font-weight:600; color:#222450; text-decoration:underline; cursor:pointer; }
 .bg-modal-form  { padding:0 28px 8px; display:flex; flex-direction:column; gap:10px; }
@@ -1120,6 +1127,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 /* ── dday 범례 텍스트/구분선 ── */
 .dday-legend-text { font-size:11px; color:var(--text-muted); }
 .dday-legend-sep  { padding:0 8px; color:var(--border); }
+/* bg-guide D-day (components.md 기준 — 브랜드 CSS 변수 사용) */
+.bg-guide .dday-badge { display:inline-flex; align-items:center; height:26px; padding:0 12px; border-radius:9999px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; }
+.bg-guide .dday-safe   { background:var(--belief);        color:var(--text-muted); }
+.bg-guide .dday-warn   { background:var(--dday-warn-bg);  color:var(--dday-warn-tx); }
+.bg-guide .dday-urgent { background:var(--dday-urgent-bg); color:var(--dday-urgent-tx); }
 
 /* ── inlinehelp 버튼 attention 변형 ── */
 .inlinehelp-btn.att  { border-color:rgba(81,83,130,0.3); color:#515382; }
@@ -1211,6 +1223,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="nav-sub" onclick="showPage('bg07')">07 레이아웃 구조</div>
       <div class="nav-sub" onclick="showPage('bg08')">08 채널 &amp; SNS</div>
       <div class="nav-sub" onclick="showPage('bg09')">09 로그인 모달</div>
+      <div class="nav-sub" onclick="showPage('bg10')">10 아이콘 시스템</div>
     </div>
 
     <div class="nav-divider"></div>
@@ -2347,7 +2360,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <tbody>
             <tr><td>D-day ≤ 3 (긴급)</td><td>#fff1f2</td><td>#e11d48</td><td>24px / 9999px</td></tr>
             <tr><td>D-day ≤ 7 (주의)</td><td>#fffbeb</td><td>#b45309</td><td>24px / 9999px</td></tr>
-            <tr><td>D-day &gt; 7 (정상)</td><td>#f0fdf4</td><td>#15803d</td><td>24px / 9999px</td></tr>
+            <tr><td>D-day &gt; 7 (여유)</td><td>#f0fdf4</td><td>#15803d</td><td>24px / 9999px</td></tr>
           </tbody>
         </table>
       </div>
@@ -2360,7 +2373,13 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <button class="inlinehelp-btn">
             <span class="inlinehelp-icon">?</span> 퍼블코드란?
           </button>
+          <button class="inlinehelp-btn open-pub">
+            <span class="inlinehelp-icon">?</span> 퍼블코드란?
+          </button>
           <button class="inlinehelp-btn att">
+            <span class="inlinehelp-icon att">?</span> 그룹코드란?
+          </button>
+          <button class="inlinehelp-btn open-grp">
             <span class="inlinehelp-icon att">?</span> 그룹코드란?
           </button>
         </div>
@@ -2370,8 +2389,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <thead><tr><th>상태</th><th>배경</th><th>테두리</th><th>높이 / 반지름</th></tr></thead>
           <tbody>
             <tr><td>기본 (닫힘)</td><td>#FFFFFF</td><td>rgba(0,0,0,0.15)</td><td>36px / 9999px</td></tr>
-            <tr><td>열림 (퍼블코드)</td><td>#FFF9D6 (accent-soft)</td><td>#222450</td><td>36px / 9999px</td></tr>
-            <tr><td>열림 (그룹코드)</td><td>#ECEEFF</td><td>#515382</td><td>36px / 9999px</td></tr>
+            <tr><td>열림 — 퍼블코드 (.open-pub)</td><td>#FFF9D6</td><td>var(--trendy)</td><td>36px / 9999px</td></tr>
+            <tr><td>열림 — 그룹코드 (.open-grp)</td><td>#ECEEFF</td><td>#515382</td><td>36px / 9999px</td></tr>
             <tr><td colspan="4" class="spec-muted">? 버튼: 16px 원형 · 텍스트: 12px 500 · 모바일 바텀시트 / PC 팝오버</td></tr>
           </tbody>
         </table>
@@ -2960,8 +2979,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
                 <div class="bg-fs-noto-hero">나만의 굿즈를<br>만드세요</div>
               </div>
               <div class="font-card-meta">
-                <div class="fn">YoonGothicPro760 / Noto Sans KR</div>
-                <div class="fw">Weight: 300 / 400 / 500 / 700 · 한글 본문, 상품명, 설명 전반</div>
+                <div class="fn">YoonGothicPro760 — 한글 메인</div>
+                <div class="fw">720 / 740 / <strong>760</strong> / 780 시리즈 · 본문·상품명·메뉴·설명 전반 (외부 페이지: Noto Sans KR 대체)</div>
               </div>
             </div>
           </div>
@@ -2975,6 +2994,82 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               <div class="fw">이벤트 배너, 시즌 특별 프로모션 타이틀에만 한정 사용</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">전체 폰트 스택</h2>
+      <div class="section-card">
+        <div class="card-label">Font Stack</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>항목</th><th>값</th></tr></thead>
+            <tbody>
+              <tr><td>표준 body font-family</td><td><code>"Montserrat", "YoonGothicPro760", sans-serif</code></td></tr>
+              <tr><td>사내 페이지 한글</td><td>YoonGothicPro760 (서버 woff/woff2/eot)</td></tr>
+              <tr><td>외부·이메일·공유 페이지 한글</td><td>Noto Sans KR (Google Fonts 대체)</td></tr>
+              <tr><td>이벤트 배너 전용</td><td>GSB (GmarketSansBold) — 이벤트 배너·시즌 타이틀에만 한정</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="section-title">윤고딕 700시리즈 @font-face</h2>
+      <div class="section-card">
+        <div class="card-label">Font Face — 사내 서버 경로 기준</div>
+        <div class="bg-guide">
+          <pre style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;color:#333;background:var(--belief);border-radius:8px;padding:16px;overflow-x:auto;white-space:pre-wrap;">@font-face {
+  font-family: "YoonGothicPro720";
+  font-style: normal; font-weight: normal; font-display: swap;
+  src: url("/include/fonts/woff/YoonGothicPro720.woff2") format("woff2"),
+       url("/include/fonts/woff/YoonGothicPro720.woff") format("woff"),
+       url("/include/fonts/eot/YoonGothicPro720.eot?") format("eot");
+}
+@font-face {
+  font-family: "YoonGothicPro740";
+  font-style: normal; font-weight: normal; font-display: swap;
+  src: url("/include/fonts/woff/YoonGothicPro740.woff2") format("woff2"),
+       url("/include/fonts/woff/YoonGothicPro740.woff") format("woff"),
+       url("/include/fonts/eot/YoonGothicPro740.eot?") format("eot");
+}
+@font-face {
+  font-family: "YoonGothicPro760";
+  font-style: normal; font-weight: normal; font-display: swap;
+  src: url("/include/fonts/woff/YoonGothicPro760.woff2") format("woff2"),
+       url("/include/fonts/woff/YoonGothicPro760.woff") format("woff"),
+       url("/include/fonts/eot/YoonGothicPro760.eot?") format("eot");
+}
+@font-face {
+  font-family: "YoonGothicPro780";
+  font-style: normal; font-weight: normal; font-display: swap;
+  src: url("/include/fonts/woff/YoonGothicPro780.woff2") format("woff2"),
+       url("/include/fonts/woff/YoonGothicPro780.woff") format("woff"),
+       url("/include/fonts/eot/YoonGothicPro780.eot?") format("eot");
+}</pre>
+        </div>
+      </div>
+
+      <h2 class="section-title">지마켓산스 @font-face</h2>
+      <div class="section-card">
+        <div class="card-label">Font Face — 이벤트 배너 전용</div>
+        <div class="bg-guide">
+          <pre style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.6;color:#333;background:var(--belief);border-radius:8px;padding:16px;overflow-x:auto;white-space:pre-wrap;">/* Light */
+@font-face {
+  font-family: 'GSL';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+/* Medium */
+@font-face {
+  font-family: 'GSM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+/* Bold */
+@font-face {
+  font-family: 'GSB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal; font-style: normal; font-display: swap;
+}</pre>
         </div>
       </div>
 
@@ -2997,12 +3092,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr>
               <td>H3 · 상품명</td>
               <td><span class="bg-fs-noto-lg">포토카드 · 아크릴 키링</span></td>
-              <td>Noto Sans KR 700<br>16–20px</td>
+              <td>YoonGothicPro760 700<br>16–20px</td>
             </tr>
             <tr>
               <td>Body · 본문</td>
               <td><span class="bg-fs-body">1개부터 대량까지 맞춤 제작 · 무료 샘플 · 대량할인</span></td>
-              <td>Noto Sans KR 400<br>13–14px</td>
+              <td>YoonGothicPro760 400<br>13–14px</td>
             </tr>
             <tr>
               <td>Price · 가격</td>
@@ -3012,12 +3107,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr>
               <td>GNB 메뉴</td>
               <td><span class="bg-fs-montserrat-sm">사진인화 · 스티커 · 아크릴</span></td>
-              <td>Montserrat 400<br>13px · letter-spacing: 0 !</td>
+              <td>Montserrat 400<br>13px · letter-spacing: 0</td>
             </tr>
             <tr>
               <td>Caption · 주석</td>
               <td><span class="bg-fs-footnote">평일 9:30-17:00 · 주말·공휴일 휴무</span></td>
-              <td>Noto Sans KR 300<br>10–12px · color #999</td>
+              <td>YoonGothicPro760 300<br>10–12px · color #999</td>
             </tr>
           </tbody>
         </table>
@@ -3347,6 +3442,35 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           </div>
         </div>
       </div>
+
+      <h2 class="section-title">⑥ D-day 배지</h2>
+      <div class="section-txt">퍼블코드 서비스에서 마감일 긴급도에 따라 3단계 색상 분기 (브랜드 CSS 변수 기준)</div>
+      <div class="section-card">
+        <div class="card-label">Preview</div>
+        <div class="bg-guide" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <span class="dday-badge dday-urgent">D-2</span>
+          <span class="dday-legend-text">D ≤ 3 긴급</span>
+          <span class="dday-legend-sep">|</span>
+          <span class="dday-badge dday-warn">D-5</span>
+          <span class="dday-legend-text">D ≤ 7 주의</span>
+          <span class="dday-legend-sep">|</span>
+          <span class="dday-badge dday-safe">D-14</span>
+          <span class="dday-legend-text">D &gt; 7 여유</span>
+        </div>
+        <div class="divider"></div>
+        <div class="card-label">Spec</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>조건</th><th>배경</th><th>텍스트</th><th>높이 / 반지름</th></tr></thead>
+            <tbody>
+              <tr><td>D-day ≤ 3 (긴급)</td><td>var(--dday-urgent-bg)</td><td>var(--dday-urgent-tx)</td><td>26px / 9999px</td></tr>
+              <tr><td>D-day ≤ 7 (주의)</td><td>var(--dday-warn-bg)</td><td>var(--dday-warn-tx)</td><td>26px / 9999px</td></tr>
+              <tr><td>D-day &gt; 7 (여유)</td><td>var(--belief)</td><td>var(--text-muted)</td><td>26px / 9999px</td></tr>
+              <tr><td colspan="4" class="spec-muted">font-family: Montserrat · font-size: 11px · font-weight: 700</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <!-- bg07 레이아웃 구조 -->
@@ -3387,7 +3511,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               <tr><td>Viewport 기준 너비</td><td><code>width=1300px</code> (meta viewport 고정)</td></tr>
               <tr><td>콘텐츠 최대 너비</td><td><code>1200px</code> (margin: 0 auto)</td></tr>
               <tr><td>헤더 총 높이</td><td><code>200px</code> (position: relative)</td></tr>
-              <tr><td>GNB 드롭다운</td><td><code>570px</code> 높이 · z-index: 9999999999</td></tr>
+              <tr><td>GNB 드롭다운</td><td><code>570px</code> 높이 · z-index: 9999</td></tr>
               <tr><td>이미지 CDN</td><td><code>s3.ap-northeast-2.amazonaws.com/image.publog.co.kr/</code></td></tr>
               <tr><td>이미지 렌더링</td><td><code>image-rendering: -webkit-optimize-contrast</code></td></tr>
               <tr><td>서버 인코딩</td><td>EUC-KR · ASP 기반</td></tr>
@@ -3619,6 +3743,174 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       </div>
     </div>
 
+    <!-- bg10 아이콘 시스템 -->
+    <div class="page" id="page-bg10">
+      <div class="section-header">
+        <h1 class="page-title">아이콘 시스템</h1>
+        <p>서비스 전반에 사용되는 아이콘 규정 및 라이브러리</p>
+      </div>
+      <hr>
+
+      <h2 class="section-title">아이콘 컬러 3종</h2>
+      <div class="section-card">
+        <div class="card-label">Icon Colors</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>이름</th><th>HEX</th><th>사용처</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>KEY · TRENDY</strong></td>
+                <td><span class="chip" style="background:#222450;"></span><code>#222450</code></td>
+                <td>기본 아이콘 컬러. 흰색·라이트 배경 위 모든 UI 아이콘. 가장 지배적으로 활용</td>
+              </tr>
+              <tr>
+                <td><strong>BLACK</strong></td>
+                <td><span class="chip" style="background:#000000;"></span><code>#000000</code></td>
+                <td>모노톤·고대비가 필요한 인쇄물·제휴 채널·블랙 베이스 페이지</td>
+              </tr>
+              <tr>
+                <td><strong>WHITE · CLEAR</strong></td>
+                <td><span class="chip" style="background:#fff;border:1px solid #ddd;"></span><code>#FFFFFF</code></td>
+                <td>어두운 배경(키컬러·블랙·이미지) 위 역상 버전. 헤더·이미지 오버레이</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="section-title">DO / DON'T</h2>
+      <div class="section-card">
+        <div class="card-label">Usage Rules</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th style="width:60px;">구분</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td style="color:#15803d;font-weight:700;">DO</td><td>흰색·라이트 배경 위 UI에서는 항상 <code>#222450</code>(Trendy)을 우선 적용</td></tr>
+              <tr><td style="color:#15803d;font-weight:700;">DO</td><td>키컬러·블랙·이미지 등 어두운 배경에서는 반드시 화이트(<code>#fff</code>) 역상 버전 사용</td></tr>
+              <tr><td style="color:#15803d;font-weight:700;">DO</td><td>한 화면 안에서는 같은 스타일(Linear 또는 Bold) 한 가지만 사용</td></tr>
+              <tr><td style="color:#e11d48;font-weight:700;">DON'T</td><td>옐로우·레드·스카이블루 등 다른 브랜드 색을 아이콘 자체에 적용 금지</td></tr>
+              <tr><td style="color:#e11d48;font-weight:700;">DON'T</td><td>가로세로 비율 왜곡, 의미가 명확한 아이콘의 임의 회전·반전 금지 (화살표 제외)</td></tr>
+              <tr><td style="color:#e11d48;font-weight:700;">DON'T</td><td>이미지·사진 위에 아이콘 직접 배치 금지 — 반투명 오버레이·뱃지 박스로 감싸 사용</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="section-title">크기 규격</h2>
+      <div class="section-card">
+        <div class="card-label">Size Guidelines</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>크기</th><th>사용처</th></tr></thead>
+            <tbody>
+              <tr><td>16px</td><td>인라인 텍스트, 캡션</td></tr>
+              <tr><td>20px</td><td>버튼, 폼 입력</td></tr>
+              <tr><td><strong>24px</strong> (기본)</td><td>GNB, 헤더 아이콘 바</td></tr>
+              <tr><td>32px</td><td>퀵메뉴, 카드 라벨</td></tr>
+              <tr><td colspan="2" class="spec-muted"><strong>Safe Area:</strong> 아이콘 외곽 상하좌우 아이콘 크기의 25% 이상 (24px → 최소 6px · 32px → 최소 8px)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="section-title">아이콘 라이브러리 (총 76개)</h2>
+      <div class="section-txt">스타일: Linear / Bold 2가지</div>
+
+      <div class="section-card">
+        <div class="card-label">Commerce · 쇼핑·상거래 (12)</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>영문명</th><th>한글명</th><th>영문명</th><th>한글명</th></tr></thead>
+            <tbody>
+              <tr><td>bag</td><td>장바구니</td><td>bag-2</td><td>장바구니 2</td></tr>
+              <tr><td>bag-happy</td><td>쇼핑 즐기기</td><td>shopping-cart</td><td>카트</td></tr>
+              <tr><td>shopping-bag</td><td>쇼핑백</td><td>shop</td><td>스토어</td></tr>
+              <tr><td>gift</td><td>선물·기프트</td><td>ticket-discount</td><td>쿠폰·할인</td></tr>
+              <tr><td>tag</td><td>태그</td><td>tag-2</td><td>태그 2</td></tr>
+              <tr><td>box</td><td>박스·포장</td><td>truck-tick</td><td>배송·운송</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <div class="card-label">User · 사용자·계정 (8)</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>영문명</th><th>한글명</th><th>영문명</th><th>한글명</th></tr></thead>
+            <tbody>
+              <tr><td>user</td><td>사용자</td><td>profile-circle</td><td>프로필</td></tr>
+              <tr><td>profile-2user</td><td>다중 사용자</td><td>people</td><td>그룹</td></tr>
+              <tr><td>login</td><td>로그인</td><td>logout</td><td>로그아웃</td></tr>
+              <tr><td>lock</td><td>잠금</td><td>unlock</td><td>잠금 해제</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <div class="card-label">Action · 액션 (17)</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>영문명</th><th>한글명</th><th>영문명</th><th>한글명</th></tr></thead>
+            <tbody>
+              <tr><td>heart</td><td>찜·좋아요</td><td>heart-add</td><td>찜 추가</td></tr>
+              <tr><td>like-1</td><td>좋아요</td><td>share</td><td>공유</td></tr>
+              <tr><td>search-normal-1</td><td>검색</td><td>edit</td><td>수정</td></tr>
+              <tr><td>add</td><td>추가</td><td>close-circle</td><td>닫기</td></tr>
+              <tr><td>filter</td><td>필터</td><td>sort</td><td>정렬</td></tr>
+              <tr><td>send</td><td>전송</td><td>trash</td><td>삭제</td></tr>
+              <tr><td>refresh</td><td>새로고침</td><td>repeat</td><td>반복</td></tr>
+              <tr><td>eye</td><td>보기</td><td>eye-slash</td><td>숨기기</td></tr>
+              <tr><td>hashtag</td><td>해시태그</td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <div class="card-label">Payment · 결제·금융 (5) / Design · 디자인·미디어 (10)</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>영문명</th><th>한글명</th><th>영문명</th><th>한글명</th></tr></thead>
+            <tbody>
+              <tr><td>card</td><td>카드</td><td>wallet</td><td>지갑</td></tr>
+              <tr><td>dollar-circle</td><td>금액</td><td>coin</td><td>코인·포인트</td></tr>
+              <tr><td>money</td><td>머니</td><td>image</td><td>이미지</td></tr>
+              <tr><td>gallery</td><td>갤러리</td><td>camera</td><td>카메라</td></tr>
+              <tr><td>video</td><td>영상</td><td>paintbucket</td><td>페인트</td></tr>
+              <tr><td>brush</td><td>브러시</td><td>color-swatch</td><td>컬러 스와치</td></tr>
+              <tr><td>3dcube</td><td>3D 큐브</td><td>scissor</td><td>가위·컷팅</td></tr>
+              <tr><td>printer</td><td>프린터</td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-card">
+        <div class="card-label">Communication (4) / Navigation (8) / Place (5) / System (7)</div>
+        <div class="bg-guide">
+          <table class="spec-table">
+            <thead><tr><th>영문명</th><th>한글명</th><th>영문명</th><th>한글명</th></tr></thead>
+            <tbody>
+              <tr><td>notification</td><td>알림</td><td>message</td><td>메시지</td></tr>
+              <tr><td>sms</td><td>SMS</td><td>star</td><td>별점</td></tr>
+              <tr><td>home-2</td><td>홈</td><td>category</td><td>카테고리</td></tr>
+              <tr><td>menu</td><td>메뉴</td><td>menu-board</td><td>메뉴 보드</td></tr>
+              <tr><td>arrow-left</td><td>왼쪽</td><td>arrow-right</td><td>오른쪽</td></tr>
+              <tr><td>arrow-up</td><td>위쪽</td><td>arrow-down</td><td>아래쪽</td></tr>
+              <tr><td>location</td><td>위치</td><td>map</td><td>지도</td></tr>
+              <tr><td>calendar</td><td>캘린더</td><td>clock</td><td>시계</td></tr>
+              <tr><td>timer</td><td>타이머</td><td>setting-2</td><td>설정</td></tr>
+              <tr><td>award</td><td>어워드</td><td>medal-star</td><td>메달</td></tr>
+              <tr><td>verify</td><td>인증</td><td>shield-tick</td><td>보안</td></tr>
+              <tr><td>tick-circle</td><td>체크</td><td>close-square</td><td>닫기 사각</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
@@ -3631,7 +3923,7 @@ const pageMap = {
   'bg03': '컬러 시스템', 'bg04': '타이포그래피',
   'bg05': '태그 & 뱃지', 'bg06': 'UI 컴포넌트',
   'bg07': '레이아웃 구조', 'bg08': '채널 & SNS',
-  'bg09': '로그인 모달',
+  'bg09': '로그인 모달', 'bg10': '아이콘 시스템',
   'pubcode-form': '폼 & 입력', 'pubcode-card': '퍼블카드',
   'pubcode-register': '코드 등록', 'pubcode-bulk': '대량 선택 UX',
   'pubcode-groupend': '그룹코드 종료', 'pubcode-groupmanage': '그룹관리 10+',
