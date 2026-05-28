@@ -11950,7 +11950,25 @@ function bindIconActions() {
         const action = btn.dataset.action;
         const color  = btn.dataset.color || '#222450';
         const svg = ICON_DATA[currentStyle] && ICON_DATA[currentStyle][name];
-        if (!svg) { showToast('SVG를 찾을 수 없어요'); return; }
+        if (!svg) {
+          const pngImg = card.querySelector('.ip img');
+          if (pngImg) {
+            const pngUrl = pngImg.getAttribute('src');
+            if (action === 'copy') {
+              try {
+                await navigator.clipboard.writeText(pngUrl);
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 1200);
+                showToast(`${name} URL 복사됨`);
+              } catch { showToast('복사 실패'); }
+            } else if (action === 'download') {
+              window.open(pngUrl, '_blank');
+              showToast(`${name} 이미지 열기`);
+            }
+            return;
+          }
+          showToast('SVG를 찾을 수 없어요'); return;
+        }
         const colored = svg.replace(/currentColor/g, color);
         if (action === 'copy') {
           try {
