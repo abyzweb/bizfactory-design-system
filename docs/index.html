@@ -11951,7 +11951,8 @@ function bindIconActions() {
         const color  = btn.dataset.color || '#222450';
         const svg = ICON_DATA[currentStyle] && ICON_DATA[currentStyle][name];
         if (!svg) {
-          const pngImg = card.querySelector('.ip img');
+          const ipCol = btn.closest('.ip-col');
+          const pngImg = ipCol ? ipCol.querySelector('img') : card.querySelector('.ip img');
           if (pngImg) {
             const pngUrl = pngImg.getAttribute('src');
             if (action === 'copy') {
