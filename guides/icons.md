@@ -76,7 +76,7 @@
 | logout | 로그아웃 |
 | lock | 잠금 |
 | unlock | 잠금 해제 |
-| global | 공개·전체공개 |
+| global | 언어 |
 
 ### Action · 액션 (17)
 
