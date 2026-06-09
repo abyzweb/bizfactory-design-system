@@ -81,7 +81,7 @@
 높이 60px · border-radius 없음 (직각)
 
 ```css
-.btn-make   { height: 60px; padding: 0 32px; background: var(--trendy); color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; }
+.btn-make   { height: 60px; padding: 0 32px; background: #262853; color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; }
 .btn-pdf    { height: 60px; padding: 0 32px; background: #999; color: #fff; border: none; font-size: 15px; font-weight: 700; cursor: pointer; }
 .btn-basket { height: 60px; width: 70px; background: #ccc; color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; }
 
@@ -229,10 +229,10 @@
 
 ### 메뉴영역 말풍선 태그 (GNB 카테고리)
 
-GNB 메뉴 항목 옆에 붙는 작은 태그. height 22px · border-radius 30px.
+GNB 메뉴 항목 옆에 붙는 말풍선형 태그. height 22px · border-radius 30px.
 
 ```css
-.memo-tag {
+.memo_tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -245,45 +245,45 @@ GNB 메뉴 항목 옆에 붙는 작은 태그. height 22px · border-radius 30px
   white-space: nowrap;
 }
 
-.memo-tag-new    { background: var(--badge-new); }           /* #FF8F17 */
-.memo-tag-hot    { background: var(--badge-hot); }           /* #E5362C */
-.memo-tag-season { background: var(--trendy); }              /* #222450 */
-.memo-tag-consult { background: #fff; color: var(--purple); box-shadow: inset 0 0 0 2px var(--purple); }
-.memo-tag-quick   { background: #fff; color: var(--badge-hot); box-shadow: inset 0 0 0 2px var(--badge-hot); }
+.tag_jadong { background: #ff7373; }   /* 자동견적 */
+.tag_nonjum { background: #3682ff; }   /* 논문제작 */
+.tag_hot    { background: #ff7373; }   /* HOT */
 ```
 
 ```html
-<span class="memo-tag memo-tag-new">NEW</span>
-<span class="memo-tag memo-tag-hot">HOT</span>
-<span class="memo-tag memo-tag-season">SEASON</span>
-<span class="memo-tag memo-tag-consult">상담</span>
-<span class="memo-tag memo-tag-quick">빠른배송</span>
+<span class="memo_tag tag_jadong">자동견적</span>
+<span class="memo_tag tag_nonjum">논문제작</span>
+<span class="memo_tag tag_hot">HOT</span>
 ```
 
 ### GNB 드롭다운 상품리스트 태그
 
-드롭다운 상품명 앞에 붙는 소형 태그. height 약 20px · border-radius 3px.
+드롭다운 상품명 앞에 붙는 소형 pill 태그. height 약 20px · border-radius 9999px.
 
 ```css
 .gnb-tag {
   display: inline-block;
-  padding: 2px 7px;
+  padding: 2px 8px;
   font-size: 10px;
   font-weight: 700;
-  border-radius: 3px;
-  font-family: 'Montserrat', sans-serif;
+  border-radius: 9999px;
+  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.4;
 }
 
-.gnb-tag-hot     { background: #ff7373; color: #fff; }
-.gnb-tag-new     { background: transparent; color: #ff4040; border: 1px solid #ff4040; }
-.gnb-tag-upgrade { background: #ff7373; color: #fff; width: 22px; text-align: center; padding: 2px 0; }
+.gnb-tag-hot      { background: #ff7373; color: #fff; }
+.gnb-tag-new      { background: #FF4040; color: #fff; }
+.gnb-tag-lowest   { background: #ff7373; color: #fff; }   /* 최저가 */
+.gnb-tag-deferred { background: #ff7373; color: #fff; }   /* 후불결제 */
+.gnb-tag-sameday  { background: #159fda; color: #fff; }   /* 당일출고 */
 ```
 
 ```html
 <span class="gnb-tag gnb-tag-hot">HOT</span>
 <span class="gnb-tag gnb-tag-new">NEW</span>
-<span class="gnb-tag gnb-tag-upgrade">UP</span>
+<span class="gnb-tag gnb-tag-lowest">최저가</span>
+<span class="gnb-tag gnb-tag-deferred">후불결제</span>
+<span class="gnb-tag gnb-tag-sameday">당일출고</span>
 ```
 
 ### 상품 목록 인라인 배지
@@ -318,19 +318,21 @@ GNB 메뉴 항목 옆에 붙는 작은 태그. height 22px · border-radius 30px
 
 | 배지명 | 이미지 URL |
 |--------|-----------|
-| KC 인증 | `https://www.publog.co.kr/gnb/new/l_kc_mark.png` |
-| 업계 최저가 | `https://stay10.publog.co.kr/gnb/new/l_low.png` |
-| 번개배송 | `https://stay10.publog.co.kr/gnb/new/l_quick.png` |
-| NEW DESIGN | `https://stay10.publog.co.kr/gnb/new/l_newdesign.png` |
-| 귀도리컷팅 | `https://stay10.publog.co.kr/gnb/new/cutr_icon.png` |
-| 대량구매 상담상품 | `https://stay10.publog.co.kr/gnb/new/l_designadvice_tag.png` |
-| 디자인 대행신청 | `https://stay10.publog.co.kr/gnb/new/l_designapply_tag.png` |
-| 2시 마감 당일출고 | `https://stay10.publog.co.kr/gnb/new/l_shipstoday_tag.png` |
+| KC 인증 | `https://www.publog.co.kr/gnb/new/l_kc_mark.png?t=2` |
+| 업계 최저가 | `https://stay10.publog.co.kr/gnb/new/l_low.png?t=1` |
+| 번개배송 | `https://stay10.publog.co.kr/gnb/new/l_quick.png?t=1` |
+| NEW DESIGN | `https://stay10.publog.co.kr/gnb/new/l_newdesign.png?t=1` |
+| 귀도리컷팅 | `https://stay10.publog.co.kr/gnb/new/cutr_icon.png?t=1` |
+| 대량구매 상담상품 | `https://stay10.publog.co.kr/gnb/new/l_designadvice_tag.png?t=1` |
+| 디자인 대행신청 | `https://stay10.publog.co.kr/gnb/new/l_designapply_tag.png?t=1` |
+| 2시 마감 당일출고 | `https://stay10.publog.co.kr/gnb/new/l_shipstoday_tag.png?t=1` |
+
+모든 배지 이미지: `45×45px` · `object-fit: contain`
 
 ```html
 <div style="display: flex; gap: 4px;">
-  <img src="https://www.publog.co.kr/gnb/new/l_kc_mark.png" alt="KC인증" title="KC인증">
-  <img src="https://stay10.publog.co.kr/gnb/new/l_quick.png" alt="번개배송" title="번개배송">
+  <img src="https://www.publog.co.kr/gnb/new/l_kc_mark.png?t=2" width="45" height="45" style="object-fit:contain" alt="KC인증">
+  <img src="https://stay10.publog.co.kr/gnb/new/l_quick.png?t=1" width="45" height="45" style="object-fit:contain" alt="번개배송">
 </div>
 ```
 
@@ -436,7 +438,7 @@ GNB 메뉴 항목 옆에 붙는 작은 태그. height 22px · border-radius 30px
 
 ```html
 <div class="login-modal">
-  <div class="login-title">PUBLOG</div>
+  <div class="login-title">WELCOME TO GOODS PLANET</div>
   <input class="login-field" type="text" placeholder="아이디">
   <input class="login-field" type="password" placeholder="비밀번호">
   <button class="login-btn login-btn-primary">로그인</button>
@@ -617,11 +619,11 @@ GNB 메뉴 항목 옆에 붙는 작은 태그. height 22px · border-radius 30px
 
 퍼블코드 서비스에서 주로 사용. 마감일 긴급도에 따라 색상이 달라집니다.
 
-| 상태 | 배경 | 텍스트 |
+| 조건 | 배경 | 텍스트 |
 |------|------|--------|
-| 여유 (D-8+) | `var(--belief)` | `var(--text-muted)` |
-| 주의 (D-3~7) | `var(--dday-warn-bg)` | `var(--dday-warn-tx)` |
-| 긴급 (D-0~2) | `var(--dday-urgent-bg)` | `var(--dday-urgent-tx)` |
+| D-day > 7 (여유) | `var(--belief)` | `var(--text-muted)` |
+| D-day ≤ 7 (주의) | `var(--dday-warn-bg)` | `var(--dday-warn-tx)` |
+| D-day ≤ 3 (긴급) | `var(--dday-urgent-bg)` | `var(--dday-urgent-tx)` |
 
 ```css
 .dday-badge {

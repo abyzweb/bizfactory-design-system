@@ -67,7 +67,7 @@ body {
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #666;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -678,20 +678,22 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 /* ── 태그 & 뱃지 ── */
 .bg-guide .memo_tag { color: #fff !important; text-align: center; padding: 0 10px; font-size: 11px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; height: 22px; position: relative; margin-bottom: 8px; white-space: nowrap; }
 .bg-guide .memo_tag::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 3px solid transparent; border-right: 3px solid transparent; }
-.bg-guide .tag_hot { background: #159fda; }
-.bg-guide .tag_hot::after { border-top: 3px solid #159fda; }
-.bg-guide .tag_jadong { background: #FF7676; }
-.bg-guide .tag_jadong::after { border-top: 3px solid #FF7676; }
-.bg-guide .tag_nonjum { background: #159fda; }
-.bg-guide .tag_nonjum::after { border-top: 3px solid #159fda; }
+.bg-guide .tag_hot { background: #ff7373; }
+.bg-guide .tag_hot::after { border-top: 3px solid #ff7373; }
+.bg-guide .tag_jadong { background: #ff7373; }
+.bg-guide .tag_jadong::after { border-top: 3px solid #ff7373; }
+.bg-guide .tag_nonjum { background: #3682ff; }
+.bg-guide .tag_nonjum::after { border-top: 3px solid #3682ff; }
 .bg-guide .line_tag01 { font-weight: bold; color: #7b42f6 !important; box-shadow: inset 0 0 0 2px #7b42f6; background: #fff !important; }
 .bg-guide .line_tag01::after { border-top: 3px solid #7b42f6; }
 .bg-guide .line_tag02 { font-weight: bold; color: #e5362c !important; box-shadow: inset 0 0 0 2px #e5362c; background: #fff !important; }
 .bg-guide .line_tag02::after { border-top: 3px solid #e5362c; }
-.bg-guide .gnb-tag { display: inline-block; padding: 2px 7px; font-size: 10px; font-weight: 700; border-radius: 3px; background: #ff7373; color: #fff; font-family: 'Montserrat', sans-serif; line-height: 1.4; }
-.bg-guide .gnb-tag-hot { color: #fff !important; border: 1px solid #ff7373 !important; background: #ff7373; }
-.bg-guide .gnb-tag-new { color: #ff4040 !important; border: 1px solid #ff4040 !important; background: transparent; }
-.bg-guide .gnb-tag-upgrade { color: #fff !important; border: 1px solid #ff7373 !important; background: #ff7373; width: 22px; text-align: center; padding: 2px 0; box-sizing: border-box; }
+.bg-guide .gnb-tag { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 700; border-radius: 9999px; background: #ff7373; color: #fff; font-family: 'Noto Sans KR', sans-serif; line-height: 1.4; }
+.bg-guide .gnb-tag-hot { background: #ff7373; color: #fff !important; border: none !important; }
+.bg-guide .gnb-tag-new { background: #FF4040; color: #fff !important; border: none !important; }
+.bg-guide .gnb-tag-lowest { background: #ff7373; color: #fff !important; border: none !important; }
+.bg-guide .gnb-tag-deferred { background: #ff7373; color: #fff !important; border: none !important; }
+.bg-guide .gnb-tag-sameday { background: #159fda; color: #fff !important; border: none !important; }
 .bg-guide .b { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 800; letter-spacing: 0.5px; font-family: 'Montserrat', sans-serif; }
 .bg-guide .b-coupon { padding: 3px 5px; background-color: #159fda; border-radius: 3px; color: #fff !important; font-size: 12px; }
 .bg-guide .b-pvc { display: inline-block; padding: 2px 7px; font-size: 10px; font-weight: 700; color: #159fda !important; border: 1px solid #159fda !important; background: transparent; border-radius: 3px; font-family: 'Montserrat', sans-serif; line-height: 1.4; box-sizing: border-box; }
@@ -1266,17 +1268,17 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="section-card">
         <div class="card-label">Product Detail Actions</div>
         <div class="btn-row">
-          <button class="btn-make">제작하기</button>
-          <button class="btn-pdf">PDF 보기</button>
-          <button class="btn-basket">장바구니</button>
+          <button class="btn-make">디자인고르기</button>
+          <button class="btn-pdf">파일 추가</button>
+          <button class="btn-basket">🛒</button>
         </div>
       </div>
       <div class="section-card">
         <div class="card-label">실제 상세페이지 배치 예시</div>
         <div class="btn-row-480">
-          <button class="btn-basket">장바구니</button>
-          <button class="btn-pdf">PDF 미리보기</button>
-          <button class="btn-make">제작하기</button>
+          <button class="btn-basket">🛒</button>
+          <button class="btn-pdf">파일 추가</button>
+          <button class="btn-make">디자인고르기</button>
         </div>
       </div>
       <div class="section-card">
@@ -1286,9 +1288,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr><th>버튼명</th><th>클래스</th><th>높이</th><th>배경</th><th>Hover</th></tr>
           </thead>
           <tbody>
-            <tr><td>제작하기</td><td><code>.btn-make</code></td><td>60px</td><td>#159fda</td><td>#4e58c2</td></tr>
-            <tr><td>PDF 보기</td><td><code>.btn-pdf</code></td><td>60px</td><td>#999999</td><td>#b3b3b3</td></tr>
-            <tr><td>장바구니</td><td><code>.btn-basket</code></td><td>60px · w:70px</td><td>#cccccc</td><td>—</td></tr>
+            <tr><td>디자인고르기</td><td><code>.btn-make</code></td><td>60px</td><td>#159fda</td><td>#4e58c2</td></tr>
+            <tr><td>파일 추가</td><td><code>.btn-pdf</code></td><td>60px</td><td>#999999</td><td>#b3b3b3</td></tr>
+            <tr><td>장바구니 담기</td><td><code>.btn-basket</code></td><td>60px · w:70px</td><td>#cccccc</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -1965,7 +1967,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </tr>
             <tr>
               <td>H3 · 상품명</td>
-              <td><span class="bg-fs-noto-lg">포토카드 · 아크릴 키링</span></td>
+              <td><span class="bg-fs-noto-lg">스피드 명함 · 현수막</span></td>
               <td>YoonGothicPro760 700<br>16–20px</td>
             </tr>
             <tr>
@@ -1975,7 +1977,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </tr>
             <tr>
               <td>Price · 가격</td>
-              <td><span class="bg-fs-price">6,400원~</span></td>
+              <td><span class="bg-fs-price">4,400원~</span></td>
               <td>Montserrat 800<br>18–24px · 반드시 ~포함</td>
             </tr>
             <tr>
@@ -2010,17 +2012,17 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="bg-tag-item">
               <div class="bg-tag-preview"><span class="memo_tag tag_jadong">자동견적</span></div>
               <div class="bg-tag-name">자동견적</div>
-              <div class="bg-tag-code">#FF7676</div>
+              <div class="bg-tag-code">#ff7373</div>
             </div>
             <div class="bg-tag-item">
               <div class="bg-tag-preview"><span class="memo_tag tag_nonjum">논문제작</span></div>
               <div class="bg-tag-name">논문제작</div>
-              <div class="bg-tag-code">#159fda</div>
+              <div class="bg-tag-code">#3682ff</div>
             </div>
             <div class="bg-tag-item">
               <div class="bg-tag-preview"><span class="memo_tag tag_hot">HOT</span></div>
               <div class="bg-tag-name">HOT</div>
-              <div class="bg-tag-code">#159fda</div>
+              <div class="bg-tag-code">#ff7373</div>
             </div>
           </div>
         </div>
@@ -2035,17 +2037,27 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="bg-tag-item">
               <div><span class="gnb-tag gnb-tag-hot">HOT</span></div>
               <div class="bg-tag-name mt">HOT</div>
-              <div class="bg-tag-code">bg #ff7373 / filled</div>
+              <div class="bg-tag-code">#ff7373 / filled pill</div>
             </div>
             <div class="bg-tag-item">
               <div><span class="gnb-tag gnb-tag-new">NEW</span></div>
               <div class="bg-tag-name mt">NEW</div>
-              <div class="bg-tag-code">#ff4040 / outline</div>
+              <div class="bg-tag-code">#FF4040 / filled pill</div>
             </div>
             <div class="bg-tag-item">
-              <div><span class="gnb-tag gnb-tag-upgrade">UP</span></div>
-              <div class="bg-tag-name mt">UPGRADE</div>
-              <div class="bg-tag-code">bg #ff7373 / w:22px</div>
+              <div><span class="gnb-tag gnb-tag-lowest">최저가</span></div>
+              <div class="bg-tag-name mt">최저가</div>
+              <div class="bg-tag-code">#ff7373 / filled pill</div>
+            </div>
+            <div class="bg-tag-item">
+              <div><span class="gnb-tag gnb-tag-deferred">후불결제</span></div>
+              <div class="bg-tag-name mt">후불결제</div>
+              <div class="bg-tag-code">#ff7373 / filled pill</div>
+            </div>
+            <div class="bg-tag-item">
+              <div><span class="gnb-tag gnb-tag-sameday">당일출고</span></div>
+              <div class="bg-tag-name mt">당일출고</div>
+              <div class="bg-tag-code">#159fda / filled pill</div>
             </div>
           </div>
         </div>
@@ -2182,8 +2194,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Product Detail</div>
         <div class="btn-row">
           <button class="btn-basket">🛒</button>
-          <button class="btn-make">디자인 선택하기</button>
-          <button class="btn-pdf">PDF 업로드</button>
+          <button class="btn-make">디자인고르기</button>
+          <button class="btn-pdf">파일 추가</button>
         </div>
         <div class="divider"></div>
         <div class="card-label">Spec</div>
@@ -2192,15 +2204,15 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <thead><tr><th>버튼</th><th>클래스</th><th>기본 색상</th><th>Hover</th></tr></thead>
             <tbody>
               <tr><td><button class="btn-basket btn-demo">🛒</button></td><td><code>.btn-basket</code></td><td>bg <strong>#cccccc</strong> / color #fff · 70×60px</td><td>bg #b3b3b3</td></tr>
-              <tr><td><button class="btn-make btn-demo">디자인 선택하기</button></td><td><code>.btn-make</code></td><td>bg <strong>#262853</strong> / color #fff · h:60px</td><td>bg #4e58c2</td></tr>
-              <tr><td><button class="btn-pdf btn-demo">PDF 업로드</button></td><td><code>.btn-pdf</code></td><td>bg <strong>#999999</strong> / color #fff · h:60px</td><td>bg #b3b3b3</td></tr>
+              <tr><td><button class="btn-make btn-demo">디자인고르기</button></td><td><code>.btn-make</code></td><td>bg <strong>#262853</strong> / color #fff · h:60px</td><td>bg #4e58c2</td></tr>
+              <tr><td><button class="btn-pdf btn-demo">파일 추가</button></td><td><code>.btn-pdf</code></td><td>bg <strong>#999999</strong> / color #fff · h:60px</td><td>bg #b3b3b3</td></tr>
             </tbody>
           </table>
         </div>
       </div>
 
       <h2 class="section-title">④ 검색 컴포넌트</h2>
-      <div class="section-txt">헤더 검색창 — 상품명 / 테마샵 / 퍼블코드 3가지 탭 모드 + 자동완성</div>
+      <div class="section-txt">헤더 검색창 — 상품명 / 테마샵 2가지 탭 모드 + 자동완성</div>
       <div class="section-card">
         <div class="card-label">Search</div>
         <div class="bg-guide">
@@ -2210,7 +2222,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <button class="s-state-btn" onclick="showSearchState('auto-product', this)">② 상품명 자동완성</button>
             <button class="s-state-btn" onclick="showSearchState('theme', this)">③ 테마샵</button>
             <button class="s-state-btn" onclick="showSearchState('auto-theme', this)">④ 테마샵 자동완성</button>
-            <button class="s-state-btn" onclick="showSearchState('pubcode', this)">⑤ 퍼블코드</button>
           </div>
           <div class="search-demo-wrap">
               <!-- 검색바 -->
@@ -2224,10 +2235,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
                       <ul class="select_fake_list" id="s-drop-tab" style="display:none;">
                         <li class="selected">상품명</li>
                         <li>테마샵</li>
-                        <li>퍼블코드</li>
                       </ul>
                     </div>
-                    <input class="input_search" id="s-input" placeholder="탁월한 명암과 색감! 꼼꼼한 고급인화" readonly>
+                    <input class="input_search" id="s-input" placeholder="스피드 명함, 현수막, 포스터..." readonly>
                   </div>
                   <button class="icon_search"></button>
                 </div>
@@ -2236,26 +2246,26 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               <div class="search-auto-dropdown" id="s-drop-auto" style="display:none;">
                 <div class="search-auto-row">
                   <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                  <span class="search-auto-name">엽서</span><span class="search-auto-tag">테마샵 ↗</span>
+                  <span class="search-auto-name">명함관</span><span class="search-auto-tag">테마샵 ↗</span>
                 </div>
                 <div class="search-auto-row">
                   <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                  <span class="search-auto-name">작가전용관</span><span class="search-auto-tag">테마샵 ↗</span>
+                  <span class="search-auto-name">배너샵</span><span class="search-auto-tag">테마샵 ↗</span>
+                </div>
+                <div class="search-auto-row">
+                  <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                  <span class="search-auto-name">학술포스터</span><span class="search-auto-tag">테마샵 ↗</span>
                 </div>
                 <div class="search-auto-row">
                   <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                  <span class="search-auto-name">아크릴키링</span><span class="search-auto-tag">테마샵 ↗</span>
+                  <span class="search-auto-name">달력제작</span><span class="search-auto-tag">테마샵 ↗</span>
                 </div>
                 <div class="search-auto-row">
                   <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                  <span class="search-auto-name">졸업몰</span><span class="search-auto-tag">테마샵 ↗</span>
-                </div>
-                <div class="search-auto-row">
-                  <div class="search-auto-picon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                  <span class="search-auto-name">겨울상품</span><span class="search-auto-tag">테마샵 ↗</span>
+                  <span class="search-auto-name">스티커관</span><span class="search-auto-tag">테마샵 ↗</span>
                 </div>
                 <div class="search-auto-recent">
-                  <span class="search-auto-recent-name">키링</span>
+                  <span class="search-auto-recent-name">명함</span>
                   <span class="search-auto-close">✕</span>
                 </div>
                 <div class="search-auto-footer"><span class="search-auto-clear">전체 삭제</span></div>
@@ -2264,11 +2274,10 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <table class="spec-table mt-12">
             <thead><tr><th>상태</th><th>탭 표시</th><th>placeholder</th><th>드롭다운</th></tr></thead>
             <tbody>
-              <tr><td>① 상품명 탭메뉴 열림</td><td>상품명 ▲</td><td>탁월한 명암과 색감! 꼼꼼한 고급인화</td><td>상품명 ✓ / 테마샵 / 퍼블코드</td></tr>
+              <tr><td>① 상품명 탭메뉴 열림</td><td>상품명 ▲</td><td>스피드 명함, 현수막, 포스터...</td><td>상품명 ✓ / 테마샵</td></tr>
               <tr><td>② 상품명 자동완성</td><td>상품명 ▼</td><td>다양한 상품을 쉽게 찾아보세요.</td><td>최근검색 + 테마샵 추천목록</td></tr>
               <tr><td>③ 테마샵 선택</td><td>테마샵 ▼</td><td>테마검색</td><td>없음</td></tr>
               <tr><td>④ 테마샵 자동완성</td><td>테마샵 ▼</td><td>다양한 상품을 쉽게 찾아보세요.</td><td>최근검색 + 테마샵 추천목록</td></tr>
-              <tr><td>⑤ 퍼블코드 선택</td><td>퍼블코드 ▼</td><td>퍼블코드를 입력해주세요</td><td>없음</td></tr>
             </tbody>
           </table>
         </div>
@@ -2280,27 +2289,27 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="bg-guide">
           <div class="product-card-row">
             <div class="product-card">
-              <div class="product-card-thumb pct-bg-blue">📸</div>
+              <div class="product-card-thumb pct-bg-blue">🪪</div>
               <div class="product-card-body">
-                <div class="product-card-name">포토북 <span class="b b-h">H</span></div>
-                <div class="product-card-desc">중앙, 두 이상의 꿰매기 방식</div>
-                <div class="product-card-price">6,400원~</div>
+                <div class="product-card-name">스피드 명함 <span class="b b-new">NEW</span></div>
+                <div class="product-card-desc">고급스러운 컬러 재현, 탄탄한 질감</div>
+                <div class="product-card-price">4,400원~</div>
               </div>
             </div>
             <div class="product-card">
-              <div class="product-card-thumb pct-bg-pink">🏷️</div>
+              <div class="product-card-thumb pct-bg-pink">📢</div>
               <div class="product-card-body">
-                <div class="product-card-name">띠부씰 스티커 <span class="b b-new">NEW</span></div>
-                <div class="product-card-desc">랜덤배치, 그 모양 그대로</div>
-                <div class="product-card-price">600원~</div>
+                <div class="product-card-name">가로형 현수막 <span class="b b-hot">HOT</span></div>
+                <div class="product-card-desc">야외 인쇄, 다양한 소재 선택</div>
+                <div class="product-card-price">11,400원~</div>
               </div>
             </div>
             <div class="product-card">
-              <div class="product-card-thumb pct-bg-lilac">💎</div>
+              <div class="product-card-thumb pct-bg-lilac">🖼️</div>
               <div class="product-card-body">
-                <div class="product-card-name">아크릴 키링 <span class="b b-hot">HOT</span></div>
-                <div class="product-card-desc">원하는 키링을 직접 디자인</div>
-                <div class="product-card-price">2,970원~</div>
+                <div class="product-card-name">디지털 소형 포스터</div>
+                <div class="product-card-desc">빠른 제작, 생생한 컬러 재현</div>
+                <div class="product-card-price">1,660원~</div>
               </div>
             </div>
           </div>
@@ -2308,7 +2317,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       </div>
 
       <h2 class="section-title">⑥ D-day 배지</h2>
-      <div class="section-txt">퍼블코드 서비스에서 마감일 긴급도에 따라 3단계 색상 분기 (브랜드 CSS 변수 기준)</div>
+      <div class="section-txt">마감일 긴급도에 따라 3단계 색상 분기 (브랜드 CSS 변수 기준)</div>
       <div class="section-card">
         <div class="card-label">Preview</div>
         <div class="bg-guide" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
@@ -2358,7 +2367,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="wf-bar section hl">BEST SELLER — 판매 1위 상품 카드 그리드</div>
             <div class="wf-bar section">굿즈 테마 섹션 (리빙 / 스티커 / 인화 / 액자)</div>
             <div class="wf-bar section">테마샵 카드 그리드</div>
-            <div class="wf-bar section">퍼블코드 서비스 배너</div>
             <div class="wf-bar section">UPDATE BIZFACTORY — 업데이트 이미지</div>
             <div class="wf-bar footer">FOOTER — 회사정보 · SNS · 고객센터 · 법적고지</div>
           </div>
@@ -2499,7 +2507,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
     <div class="page" id="page-bg09">
       <div class="section-header">
         <h1 class="page-title">로그인 모달</h1>
-        <p>회원 로그인 팝업 — 퍼블코드 등 로그인 필요 기능 진입 시 노출</p>
+        <p>회원 로그인 팝업 — 로그인 필요 기능 진입 시 노출</p>
       </div>
       <hr>
 
@@ -3140,7 +3148,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
     <button class="cat-chip" data-cat="navigation">네비게이션</button>
     <button class="cat-chip" data-cat="place">시간·위치</button>
     <button class="cat-chip" data-cat="system">시스템·인증</button>
-    <button class="cat-chip" data-cat="BIZFACTORY">퍼블코드</button>
 
   </div>
 
@@ -5845,45 +5852,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
   </div>
 </section>
 
-<section class="cat-section" data-cat="BIZFACTORY">
-  <div class="cat-header">
-    <div class="cat-en">BIZFACTORY Code</div>
-    <h3 class="cat-title">퍼블코드</h3>
-    <div class="cat-count">2 icons</div>
-  </div>
-  <div class="icon-grid">
-    <div class="icon-card" data-name="share-BIZFACTORY" data-ko="공유" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_w.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">share-BIZFACTORY</div>
-        <div class="icon-ko">공유</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-    <div class="icon-card" data-name="group-BIZFACTORY" data-ko="그룹코드" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px; height:28px; object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group_w.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">group-BIZFACTORY</div>
-        <div class="icon-ko">그룹코드</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-  </div>
-</section>
+
 
   </div>
 </div>
@@ -8592,45 +8561,7 @@ const linearHtml = `
   </div>
 </section>
 
-<section class="cat-section" data-cat="BIZFACTORY">
-  <div class="cat-header">
-    <div class="cat-en">BIZFACTORY Code</div>
-    <h3 class="cat-title">퍼블코드</h3>
-    <div class="cat-count">2 icons</div>
-  </div>
-  <div class="icon-grid">
-    <div class="icon-card" data-name="share-BIZFACTORY" data-ko="공유" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_w.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">share-BIZFACTORY</div>
-        <div class="icon-ko">공유</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-    <div class="icon-card" data-name="group-BIZFACTORY" data-ko="그룹코드" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px; height:28px; object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group_w.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">group-BIZFACTORY</div>
-        <div class="icon-ko">그룹코드</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-  </div>
-</section>
+
 `;
 const boldHtml = `
 <section class="cat-section" data-cat="commerce">
@@ -10916,45 +10847,7 @@ const boldHtml = `
   </div>
 </section>
 
-<section class="cat-section" data-cat="BIZFACTORY">
-  <div class="cat-header">
-    <div class="cat-en">BIZFACTORY Code</div>
-    <h3 class="cat-title">퍼블코드</h3>
-    <div class="cat-count">2 icons</div>
-  </div>
-  <div class="icon-grid">
-    <div class="icon-card" data-name="share-BIZFACTORY" data-ko="공유" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_w.png?t=1" style="width:28px; height:28px; object-fit:contain;" alt="share-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">share-BIZFACTORY</div>
-        <div class="icon-ko">공유</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-    <div class="icon-card" data-name="group-BIZFACTORY" data-ko="그룹코드" data-svg="">
-      <div class="icon-preview-row">
-        <div class="ip ip-key" title="키컬러 #159fda"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px; height:28px; object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-black" title="블랙 #000"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-        <div class="ip ip-white" title="화이트 #fff"><img src="https://www.BIZFACTORY.co.kr/sub_order/img/share_group_w.png" style="width:28px;height:28px;object-fit:contain;" alt="group-BIZFACTORY"></div>
-      </div>
-      <div class="icon-meta">
-        <div class="icon-name">group-BIZFACTORY</div>
-        <div class="icon-ko">그룹코드</div>
-      </div>
-      <div class="icon-actions">
-        <button class="ia-btn" data-action="copy" title="SVG 코드 복사"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
-        <button class="ia-btn" data-action="download" title="SVG 다운로드"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-      </div>
-    </div>
-  </div>
-</section>
+
 `;
 
 let currentStyle = "linear";
@@ -11146,7 +11039,7 @@ function showSearchState(state, btn) {
   if (btn) btn.classList.add('s-on');
   if (state === 'tab-menu') {
     tabText.textContent = '상품명';
-    input.placeholder = '탁월한 명암과 색감! 꼼꼼한 고급인화';
+    input.placeholder = '스피드 명함, 현수막, 포스터...';
     dropTab.style.display = 'block';
     if (selectFake) selectFake.classList.add('open');
   } else if (state === 'auto-product') {
@@ -11160,9 +11053,6 @@ function showSearchState(state, btn) {
     tabText.textContent = '테마샵';
     input.placeholder = '다양한 상품을 쉽게 찾아보세요.';
     dropAuto.style.display = 'block';
-  } else if (state === 'pubcode') {
-    tabText.textContent = '퍼블코드';
-    input.placeholder = '퍼블코드를 입력해주세요';
   }
 }
 
