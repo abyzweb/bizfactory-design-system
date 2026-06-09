@@ -870,6 +870,23 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .bg-modal-spec-apple  { width:36px; height:36px; border-radius:50%; background:#000; border:none; color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:11px; cursor:default; }
 .bg-modal-spec-google { width:36px; height:36px; border-radius:50%; background:#fff; border:1px solid #d9d9d9; display:inline-flex; align-items:center; justify-content:center; cursor:default; }
 
+/* ── 로그인 모달 v2 프리뷰 (BIZ FACTORY 소셜 전용) ── */
+.bfm2-card { background:#fff; width:360px; padding:40px 24px 28px; font-family:'Noto Sans KR',sans-serif; }
+.bfm2-welcome { text-align:center; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.14em; color:#222; margin-bottom:4px; }
+.bfm2-brand { text-align:center; font-family:'Montserrat',sans-serif; font-size:34px; font-weight:900; color:#159fda; letter-spacing:0.04em; margin-bottom:20px; }
+.bfm2-desc { text-align:center; font-size:19px; font-weight:700; color:#111; line-height:1.55; margin-bottom:20px; }
+.bfm2-illust { height:220px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.bfm2-illust svg { width:100%; height:100%; }
+.bfm2-badge { text-align:center; font-size:12px; color:#aaa; margin-bottom:28px; }
+.bfm2-btn-stack { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+.bfm2-btn { width:100%; height:54px; border-radius:8px; border:none; font-family:'Noto Sans KR',sans-serif; font-size:15px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; }
+.bfm2-kakao { background:#FEE500; color:#3C1E1E; }
+.bfm2-naver  { background:#1ec800; color:#fff; }
+.bfm2-apple  { background:#000;    color:#fff; }
+.bfm2-google { background:#fff;    color:#333; border:1px solid #ddd !important; }
+.bfm2-links  { text-align:center; font-size:12px; color:#999; }
+.bfm2-links-sep { margin:0 6px; color:#ddd; }
+
 /* ── 버튼행 레이아웃 ── */
 .btn-row-480 { display:flex; gap:0; max-width:480px; }
 .btn-row-480 .btn-pdf  { flex:1; }
@@ -957,16 +974,16 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
     </div>
     <div class="nav-items">
       <div class="nav-sub" onclick="showPage('test')">test</div>
-      <div class="nav-sub" onclick="showPage('bg01')"><span class="nav-num">01</span> 브랜드 정체성</div>
-      <div class="nav-sub" onclick="showPage('bg02')"><span class="nav-num">02</span> 로고 시스템</div>
-      <div class="nav-sub" onclick="showPage('bg03')"><span class="nav-num">03</span> 컬러 시스템</div>
-      <div class="nav-sub" onclick="showPage('bg04')"><span class="nav-num">04</span> 타이포그래피</div>
-      <div class="nav-sub" onclick="showPage('bg05')"><span class="nav-num">05</span> 태그 &amp; 뱃지</div>
-      <div class="nav-sub" onclick="showPage('bg06')"><span class="nav-num">06</span> UI 컴포넌트</div>
-      <div class="nav-sub" onclick="showPage('bg07')"><span class="nav-num">07</span> 레이아웃 구조</div>
-      <div class="nav-sub" onclick="showPage('bg08')"><span class="nav-num">08</span> 채널 &amp; SNS</div>
-      <div class="nav-sub" onclick="showPage('bg09')"><span class="nav-num">09</span> 로그인 모달</div>
-      <div class="nav-sub" onclick="showPage('bg10')"><span class="nav-num">10</span> 아이콘 시스템</div>
+      <!-- <div class="nav-sub" onclick="showPage('bg01')"><span class="nav-num">01</span> 브랜드 정체성</div> -->
+      <div class="nav-sub" onclick="showPage('bg02')"><span class="nav-num">01</span> 로고 시스템</div>
+      <div class="nav-sub" onclick="showPage('bg03')"><span class="nav-num">02</span> 컬러 시스템</div>
+      <div class="nav-sub" onclick="showPage('bg04')"><span class="nav-num">03</span> 타이포그래피</div>
+      <div class="nav-sub" onclick="showPage('bg05')"><span class="nav-num">04</span> 태그 &amp; 뱃지</div>
+      <div class="nav-sub" onclick="showPage('bg06')"><span class="nav-num">05</span> UI 컴포넌트</div>
+      <div class="nav-sub" onclick="showPage('bg07')"><span class="nav-num">06</span> 레이아웃 구조</div>
+      <div class="nav-sub" onclick="showPage('bg08')"><span class="nav-num">07</span> 채널 &amp; SNS</div>
+      <div class="nav-sub" onclick="showPage('bg09')"><span class="nav-num">08</span> 로그인 모달</div>
+      <div class="nav-sub" onclick="showPage('bg10')"><span class="nav-num">09</span> 아이콘 시스템</div>
     </div>
 
   </div>
@@ -1575,7 +1592,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
     <!-- ─── 브랜드 가이드 ─── -->
 
-    <!-- bg01 브랜드 정체성 -->
+    <!-- bg01 브랜드 정체성 (주석 처리 — 나중에 재사용 가능)
     <div class="page" id="page-bg01">
       <div class="section-header">
         <h1 class="page-title">브랜드 정체성</h1>
@@ -1636,6 +1653,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         </div>
       </div>
     </div>
+    -->
 
     <!-- bg02 로고 시스템 -->
     <div class="page" id="page-bg02">
@@ -2410,32 +2428,36 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <div class="sns-grid">
             <div class="sns-card">
               <div class="sns-icon" style="background:#FEE500;">
-                <img src="https://www.BIZFACTORY.co.kr/img/kakao_logo.png?t=1" alt="KakaoTalk" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 48 48" width="26" height="26" fill="#3C1E1E"><path d="M24 4C12.95 4 4 11.16 4 20c0 5.59 3.28 10.53 8.33 13.65L10.42 42 20.2 36.5C21.44 36.82 22.71 37 24 37c11.05 0 20-7.16 20-16S35.05 4 24 4z"/></svg>
               </div>
               <div class="sns-name">KakaoTalk</div>
               <div class="sns-url">pf.kakao.com/_xbxmxhzE</div>
             </div>
             <div class="sns-card">
               <div class="sns-icon" style="background:#000;">
-                <img src="https://www.BIZFACTORY.co.kr/img/x_logo.png?t=1" alt="X" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.74-8.855L2.252 2.25H8.08l4.713 5.981zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </div>
               <div class="sns-name">Twitter/X</div>
               <div class="sns-url">twitter.com/BIZFACTORY_abyz</div>
             </div>
             <div class="sns-card">
               <div class="sns-icon" style="background:#0866ff;">
-                <img src="https://www.BIZFACTORY.co.kr/img/facebook_logo.png?t=1" alt="Facebook" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 10 18" width="14" height="26" fill="#fff"><path d="M6.5 18V10h2.7l.4-3H6.5V5.1c0-.9.2-1.5 1.5-1.5H9.7V.1C9.3.1 8.3 0 7.1 0 4.6 0 2.9 1.5 2.9 4.3V7H0v3h2.9v8z"/></svg>
               </div>
               <div class="sns-name">Facebook</div>
               <div class="sns-url">facebook.com/BIZFACTORYbook</div>
             </div>
             <div class="sns-card">
-              <div class="sns-icon" style="background:#f0f1f6;"></div>
+              <div class="sns-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
               <div class="sns-name">Instagram</div>
               <div class="sns-url">instagram.com/BIZFACTORY</div>
             </div>
             <div class="sns-card">
-              <div class="sns-icon" style="background:#f0f1f6;"></div>
+              <div class="sns-icon" style="background:#03C75A;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+              </div>
               <div class="sns-name">Naver Blog</div>
               <div class="sns-url">blog.naver.com/happyhoon2016</div>
             </div>
@@ -2450,21 +2472,21 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <div class="sns-grid col3">
             <div class="sns-card">
               <div class="sns-icon" style="background:#1ec800;">
-                <img src="https://www.BIZFACTORY.co.kr/img/naver_logo.png?t=2" alt="Naver" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
               </div>
               <div class="sns-name">Naver</div>
               <div class="sns-url">#1ec800 / color #fff</div>
             </div>
             <div class="sns-card">
               <div class="sns-icon" style="background:#000;">
-                <img src="https://www.BIZFACTORY.co.kr/img/apple_logo.png?t=2" alt="Apple" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 14 17" width="16" height="20" fill="#fff"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
               </div>
               <div class="sns-name">Apple</div>
               <div class="sns-url">#000 / color #fff</div>
             </div>
             <div class="sns-card">
               <div class="sns-icon" style="background:#fff; border:1px solid #d9d9d9;">
-                <img src="https://www.BIZFACTORY.co.kr/img/google_logo.png" alt="Google" style="width:26px; height:26px; object-fit:contain;">
+                <svg viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
               </div>
               <div class="sns-name">Google</div>
               <div class="sns-url">#fff / border #d9d9d9</div>
@@ -2473,34 +2495,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         </div>
       </div>
 
-      <h2 class="section-title">판매 채널</h2>
-      <div class="section-card">
-        <div class="card-label">Sales Channels</div>
-        <div class="bg-guide">
-          <div class="info-grid">
-            <div class="info-box">
-              <h4>온라인 판매</h4>
-              <p>
-                공식 웹사이트: www.BIZFACTORY.co.kr<br>
-                B2B (대량): www.bizfactory.co.kr<br>
-                네이버 스마트스토어 운영<br>
-                텐바이텐 / 와디즈 / 쿠팡 입점<br>
-                YouTube: @비즈팩토리 (Shorts)
-              </p>
-            </div>
-            <div class="info-box">
-              <h4>앱 서비스</h4>
-              <p>
-                Android: Google Play (BIZFACTORY.app)<br>
-                iOS: App Store 등록<br>
-                T멤버십 제휴 운영<br>
-                인생20컷 제휴<br>
-                네이버 스마트스토어 제휴
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- bg09 로그인 모달 -->
@@ -2516,43 +2510,74 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Login Modal</div>
         <div class="bg-guide">
           <div class="bg-modal-wrap">
-            <div class="bg-modal-card">
-              <div class="bg-modal-head">
-                <p class="bg-modal-title">WELCOME TO GOODS PLANET</p>
-                <p class="bg-modal-sub">지금 가입하면 특별 무료 혜택을 드려요&nbsp;<span class="bg-modal-sub-link">자세히</span></p>
+            <div class="bfm2-card">
+
+              <!-- 헤더 -->
+              <p class="bfm2-welcome">WELCOME</p>
+              <p class="bfm2-brand">BIZ FACTORY</p>
+
+              <!-- 설명 -->
+              <p class="bfm2-desc">다양한 쿠폰이 준비되어 있어요.<br>회원가입 후 이벤트에서 선택하세요.</p>
+
+              <!-- 일러스트 (마스코트 + 모니터) -->
+              <div class="bfm2-illust">
+                <svg viewBox="0 0 312 220" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="32" y="30" width="180" height="118" rx="10" fill="#fff" stroke="#ddd" stroke-width="2"/>
+                  <rect x="38" y="36" width="168" height="100" rx="6" fill="#e8f4fb"/>
+                  <rect x="44" y="42" width="156" height="18" rx="3" fill="#159fda" opacity="0.8"/>
+                  <rect x="44" y="66" width="90" height="8" rx="3" fill="#cce8f5"/>
+                  <rect x="44" y="78" width="70" height="8" rx="3" fill="#cce8f5"/>
+                  <rect x="44" y="90" width="110" height="8" rx="3" fill="#cce8f5"/>
+                  <rect x="140" y="66" width="62" height="32" rx="4" fill="#159fda" opacity="0.5"/>
+                  <rect x="109" y="148" width="26" height="18" rx="3" fill="#ddd"/>
+                  <rect x="90" y="163" width="64" height="8" rx="4" fill="#ccc"/>
+                  <path d="M234 52 C220 70 190 100 190 130 C190 162 210 182 234 182 C258 182 278 162 278 130 C278 100 248 70 234 52Z" fill="#159fda"/>
+                  <ellipse cx="234" cy="148" rx="32" ry="28" fill="#fff" opacity="0.95"/>
+                  <ellipse cx="224" cy="144" rx="5" ry="6" fill="#333"/>
+                  <ellipse cx="244" cy="144" rx="5" ry="6" fill="#333"/>
+                  <ellipse cx="226" cy="142" rx="2" ry="2" fill="#fff"/>
+                  <ellipse cx="246" cy="142" rx="2" ry="2" fill="#fff"/>
+                  <ellipse cx="216" cy="152" rx="7" ry="5" fill="#ffaaaa" opacity="0.6"/>
+                  <ellipse cx="252" cy="152" rx="7" ry="5" fill="#ffaaaa" opacity="0.6"/>
+                  <path d="M224 158 Q234 166 244 158" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <polygon points="231,118 225,132 233,132 229,148 241,128 233,128 237,118" fill="#FFCE2D"/>
+                  <path d="M196 150 Q190 148 185 150 Q182 152 184 156 Q186 162 196 162Z" fill="#159fda"/>
+                  <ellipse cx="184" cy="155" rx="7" ry="6" fill="#0e88be"/>
+                </svg>
               </div>
-              <div class="bg-modal-form">
-                <input class="bg-modal-input" placeholder="아이디">
-                <input class="bg-modal-input" type="password" placeholder="비밀번호">
-                <button class="bg-modal-btn-login">로그인</button>
-              </div>
-              <div class="bg-modal-kakao-wrap">
-                <button class="bg-modal-kakao-btn">
-                  <svg width="20" height="20" viewBox="0 0 48 48" fill="#3C1E1E"><path d="M24 4C12.95 4 4 11.16 4 20c0 5.59 3.28 10.53 8.33 13.65L10.42 42 20.2 36.5C21.44 36.82 22.71 37 24 37c11.05 0 20-7.16 20-16S35.05 4 24 4z"/></svg>
+
+              <!-- 배지 문구 -->
+              <p class="bfm2-badge">회원가입고객 바로증정</p>
+
+              <!-- 소셜 로그인 버튼들 -->
+              <div class="bfm2-btn-stack">
+                <button class="bfm2-btn bfm2-kakao">
+                  <svg viewBox="0 0 48 48" width="22" height="22" fill="#3C1E1E"><path d="M24 4C12.95 4 4 11.16 4 20c0 5.59 3.28 10.53 8.33 13.65L10.42 42 20.2 36.5C21.44 36.82 22.71 37 24 37c11.05 0 20-7.16 20-16S35.05 4 24 4z"/></svg>
                   카카오 로그인
                 </button>
-              </div>
-              <div class="bg-modal-social-wrap">
-                <div class="bg-modal-divider"></div>
-                <button class="bg-modal-social-btn bg-modal-naver">N</button>
-                <button class="bg-modal-social-btn bg-modal-apple">
-                  <svg width="14" height="17" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
+                <button class="bfm2-btn bfm2-naver">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+                  네이버 로그인
                 </button>
-                <button class="bg-modal-social-btn bg-modal-google">
-                  <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
+                <button class="bfm2-btn bfm2-apple">
+                  <svg viewBox="0 0 14 17" width="16" height="20" fill="#fff"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
+                  애플 로그인
                 </button>
-                <div class="bg-modal-divider"></div>
+                <button class="bfm2-btn bfm2-google">
+                  <svg viewBox="0 0 48 48" width="20" height="20"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
+                  구글 로그인
+                </button>
               </div>
-              <div class="bg-modal-links">
-                <span>회원 가입하기</span>
-                <span class="bg-modal-links-sep">|</span>
-                <span>비회원 주문/조회</span>
-                <span class="bg-modal-links-sep">|</span>
-                <span>아이디/비밀번호 찾기</span>
-              </div>
-              <div class="bg-modal-notice">
-                데모 계정: <strong>cccccc103</strong> / 비밀번호 아무거나
-              </div>
+
+              <!-- 하단 링크 -->
+              <p class="bfm2-links">
+                <span>이메일로 로그인</span>
+                <span class="bfm2-links-sep">/</span>
+                <span>회원가입</span>
+                <span class="bfm2-links-sep">/</span>
+                <span>비밀번호 찾기</span>
+              </p>
+
             </div>
           </div>
         </div>
@@ -2564,28 +2589,30 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Social Login Buttons</div>
         <div class="bg-guide">
           <div class="bg-social-row">
-            <button class="bg-modal-social-btn bg-modal-naver">N</button>
+            <button class="bg-modal-social-btn bg-modal-naver">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+            </button>
             <button class="bg-modal-social-btn bg-modal-apple">
-              <svg width="14" height="17" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
+              <svg viewBox="0 0 14 17" width="13" height="16" fill="#fff"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg>
             </button>
             <button class="bg-modal-social-btn bg-modal-google">
-              <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 20.6s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
+              <svg viewBox="0 0 48 48" width="16" height="16"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg>
             </button>
           </div>
           <table class="spec-table">
               <thead><tr><th>플랫폼</th><th>배경색</th><th>텍스트 / 아이콘</th><th>테두리</th><th>크기</th></tr></thead>
               <tbody>
                 <tr>
-                  <td><button class="bg-modal-spec-naver">N</button></td>
-                  <td><strong>#1ec800</strong></td><td>흰색 "N" · font-weight 800</td><td>없음</td><td>40 × 40px 원형</td>
+                  <td><button class="bg-modal-spec-naver"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg></button></td>
+                  <td><strong>#1ec800</strong></td><td>흰색 N 로고</td><td>없음</td><td>40 × 40px 원형</td>
                 </tr>
                 <tr>
-                  <td><button class="bg-modal-spec-apple"><svg width="11" height="14" viewBox="0 0 14 17" fill="currentColor"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg></button></td>
-                  <td><strong>#000000</strong></td><td>흰색 Apple SVG</td><td>없음</td><td>40 × 40px 원형</td>
+                  <td><button class="bg-modal-spec-apple"><svg viewBox="0 0 14 17" width="11" height="14" fill="#fff"><path d="M11.7 9.08c-.02-2.15 1.75-3.19 1.83-3.24-1-1.47-2.56-1.67-3.1-1.69-1.32-.14-2.58.79-3.25.79-.67 0-1.7-.77-2.8-.75C2.87 4.21 1.64 5.01.91 6.23-.6 8.71.57 12.43 2.01 14.5c.72 1.03 1.57 2.18 2.69 2.14 1.08-.04 1.48-.7 2.79-.7 1.3 0 1.66.7 2.8.68 1.16-.02 1.9-1.05 2.61-2.09.82-1.2 1.16-2.36 1.18-2.42-.03-.01-2.26-.87-2.38-3.03zM9.5 2.78C10.11 2.02 10.53 1 10.4 0 9.52.04 8.44.58 7.81 1.33c-.57.66-1.07 1.72-.94 2.73.98.08 1.98-.5 2.63-1.28z"/></svg></button></td>
+                  <td><strong>#000000</strong></td><td>흰색 Apple 로고</td><td>없음</td><td>40 × 40px 원형</td>
                 </tr>
                 <tr>
-                  <td><button class="bg-modal-spec-google"><svg width="13" height="13" viewBox="0 0 48 48"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg></button></td>
-                  <td><strong>#ffffff</strong></td><td>Google G 컬러 SVG</td><td>1px solid <strong>#d9d9d9</strong></td><td>40 × 40px 원형</td>
+                  <td><button class="bg-modal-spec-google"><svg viewBox="0 0 48 48" width="13" height="13"><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v8.7h12.4c-.5 2.7-2.1 4.9-4.4 6.4v5.3h7.1c4.2-3.8 6.6-9.5 6.6-15.8z"/><path fill="#34A853" d="M24 47c6.3 0 11.5-2.1 15.3-5.6l-7.1-5.3c-2.1 1.4-4.7 2.2-8.2 2.2-6.3 0-11.7-4.3-13.6-10H3v5.5C6.7 42.2 14.8 47 24 47z"/><path fill="#FBBC04" d="M10.4 28.3c-.5-1.4-.8-2.9-.8-4.3s.3-2.9.8-4.3V14.2H3C1.4 17.3.5 20.6.5 24s.9 6.7 2.5 9.8l7.4-5.5z"/><path fill="#EA4335" d="M24 9.7c3.5 0 6.7 1.2 9.2 3.6l6.8-6.8C35.5 2.8 30.3.5 24 .5 14.8.5 6.7 5.3 3 13.7l7.4 5.5C12.3 13.9 17.7 9.7 24 9.7z"/></svg></button></td>
+                  <td><strong>#ffffff</strong></td><td>Google G 컬러 로고</td><td>1px solid <strong>#d9d9d9</strong></td><td>40 × 40px 원형</td>
                 </tr>
               </tbody>
             </table>
