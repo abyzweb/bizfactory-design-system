@@ -4,20 +4,19 @@
 
 | CSS 변수명 | HEX | 이름 | 용도 |
 |-----------|-----|------|------|
-| `--trendy` | `#222450` | 트렌디 — Brand Primary | 헤더, GNB, 버튼 배경, 강조선. **가장 지배적, 교체 불가** |
+| `--trendy` | `#159fda` | 트렌디 — Brand Primary | 헤더, GNB, 버튼(.key_box), 활성 상태(.btn_checked), 강조 링크. **가장 지배적, 교체 불가** |
 | `--friendly` | `#FFCE2D` | 프렌들리 — Brand Yellow | 이벤트 강조, CTA 포인트, 배너. 배경 전체 사용 가능 |
 | `--clear` | `#FFFFFF` | 클리어 — White Base | 카드 배경, 팝업, 콘텐츠 기본 바탕 |
-| `--belief` | `#F0F1F6` | 빌리프 — Background | 섹션 구분, GNB 드롭다운 배경, 소프트 컨테이너 |
+| `--belief` | `#f7f7f7` | 빌리프 — Background | 서브 페이지 배경(.sub_wrap_bg), 상품 목록 배경, 섹션 구분 소프트 컨테이너 |
 | `--stability` | `#111111` | 스태빌리티 — Text Main | 본문 강조 텍스트, 제목 |
-| `--attention` | `#515382` | 어텐션 — Text Point | GNB 서브메뉴 링크 호버, 포인트 텍스트 |
+| `--attention` | `#0080b3` | 어텐션 — Hover Blue | 버튼 호버(.key_box:hover), 링크 포커스(.key_line:hover), 다운로드 강조 |
 
 ## 보조 컬러
 
 | CSS 변수명 | HEX | 용도 |
 |-----------|-----|------|
-| `--trendy-2` | `#1a1c3c` | (임시) trendy 어두운 변형 |
-| `--sky` | `#159FDA` | 바로구매 버튼 |
-| `--red` | `#FF4040` | NEW 태그 아웃라인 |
+| `--hover` | `#0080b3` | 버튼/링크 호버 (--attention과 동일) |
+| `--red` | `#FF4040` | NEW 태그 아웃라인, 가격 강조 |
 | `--orange` | `#FF5400` | HOT 배지 |
 | `--purple` | `#7B42F6` | UPGRADE 배지 |
 
@@ -44,9 +43,9 @@
 
 ## 컬러 사용 원칙
 
-- `--trendy (#222450)` — 모든 CTA·헤더·강조 요소에 지배적 사용. 교체 불가
+- `--trendy (#159fda)` — 모든 CTA·헤더·버튼·강조 요소에 지배적 사용. 교체 불가
 - `--friendly (#FFCE2D)` — 이벤트·친근한 강조에 사용
-- `--belief (#F0F1F6)` — 섹션 구분·드롭다운·소프트 컨테이너 전용
+- `--belief (#f7f7f7)` — 서브 페이지 배경·섹션 구분·소프트 컨테이너 전용
 - 어두운 배경 위 텍스트 → `#fff`
 - 밝은 배경 본문 → `#333` 또는 `#1a1a1a`
 - 브랜드 변수 외 임의 색상 사용 금지
