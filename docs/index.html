@@ -603,6 +603,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .btn-basket { height: 60px; width: 70px; background: #ccc; color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; }
 .btn-make:hover { background: #4e58c2; }
 .btn-pdf:hover  { background: #b3b3b3; }
+.btn-upload { height: 60px; flex: 1; background: #575757; color: #fff; border: none; border-radius: 4px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: background 0.18s; }
+.btn-upload:hover { background: #444; }
+.btn-quote  { height: 60px; flex: 1; background: #159fda; color: #fff; border: none; border-radius: 4px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; transition: background 0.18s; }
+.btn-quote:hover  { background: #0092c0; }
+.btn-detail-row { display: flex; gap: 12px; }
 
 /* ══════════════════════════════════════════════════════
    브랜드 가이드 전용 시각 컴포넌트 (.bg-guide 스코프)
@@ -980,7 +985,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       <div class="nav-sub" onclick="showPage('bg04')"><span class="nav-num">03</span> 타이포그래피</div>
       <div class="nav-sub" onclick="showPage('bg05')"><span class="nav-num">04</span> 태그 &amp; 뱃지</div>
       <div class="nav-sub" onclick="showPage('bg06')"><span class="nav-num">05</span> UI 컴포넌트</div>
-      <div class="nav-sub" onclick="showPage('bg07')"><span class="nav-num">06</span> 레이아웃 구조</div>
+      <!-- <div class="nav-sub" onclick="showPage('bg07')"><span class="nav-num">06</span> 레이아웃 구조</div> -->
       <div class="nav-sub" onclick="showPage('bg08')"><span class="nav-num">07</span> 채널 &amp; SNS</div>
       <div class="nav-sub" onclick="showPage('bg09')"><span class="nav-num">08</span> 로그인 모달</div>
       <div class="nav-sub" onclick="showPage('bg10')"><span class="nav-num">09</span> 아이콘 시스템</div>
@@ -1207,7 +1212,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="btn-row">
           <button class="btn-primary">주문하기</button>
           <button class="btn-sky">바로구매</button>
-          <button class="btn-yellow">할인쿠폰</button>
           <button class="btn-outline">담아두기</button>
           <button class="btn-ghost">샘플신청</button>
         </div>
@@ -1216,7 +1220,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="btn-row">
           <button class="btn-primary btn-sm">주문하기</button>
           <button class="btn-sky btn-sm">바로구매</button>
-          <button class="btn-yellow btn-sm">할인쿠폰</button>
           <button class="btn-outline btn-sm">담아두기</button>
           <button class="btn-ghost btn-sm">샘플신청</button>
         </div>
@@ -1225,7 +1228,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="btn-row">
           <button class="btn-primary btn-lg">주문하기</button>
           <button class="btn-sky btn-lg">바로구매</button>
-          <button class="btn-yellow btn-lg">할인쿠폰</button>
           <button class="btn-outline btn-lg">담아두기</button>
           <button class="btn-ghost btn-lg">샘플신청</button>
         </div>
@@ -1245,7 +1247,6 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <tbody>
             <tr><td>주문하기</td><td><code>.btn-primary</code></td><td><span class="chip" style="background:#159fda"></span>#159fda</td><td>#fff</td><td>#3a3f7a</td></tr>
             <tr><td>바로구매</td><td><code>.btn-sky</code></td><td><span class="chip" style="background:#159FDA"></span>#159FDA</td><td>#fff</td><td>#0092c0</td></tr>
-            <tr><td>할인쿠폰</td><td><code>.btn-yellow</code></td><td><span class="chip" style="background:#FFCE2D;border-color:#ccc"></span>#FFCE2D</td><td>#159fda</td><td>#f0c000</td></tr>
             <tr><td>담아두기</td><td><code>.btn-outline</code></td><td>투명 · border #159fda</td><td>#159fda</td><td>bg #159fda · color #fff</td></tr>
             <tr><td>샘플신청</td><td><code>.btn-ghost</code></td><td>투명 · border #E4E5EC</td><td>#777</td><td>border #aaa · color #444</td></tr>
           </tbody>
@@ -1281,21 +1282,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
       <!-- ③ 상품 상세 버튼 -->
       <h2 class="section-title">03 · PRODUCT DETAIL BUTTONS</h2>
-      <div class="section-txt">상품 상세 페이지 전용 · height: 60px · border-radius: 0px (직각)</div>
+      <div class="section-txt">상품 상세 페이지 전용 · height: 60px · border-radius: 4px</div>
       <div class="section-card">
         <div class="card-label">Product Detail Actions</div>
-        <div class="btn-row">
-          <button class="btn-make">디자인고르기</button>
-          <button class="btn-pdf">파일 추가</button>
-          <button class="btn-basket">🛒</button>
-        </div>
-      </div>
-      <div class="section-card">
-        <div class="card-label">실제 상세페이지 배치 예시</div>
-        <div class="btn-row-480">
-          <button class="btn-basket">🛒</button>
-          <button class="btn-pdf">파일 추가</button>
-          <button class="btn-make">디자인고르기</button>
+        <div class="btn-detail-row">
+          <button class="btn-upload">파일 업로드</button>
+          <button class="btn-quote">견적서 보기</button>
         </div>
       </div>
       <div class="section-card">
@@ -1305,9 +1297,8 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <tr><th>버튼명</th><th>클래스</th><th>높이</th><th>배경</th><th>Hover</th></tr>
           </thead>
           <tbody>
-            <tr><td>디자인고르기</td><td><code>.btn-make</code></td><td>60px</td><td>#159fda</td><td>#4e58c2</td></tr>
-            <tr><td>파일 추가</td><td><code>.btn-pdf</code></td><td>60px</td><td>#999999</td><td>#b3b3b3</td></tr>
-            <tr><td>장바구니 담기</td><td><code>.btn-basket</code></td><td>60px · w:70px</td><td>#cccccc</td><td>—</td></tr>
+            <tr><td>파일 업로드</td><td><code>.btn-upload</code></td><td>60px</td><td><span class="chip" style="background:#575757"></span>#575757</td><td>#444444</td></tr>
+            <tr><td>견적서 보기</td><td><code>.btn-quote</code></td><td>60px</td><td><span class="chip" style="background:#159fda"></span>#159fda</td><td>#0092c0</td></tr>
           </tbody>
         </table>
       </div>
@@ -2364,7 +2355,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
       </div>
     </div>
 
-    <!-- bg07 레이아웃 구조 -->
+    <!-- bg07 레이아웃 구조 (주석 처리 — 나중에 재사용 가능)
     <div class="page" id="page-bg07">
       <div class="section-header">
         <h1 class="page-title">레이아웃 구조</h1>
@@ -2411,6 +2402,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         </div>
       </div>
     </div>
+    -->
 
     <!-- bg08 채널 & SNS -->
     <div class="page" id="page-bg08">
