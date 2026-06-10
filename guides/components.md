@@ -350,7 +350,7 @@ GNB 메뉴 항목 옆에 붙는 말풍선형 태그. height 22px · border-radiu
 ### 메인 헤더
 
 - 높이: `80px`
-- 로고: `main_2025/img/logo.png` · width `130px`
+- 로고: `https://www.bizfactory.co.kr/include/img/logo_b.png` · width `130px`
 - 검색창: height `40px` · border-radius `4px` · border `1px solid var(--trendy)`
 - 검색 버튼: bg `var(--trendy)` · 흰색 아이콘
 

@@ -59,12 +59,12 @@ FOOTER
 
 :root {
   /* ── 브랜드 6색 ── */
-  --trendy:    #222450;
+  --trendy:    #159fda;
   --friendly:  #FFCE2D;
   --clear:     #FFFFFF;
-  --belief:    #F0F1F6;
+  --belief:    #f7f7f7;
   --stability: #111111;
-  --attention: #515382;
+  --attention: #3682ff;
 
   /* ── 보조 컬러 ── */
   --sky:    #159FDA;
@@ -93,15 +93,18 @@ FOOTER
   --friendly-hover:  #f0c000;
   --btn-make-hover:  #4e58c2;
 
+  /* ── 배경 ── */
+  --paper: #FAFAF7;  /* 페이지 기본 배경 */
+
   /* ── 퍼블코드 ── */
   --group-purple-soft: #ECEEFF;
   --radius: 12px;
 
   /* ── D-day ── */
-  --dday-warn-bg:    #FFF3CD;
-  --dday-warn-tx:    #856404;
-  --dday-urgent-bg:  #FFE5E5;
-  --dday-urgent-tx:  #DC3545;
+  --dday-warn-bg:    #fffbeb;
+  --dday-warn-tx:    #b45309;
+  --dday-urgent-bg:  #fff1f2;
+  --dday-urgent-tx:  #e11d48;
 
   /* ── 소셜 버튼 ── */
   --naver:      #1ec800;
@@ -110,8 +113,8 @@ FOOTER
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background: #FFFFFF;
+  font-family: "Montserrat", "YoonGothicPro760", sans-serif;
+  background: var(--paper);
   color: var(--text-body);
   line-height: 1.6;
 }
@@ -132,8 +135,8 @@ body {
 
 | 구분 | URL |
 |------|-----|
-| 기본 로고 (밝은 배경) | `https://www.publog.co.kr/main_2025/img/logo.png` |
-| 역상 로고 (어두운 배경) | `https://www.publog.co.kr/main_2025/img/logo_w.png` |
+| 기본 로고 (흰색·밝은 배경) | `https://www.bizfactory.co.kr/include/img/logo_b.png` |
+| 역상 로고 (어두운 배경 `#333`) | `https://www.bizfactory.co.kr/include/img/logo_w.png` |
 
 - 헤더 내 너비: `130px`
 - 최소 여백: 로고 외곽 상하좌우 16px 이상
