@@ -12,11 +12,11 @@ html { scrollbar-gutter: stable; }
 
 :root {
   --trendy: #159fda;
-  --friendly: #FFCE2D;
+  --friendly: #ff7373;
   --clear: #FFFFFF;
-  --belief: #F0F1F6;
+  --belief: #f7f7f7;
   --stability: #111111;
-  --attention: #515382;
+  --attention: #3682ff;
   --sky: #159FDA;
   --text-body: #333333;
   --text-muted: #777777;
@@ -174,7 +174,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 11px;
-  color: #ffce2d;
+  color: #ff7373;
   min-width: 24px;
   display: inline-block;
   letter-spacing: 0.5px;
@@ -798,11 +798,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 
 /* ── bg-guide 컬러 스와치 ── */
 .bg-cs-trendy    { background:#159fda; }
-.bg-cs-friendly  { background:#FFCE2D; border-bottom:1px solid var(--border); }
+.bg-cs-friendly  { background:#ff7373; border-bottom:1px solid var(--border); }
 .bg-cs-clear     { background:#FFFFFF; border-bottom:1px solid var(--border); }
-.bg-cs-belief    { background:#F0F1F6; }
+.bg-cs-belief    { background:#f7f7f7; }
 .bg-cs-stability { background:#111111; }
-.bg-cs-attention { background:#515382; }
+.bg-cs-attention { background:#3682ff; }
 .bg-cs-role-w    { color:rgba(255,255,255,0.6); }
 .bg-cs-role-n    { color:rgba(34,36,80,0.6); }
 .bg-cs-role-gray { color:#999; }
@@ -818,7 +818,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .bg-gs-99 { background:#999; }
 .bg-gs-cc { background:#ccc; }
 .bg-gs-e4 { background:#e4e5ec; }
-.bg-gs-f0 { background:#f0f1f6; }
+.bg-gs-f0 { background:#f7f7f7; }
 .bg-gs-hw { color:#fff; }
 .bg-gs-hm { color:#555; }
 .bg-gs-rd { color:rgba(255,255,255,0.4); }
@@ -1714,12 +1714,12 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
     <div class="page" id="page-bg03">
       <div class="section-header">
         <h1 class="page-title">컬러 시스템</h1>
-        <p>공식 BI 페이지 기준 6색 시스템 + CSS 분석 보조 컬러</p>
+        <p>bizfactory.co.kr CSS 실측 기준 6색 시스템 + 보조 컬러</p>
       </div>
       <hr>
 
-      <h2 class="section-title">공식 BI 컬러 6종</h2>
-      <div class="section-txt">brand_identity.asp 원본 기준</div>
+      <h2 class="section-title">공식 브랜드 컬러 6종</h2>
+      <div class="section-txt">bizfactory.co.kr CSS 실측 기준</div>
       <div class="section-card">
         <div class="card-label">Brand Colors</div>
         <div class="bg-guide">
@@ -1731,13 +1731,13 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
               </div>
               <div class="color-detail">
                 <div class="color-name">트렌디 — Brand Primary</div>
-                <div class="color-use">헤더, GNB, 버튼, 강조선, 전체 브랜드 주 색상. CSS 전체 61회 등장 (가장 지배적)</div>
+                <div class="color-use">헤더, GNB, 버튼(.key_box), 활성 상태(.btn_checked), 강조 링크. 사이트 전체 주 색상 (가장 지배적)</div>
               </div>
             </div>
             <div class="color-tile">
               <div class="color-swatch bg-cs-friendly">
                 <div class="role-tag bg-cs-role-n">FRIENDLY</div>
-                <div class="hex-tag bg-cs-hex-navy">#FFCE2D</div>
+                <div class="hex-tag bg-cs-hex-navy">#ff7373</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">프렌들리 — Brand Yellow</div>
@@ -1757,11 +1757,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="color-tile">
               <div class="color-swatch bg-cs-belief">
                 <div class="role-tag bg-cs-role-gray">BELIEF</div>
-                <div class="hex-tag bg-cs-hex-muted">#F0F1F6</div>
+                <div class="hex-tag bg-cs-hex-muted">#f7f7f7</div>
               </div>
               <div class="color-detail">
                 <div class="color-name">빌리프 — Background</div>
-                <div class="color-use">섹션 구분 배경, GNB 드롭다운 배경, 소프트 컨테이너</div>
+                <div class="color-use">서브 페이지 배경(.sub_wrap_bg), 상품 목록 배경, 섹션 구분 소프트 컨테이너</div>
               </div>
             </div>
             <div class="color-tile">
@@ -1777,11 +1777,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="color-tile">
               <div class="color-swatch bg-cs-attention">
                 <div class="role-tag bg-cs-role-w">ATTENTION</div>
-                <div class="hex-tag bg-cs-hex-white">#515382</div>
+                <div class="hex-tag bg-cs-hex-white">#3682ff</div>
               </div>
               <div class="color-detail">
-                <div class="color-name">어텐션 — Text Point</div>
-                <div class="color-use">GNB 서브메뉴 링크 호버, 포인트 텍스트 강조</div>
+                <div class="color-name">어텐션 — Hover Blue</div>
+                <div class="color-use">버튼 호버(.key_box:hover), 링크 포커스(.key_line:hover), 다운로드 강조</div>
               </div>
             </div>
           </div>
@@ -1794,7 +1794,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
         <div class="card-label">Accent Colors</div>
         <div class="bg-guide">
           <div class="accent-row">
-            <div class="accent-chip"><div class="accent-dot" style="background:#159FDA;"></div>스카이 블루 <span class="a-hex">#159FDA</span></div>
+            <div class="accent-chip"><div class="accent-dot" style="background:#3682ff;"></div>다크 블루 (Hover) <span class="a-hex">#3682ff</span></div>
             <div class="accent-chip"><div class="accent-dot" style="background:#FF4040;"></div>레드 (NEW) <span class="a-hex">#FF4040</span></div>
             <div class="accent-chip"><div class="accent-dot" style="background:#FF5400;"></div>오렌지 (HOT) <span class="a-hex">#FF5400</span></div>
             <div class="accent-chip"><div class="accent-dot" style="background:#7B42F6;"></div>퍼플 (UP) <span class="a-hex">#7B42F6</span></div>
@@ -1814,7 +1814,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <div class="gray-stop bg-gs-99"><div class="g-hex bg-gs-hw">#999999</div><div class="g-role bg-gs-rd">힌트</div></div>
             <div class="gray-stop bg-gs-cc"><div class="g-hex bg-gs-hm">#CCCCCC</div><div class="g-role bg-gs-rm">구분선</div></div>
             <div class="gray-stop bg-gs-e4"><div class="g-hex bg-gs-hm">#E4E5EC</div><div class="g-role bg-gs-rm">테두리</div></div>
-            <div class="gray-stop bg-gs-f0"><div class="g-hex bg-gs-hm">#F0F1F6</div><div class="g-role bg-gs-rm">배경(Belief)</div></div>
+            <div class="gray-stop bg-gs-f0"><div class="g-hex bg-gs-hm">#f7f7f7</div><div class="g-role bg-gs-rm">배경(Belief)</div></div>
           </div>
         </div>
       </div>
@@ -1827,9 +1827,9 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             <thead><tr><th>규칙</th><th>내용</th></tr></thead>
             <tbody>
               <tr><td><strong>TRENDY 우선</strong></td><td>#159fda은 모든 CTA·헤더·강조 요소에 지배적으로 사용. 교체 불가</td></tr>
-              <tr><td><strong>FRIENDLY 포인트</strong></td><td>#FFCE2D(옐로우)는 이벤트·친근한 강조에 사용. 배경 전체 사용 가능</td></tr>
+              <tr><td><strong>FRIENDLY 포인트</strong></td><td>#ff7373(코럴 레드)는 이벤트·친근한 강조에 사용. 배경 전체 사용 가능</td></tr>
               <tr><td><strong>뱃지 컬러 규정</strong></td><td>NEW→#FF4040, HOT→#FF5400, UP→#7B42F6, 당일출고→#2ecc71계열</td></tr>
-              <tr><td><strong>BELIEF 배경</strong></td><td>#F0F1F6는 섹션 구분·드롭다운·소프트 컨테이너 전용</td></tr>
+              <tr><td><strong>BELIEF 배경</strong></td><td>#f7f7f7는 서브 페이지 배경·섹션 구분·소프트 컨테이너 전용</td></tr>
               <tr><td><strong>텍스트 대비</strong></td><td>어두운 배경 위 → #fff. 밝은 배경 본문 → #333 또는 #1a1a1a</td></tr>
             </tbody>
           </table>
