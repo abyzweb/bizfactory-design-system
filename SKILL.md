@@ -1,25 +1,23 @@
 ---
-name: publog-design-system
-description: '"퍼블로그 디자인 시스템" 입력 시 활성화. 퍼블로그(publog.co.kr) 웹 디자인 표준 적용. HTML 수정·신규 컴포넌트 생성·가이드 업데이트 지원.'
+name: bizfactory-design-system
+description: '"비즈팩토리 디자인 시스템" 입력 시 활성화. 비즈팩토리(bizfactory.co.kr) 웹 디자인 표준 적용. HTML 수정·신규 컴포넌트 생성·가이드 업데이트 지원.'
 ---
 
-<!-- 테스트 시: name을 publog-design-system-test 로 변경 -->
+# 비즈팩토리 디자인 시스템
 
-# 퍼블로그 디자인 시스템
-
-퍼블로그(publog.co.kr) 웹 디자인 표준을 적용해 HTML을 만들거나 수정하는 스킬입니다.
+비즈팩토리(bizfactory.co.kr) 웹 디자인 표준을 적용해 HTML을 만들거나 수정하는 스킬입니다.
 
 ---
 
 ## 브랜드 컬러 (CSS 변수명)
 
 ```css
---trendy:    #222450  /* 헤더·버튼 배경·텍스트 강조 — 가장 지배적, 교체 불가 */
+--trendy:    #159fda  /* 헤더·버튼 배경·텍스트 강조 — 가장 지배적, 교체 불가 */
 --friendly:  #FFCE2D  /* CTA·이벤트·친근한 포인트 */
 --clear:     #FFFFFF  /* 카드 배경·팝업 바탕 */
---belief:    #F0F1F6  /* 섹션 구분·소프트 컨테이너 */
+--belief:    #f7f7f7  /* 섹션 구분·소프트 컨테이너 */
 --stability: #111111  /* 본문 강조 텍스트 */
---attention: #515382  /* GNB 호버·포인트 텍스트 */
+--attention: #3682ff  /* 텍스트 포인트·링크 강조 */
 ```
 
 **보조:** `--sky: #159FDA` · `--red: #FF4040` · `--orange: #FF5400` · `--purple: #7B42F6`  
@@ -52,8 +50,12 @@ description: '"퍼블로그 디자인 시스템" 입력 시 활성화. 퍼블로
 
 | 구분 | URL |
 |------|-----|
-| 기본 로고 (밝은 배경) | `https://www.publog.co.kr/main_2025/img/logo.png` |
-| 역상 로고 (어두운 배경) | `https://www.publog.co.kr/main_2025/img/logo_w.png` |
+| 기본 로고 (밝은 배경) | `https://www.bizfactory.co.kr/include/img/logo_b.png` |
+| 역상 로고 (어두운 배경 #333) | `https://www.bizfactory.co.kr/include/img/logo_w.png` |
+| 미니 로고 — Black | `https://www.bizfactory.co.kr/include/img/logo_mini_b.png` |
+| 미니 로고 — White | `https://www.bizfactory.co.kr/include/img/logo_mini_w.png` |
+| 아이콘 — Black | `https://www.bizfactory.co.kr/include/img/logo_icon_b.png` |
+| 아이콘 — White | `https://www.bizfactory.co.kr/include/img/logo_icon_w.png` |
 
 - 헤더 너비: `130px` · 최소 여백: 상하좌우 16px 이상
 - 복잡한 사진 위 직접 배치 금지 — 반투명 오버레이 필요
@@ -87,18 +89,18 @@ FOOTER
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --trendy: #222450; --friendly: #FFCE2D; --clear: #FFFFFF;
-  --belief: #F0F1F6; --stability: #111111; --attention: #515382;
+  --trendy: #159fda; --friendly: #FFCE2D; --clear: #FFFFFF;
+  --belief: #f7f7f7; --stability: #111111; --attention: #3682ff;
   --sky: #159FDA; --red: #FF4040; --orange: #FF5400; --purple: #7B42F6;
   --text-body: #333333; --text-muted: #777777; --text-light: #aaaaaa; --border: #E4E5EC;
   --badge-new: #FF8F17; --badge-hot: #E5362C;
   --naver: #1ec800; --kakao: #FEE500; --kakao-text: #3C1E1E;
   --dday-warn-bg: #FFF3CD; --dday-warn-tx: #856404;
   --dday-urgent-bg: #FFE5E5; --dday-urgent-tx: #DC3545;
-  --trendy-hover: #3a3f7a; --sky-hover: #0092c0; --friendly-hover: #f0c000;
-  --group-purple-soft: #ECEEFF;  /* 퍼블코드 그룹 배지·배경 */
+  --trendy-hover: #0f87c0; --sky-hover: #0092c0; --friendly-hover: #f0c000;
+  --group-purple-soft: #ECEEFF;
   --gray-text: #666666; --gray-hint: #999999; --gray-line: #cccccc;
-  --radius: 12px;  /* 카드 기본 border-radius */
+  --radius: 12px;
 }
 body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-height: 1.6; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -118,7 +120,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-he
 대화에서 HTML 생성·수정 요청을 처음 받았을 때 **한 번만** 아래 내용을 먼저 안내한다:
 
 ---
-퍼블로그 브랜드 가이드를 기반으로 HTML을 만들어 드릴게요.
+비즈팩토리 브랜드 가이드를 기반으로 HTML을 만들어 드릴게요.
 
 색상·폰트·여백 같은 규칙은 가이드대로 적용되지만,
 레이아웃 배치나 디자인 느낌은 예상과 다를 수 있어요.
@@ -134,7 +136,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-he
 ## 작업 규칙
 
 1. 브랜드 변수 외 임의 색상 사용 금지
-2. 헤더·주요 버튼 배경은 반드시 `--trendy (#222450)`
+2. 헤더·주요 버튼 배경은 반드시 `--trendy (#159fda)`
 3. 영문·숫자 강조는 Montserrat 적용
 4. 컨테이너 최대 너비 1200px 유지
 5. 여백은 4px 배수만 사용
@@ -146,7 +148,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-he
 
 - AI 스러운 디자인 금지 (보라 그라데이션, Inter 폰트, 뻔한 카드 레이아웃)
 - 명확한 디자인 컨셉을 먼저 정하고 코딩 시작
-- 퍼블로그 톤 기준: `--trendy` 기반의 신뢰감 있는 레이아웃 + `--friendly` 포인트
+- 비즈팩토리 톤 기준: `--trendy` 기반의 신뢰감 있는 레이아웃 + `--friendly` 포인트
 
 ---
 
@@ -156,12 +158,11 @@ body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-he
 
 | 요청 유형 | 불러올 URL |
 |-----------|-----------|
-| 색상·팔레트 관련 | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/colors.md` |
-| 폰트·텍스트 스타일 | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/typography.md` |
-| 레이아웃·간격·컨테이너 | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/layout.md` |
-| 버튼·검색·카드·GNB 등 일반 컴포넌트 | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/components.md` |
-| 퍼블코드 전용 컴포넌트 (SubTab·CodeChip·PublCard 등) | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/publog-code.md` |
-| 아이콘·SVG·아이콘 라이브러리 | `https://raw.githubusercontent.com/abyzweb/publog-design-system/main/guides/icons.md` |
+| 색상·팔레트 관련 | `https://raw.githubusercontent.com/abyzweb/bizfactory-design-system/main/guides/colors.md` |
+| 폰트·텍스트 스타일 | `https://raw.githubusercontent.com/abyzweb/bizfactory-design-system/main/guides/typography.md` |
+| 레이아웃·간격·컨테이너 | `https://raw.githubusercontent.com/abyzweb/bizfactory-design-system/main/guides/layout.md` |
+| 버튼·검색·카드·GNB 등 일반 컴포넌트 | `https://raw.githubusercontent.com/abyzweb/bizfactory-design-system/main/guides/components.md` |
+| 아이콘·SVG·아이콘 라이브러리 | `https://raw.githubusercontent.com/abyzweb/bizfactory-design-system/main/guides/icons.md` |
 
 - 여러 유형이 섞인 요청이면 해당 파일을 모두 불러온다
 - 불러온 내용이 이 파일의 내용과 충돌하면 **불러온 파일을 우선**한다
@@ -173,10 +174,10 @@ body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-body); line-he
 HTML 생성 시 위 컴포넌트 가이드와 대조합니다.
 
 **가이드에 없는 컴포넌트가 포함된 경우:**
-퍼블로그 톤으로 최대한 맞춰 생성하고, 아래 형식으로 안내합니다:
+비즈팩토리 톤으로 최대한 맞춰 생성하고, 아래 형식으로 안내합니다:
 
 ```
-생성 완료! 아래 컴포넌트는 공식 가이드에 없어서 퍼블로그 톤으로 최대한 맞춰 생성했습니다.
+생성 완료! 아래 컴포넌트는 공식 가이드에 없어서 비즈팩토리 톤으로 최대한 맞춰 생성했습니다.
 UXUI 팀 가이드 추가 요청 양식을 미리 작성했습니다. 확인 후 수정해 주세요:
 
 페이지명: [작업한 페이지 이름]
