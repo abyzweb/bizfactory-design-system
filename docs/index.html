@@ -653,6 +653,11 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
 .bg-guide .logo-info { padding: 14px 16px; background: #fff; border-top: 1px solid var(--border); }
 .bg-guide .logo-info .logo-type { font-size: 11px; font-weight: 700; color: #333; margin-bottom: 2px; }
 .bg-guide .logo-info .logo-note { font-size: 11px; color: var(--text-muted); }
+.bg-guide .logo-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.bg-guide .bizi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+.bg-guide .bizi-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.bg-guide .bizi-preview { height: 160px; display: flex; align-items: center; justify-content: center; background: #fff; }
+.bg-guide .bizi-preview img { max-width: 80%; max-height: 80%; object-fit: contain; }
 
 /* ── 컬러 시스템 ── */
 .bg-guide .official-colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 4px; }
@@ -1663,7 +1668,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
           <div class="logo-grid">
             <div class="logo-card">
               <div class="logo-preview on-white">
-                <img src="https://www.BIZFACTORY.co.kr/main_2025/img/logo.png?t=1" alt="Standard logo">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_b.png" alt="Standard logo">
               </div>
               <div class="logo-info">
                 <div class="logo-type">Standard</div>
@@ -1672,7 +1677,7 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
             <div class="logo-card">
               <div class="logo-preview on-bright">
-                <img src="https://www.BIZFACTORY.co.kr/main_2025/img/logo.png?t=1" alt="Bright background logo">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_b.png" alt="Bright background logo">
               </div>
               <div class="logo-info">
                 <div class="logo-type">Bright background</div>
@@ -1681,12 +1686,112 @@ code { background: #f3f4ff; color: #5B5FDE; font-size: 0.85em; padding: 2px 6px;
             </div>
             <div class="logo-card">
               <div class="logo-preview on-dark">
-                <img src="https://www.BIZFACTORY.co.kr/main_2025/img/logo_w.png?t=1" alt="Dark background logo">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_w.png" alt="Dark background logo">
               </div>
               <div class="logo-info">
                 <div class="logo-type">Dark background</div>
                 <div class="logo-note">어두운 배경 — #159fda 위 역상</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">공식아이콘</h2>
+      <div class="section-txt">미니 로고·아이콘 4종 — 소형 UI 및 파비콘 용도</div>
+      <div class="section-card">
+        <div class="card-label">Icon Variants</div>
+        <div class="bg-guide">
+          <div class="logo-grid logo-grid-4">
+            <div class="logo-card">
+              <div class="logo-preview on-white">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_mini_b.png" alt="Mini logo black">
+              </div>
+              <div class="logo-info">
+                <div class="logo-type">Mini — Black</div>
+                <div class="logo-note">밝은 배경 전용</div>
+              </div>
+            </div>
+            <div class="logo-card">
+              <div class="logo-preview on-dark">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_mini_w.png" alt="Mini logo white">
+              </div>
+              <div class="logo-info">
+                <div class="logo-type">Mini — White</div>
+                <div class="logo-note">어두운 배경 전용</div>
+              </div>
+            </div>
+            <div class="logo-card">
+              <div class="logo-preview on-white">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_icon_b.png" alt="Icon black">
+              </div>
+              <div class="logo-info">
+                <div class="logo-type">Icon — Black</div>
+                <div class="logo-note">밝은 배경 전용</div>
+              </div>
+            </div>
+            <div class="logo-card">
+              <div class="logo-preview on-dark">
+                <img src="https://www.bizfactory.co.kr/include/img/logo_icon_w.png" alt="Icon white">
+              </div>
+              <div class="logo-info">
+                <div class="logo-type">Icon — White</div>
+                <div class="logo-note">어두운 배경 전용</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">공식 캐릭터 — BIZI</h2>
+      <div class="section-txt">캐릭터 11종 — 다양한 감정·상황 표현용</div>
+      <div class="section-card">
+        <div class="card-label">Character Variants</div>
+        <div class="bg-guide">
+          <div class="bizi-grid">
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_01.png" alt="BIZI 01"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 01</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_02.png" alt="BIZI 02"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 02</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_03.png" alt="BIZI 03"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 03</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_04.png" alt="BIZI 04"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 04</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_05.png" alt="BIZI 05"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 05</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_06.png" alt="BIZI 06"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 06</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_07.png" alt="BIZI 07"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 07</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_08.png" alt="BIZI 08"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 08</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_09.png" alt="BIZI 09"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 09</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_10.png" alt="BIZI 10"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 10</div></div>
+            </div>
+            <div class="bizi-card">
+              <div class="bizi-preview"><img src="https://www.bizfactory.co.kr/include/img/bizi_11.png" alt="BIZI 11"></div>
+              <div class="logo-info"><div class="logo-type">BIZI 11</div></div>
             </div>
           </div>
         </div>
